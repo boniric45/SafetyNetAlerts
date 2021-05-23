@@ -12,18 +12,22 @@ import java.util.Date;
 public class MedicalRecords {
 
     @Id //autoincrement id key primary
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name = "firstName")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String firstName;
-
-    @Column(name = "lastName")
     private String lastName;
-
-    private Date birthdate;
+    private String birthdate;
     private String medications;
     private String allergies;
 
     public MedicalRecords(){}
+
+    public MedicalRecords(int id, String firstName, String lastName, String birthdate, String medications, String allergies) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthdate = birthdate;
+        this.medications = medications;
+        this.allergies = allergies;
+    }
 }

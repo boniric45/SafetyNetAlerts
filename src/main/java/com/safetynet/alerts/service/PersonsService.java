@@ -6,29 +6,21 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
-@Data
+//@Data
 @Service
 public class PersonsService {
 
     @Autowired
     private PersonsRepository personsRepository;
+    private final List<Persons> personsList = new ArrayList<>();
 
-    public Optional<Persons> getPerson(final Long id){
-        return personsRepository.findById(id);
+    public Iterable<Persons> listSave (List<Persons> list){
+        personsRepository.saveAll(list);
+        return list;
     }
 
-    public Iterable<Persons> getPersons(){
-        return personsRepository.findAll();
-    }
-
-    public void deletePersons(final Long id){
-        personsRepository.deleteById(id);
-    }
-
-    public Persons savePersons(Persons persons){
-        Persons savedPersons = personsRepository.save(persons);
-        return savedPersons;
-    }
 }

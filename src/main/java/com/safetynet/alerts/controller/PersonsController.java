@@ -1,33 +1,33 @@
 package com.safetynet.alerts.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.safetynet.alerts.model.Persons;
 import com.safetynet.alerts.service.PersonsService;
+import com.safetynet.alerts.utils.ReaderJsonPerson;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @RestController
 public class PersonsController {
-
+    private static final Logger logger = LoggerFactory.getLogger(PersonsService.class);
     @Autowired
     private PersonsService personsService;
+    private Persons Persons;
 
-    @GetMapping("/persons")
-    public Iterable<Persons> getPersons() throws IOException {
-
-        //create ObjectMapper instance
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        //read json file and convert to customer object
-        Persons persons = objectMapper.readValue(new File("D:/Openclassrooms/Projet5/SafetyNet_Alerts/src/main/resources/json/data.json"), Persons.class);
-
-        //print customer details
-        System.out.println(persons.getAddress());
-
-        return personsService.getPersons();
+//    @GetMapping(value = "/list")
+    public ArrayList<Persons> chargedPerson() throws IOException {
+        String dataFile = "D:/Openclassrooms/Projet5/SafetyNet/src/main/resources/json/data.json";
+        ArrayList<Persons> list = ReaderJsonPerson.readJsonFile(dataFile);
+        personsService.listSave(list);
+        return list;
     }
+
+
 }
+
+
+

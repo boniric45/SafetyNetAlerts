@@ -6,6 +6,8 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Data
@@ -14,21 +16,11 @@ public class FireStationsService {
 
     @Autowired
     private FireStationsRepository fireStationsRepository;
+    private final List<FireStations> fireStationsList = new ArrayList<>();
 
-    public Optional<FireStations> getFireStation(final Long id) {
-        return fireStationsRepository.findById(id);
+    public Iterable<FireStations> listSaveFirestation (List<FireStations> list){
+        fireStationsRepository.saveAll(list);
+        return list;
     }
 
-    public Iterable<FireStations> getFireStations() {
-        return fireStationsRepository.findAll();
-    }
-
-    public void deleteFireStations(final Long id) {
-        fireStationsRepository.deleteById(id);
-    }
-
-    public FireStations saveFireStations(FireStations fireStations) {
-        FireStations savedFireStations = fireStationsRepository.save(fireStations);
-        return savedFireStations;
-    }
 }
