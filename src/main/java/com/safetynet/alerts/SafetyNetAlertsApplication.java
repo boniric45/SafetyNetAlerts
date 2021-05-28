@@ -13,15 +13,14 @@ import java.io.IOException;
 @SpringBootApplication
 public class SafetyNetAlertsApplication implements CommandLineRunner {
 
-
-    @Autowired
-    private CustomProperties props;
     @Autowired
     PersonsController pc = new PersonsController();
     @Autowired
     FireStationsController fsc = new FireStationsController();
     @Autowired
     MedicalsRecordsController mrc = new MedicalsRecordsController();
+    @Autowired
+    private CustomProperties props;
 
     public static void main(String[] args) throws IOException {
         SpringApplication.run(SafetyNetAlertsApplication.class, args);
@@ -35,9 +34,10 @@ public class SafetyNetAlertsApplication implements CommandLineRunner {
      */
     @Override
     public void run(String... args) throws Exception {
-       System.out.println(props.getApiURL());
-       pc.chargedPerson();
-       fsc.chargedFirestation();
-       mrc.chargedMedicalRecord();
+
+        //Chargement du JSON en base H2
+        pc.chargedPerson(props.getJsonDatafile());
+        fsc.chargedFirestation(props.getJsonDatafile());
+        mrc.chargedMedicalRecord(props.getJsonDatafile());
     }
 }

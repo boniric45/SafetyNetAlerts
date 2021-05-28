@@ -37,7 +37,7 @@ public class ReadJsonFirestation {
                 fireStations.setStation(station);
                 fireStations.setAddress(address);
 
-                fireStations = new FireStations(id, station, address);
+                fireStations = new FireStations(id,station, address);
                 id++;
             }
 

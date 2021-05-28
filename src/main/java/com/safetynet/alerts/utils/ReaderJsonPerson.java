@@ -7,6 +7,7 @@ import org.json.simple.parser.JSONParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
 import java.io.FileReader;
 import java.util.ArrayList;
 
@@ -53,6 +54,7 @@ public class ReaderJsonPerson {
             }
 
         } catch (Exception e) {
+            logger.error(".... Not Charged ....");
             e.printStackTrace();
         } finally {
             logger.info(".... Charged ....");

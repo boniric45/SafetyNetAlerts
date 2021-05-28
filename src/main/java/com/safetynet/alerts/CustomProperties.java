@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "com.safetynet.alerts")
 public class CustomProperties {
-    private String apiURL;
-    String dataFile = "D:/Openclassrooms/Projet5/SafetyNet/src/main/resources/json/data.json";
+    private String jsonDatafile;
+    private String endPoint;
 }

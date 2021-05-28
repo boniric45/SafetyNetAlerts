@@ -1,6 +1,7 @@
 package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.MedicalRecords;
+import com.safetynet.alerts.model.Persons;
 import com.safetynet.alerts.repository.MedicalsRecordsRepository;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,10 @@ public class MedicalsRecordsService {
     public Iterable<MedicalRecords> listSaveMedicalrecords(List<MedicalRecords> list) {
         medicalsRecordsRepository.saveAll(list);
         return list;
+    }
+
+    public Iterable<MedicalRecords> getMedicalsRecordsAll() {
+        return medicalsRecordsRepository.findAll();
     }
 
 }
