@@ -23,4 +23,6 @@ public class FireStations {
         this.station = station;
         this.address = address;
     }
+
+
 }

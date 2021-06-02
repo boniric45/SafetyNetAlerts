@@ -7,9 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import java.io.IOException;
-
+import org.apache.logging.log4j.*;
 @SpringBootApplication
 public class SafetyNetAlertsApplication implements CommandLineRunner {
 
@@ -34,7 +33,7 @@ public class SafetyNetAlertsApplication implements CommandLineRunner {
      */
     @Override
     public void run(String... args) throws Exception {
-
+//        PropertyConfigurator.configure("D:\\Openclassrooms\\Projet5\\SafetyNet\\src\\log4j2.properties");
         //Chargement du JSON en base H2
         pc.chargedPerson(props.getJsonDatafile());
         fsc.chargedFirestation(props.getJsonDatafile());

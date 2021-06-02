@@ -9,5 +9,4 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "com.safetynet.alerts")
 public class CustomProperties {
     private String jsonDatafile;
-    private String endPoint;
 }

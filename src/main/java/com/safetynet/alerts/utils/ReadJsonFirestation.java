@@ -1,20 +1,23 @@
 package com.safetynet.alerts.utils;
 
 import com.safetynet.alerts.model.FireStations;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class ReadJsonFirestation {
 
-    private static final Logger logger = LoggerFactory.getLogger(ReaderJsonPerson.class);
+    private static final Logger logger = LogManager.getLogger(ReadJsonFirestation.class);
 
     public static ArrayList<FireStations> readJsonFileFirestation(String dataFile) {
         ArrayList<FireStations> listFireStation = new ArrayList<>();
@@ -22,8 +25,8 @@ public class ReadJsonFirestation {
         FireStations fireStations = new FireStations();
 
         try {
-            logger.info("//////////////// loading FireStation JSON to H2 ////////////////");
-            JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(dataFile));
+            logger.info("Read JSON FireStation to H2");
+            JSONObject jsonObject = (JSONObject) parser.parse(new InputStreamReader(new FileInputStream(dataFile), StandardCharsets.UTF_8));
             JSONArray jsonArray = (JSONArray) jsonObject.get("firestations");
             int id = 1;
             for (int i = 0; i < jsonArray.size(); i++) {
@@ -41,11 +44,10 @@ public class ReadJsonFirestation {
                 id++;
             }
 
-
         } catch (IOException | ParseException e) {
-            e.printStackTrace();
+            logger.error("Error Read JSON FireStation: "+e);
         } finally {
-            logger.info(".... Charged ....");
+            logger.info("FireStation saved to H2");
         }
 
         return listFireStation;

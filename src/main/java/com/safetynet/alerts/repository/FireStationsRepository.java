@@ -8,4 +8,9 @@ import java.util.Optional;
 public interface FireStationsRepository extends CrudRepository<FireStations, String> {
 
     Iterable<FireStations> findAllByStation(String station);
+
+    Optional<FireStations> findById(int id);
+
+    void deleteById(int id);
+
 }

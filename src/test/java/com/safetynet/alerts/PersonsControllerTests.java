@@ -17,12 +17,10 @@ public class PersonsControllerTests {
     @Autowired
     private MockMvc mockMvc;
 
-
     @Test
     public void testGetPersons() throws Exception {
         mockMvc.perform(get("/person"))
                 .andExpect(status().isOk());
     }
-
 
 }

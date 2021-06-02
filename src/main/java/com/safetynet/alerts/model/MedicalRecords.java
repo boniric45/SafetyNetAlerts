@@ -1,10 +1,8 @@
 package com.safetynet.alerts.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Data //charge getter & setter
 @Entity //data table
@@ -20,7 +18,8 @@ public class MedicalRecords {
     private String medications;
     private String allergies;
 
-    public MedicalRecords(){}
+    public MedicalRecords() {
+    }
 
     public MedicalRecords(int id, String firstName, String lastName, String birthdate, String medications, String allergies) {
         this.id = id;
