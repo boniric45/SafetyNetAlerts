@@ -7,9 +7,8 @@ import java.util.Optional;
 
 public interface MedicalsRecordsRepository extends CrudRepository<MedicalRecords,Long> {
 
-
     Optional<MedicalRecords> getMedicalRecordsById(int id);
 
-    void deleteById(int id);
+    void deleteMedicalRecordByFirstNameAndLastName(String firstName, String lastName);
 
 }

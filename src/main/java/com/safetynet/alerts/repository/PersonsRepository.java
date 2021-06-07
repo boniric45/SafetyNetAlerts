@@ -12,10 +12,5 @@ public interface PersonsRepository extends CrudRepository<Persons, Integer> {
     Iterable<Persons> findAllByCity(String city);
     List<Persons> findAllByAddress(String address);
     Iterable<Persons> findAll();
-
-
-//    Iterable<Persons> findPersonFirstnameLastname(@Param("firstName") String firstName, @Param("lastName") String lastName);
-//    List<Persons> findPersonFirstnameLastname(String firstName);
-//Iterable<Persons> findPersonFirstnameLastname(String firstName);
-
+    void deletePersonByFirstNameAndLastName(String firstName, String lastName);
 }

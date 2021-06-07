@@ -40,3 +40,504 @@
 2021-06-02 23:01:48,726 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] get All Person  
 2021-06-02 23:01:59,118 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] Search Person : Persons(id=1, firstName=John, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6512, email=jaboyd@email.com)
 2021-06-02 23:02:03,733 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3] Search Person : Persons(id=15, firstName=Reginold, lastName=Walker, address=908 73rd St, zip=97451, city=Culver, phone=841-874-8547, email=reg@email.com)
+2021-06-07 08:32:49,653 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 08:32:49,657 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 08:32:49,713 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 08:32:49,713 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 08:32:49,723 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 08:32:49,726 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 09:40:56,510 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] Home
+2021-06-07 09:41:05,206 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3] get All Person  
+2021-06-07 09:41:12,842 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4] Search Person : Persons(id=1, firstName=John, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6512, email=jaboyd@email.com)
+2021-06-07 09:44:23,523 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 09:44:23,527 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 09:44:23,581 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 09:44:23,581 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 09:44:23,590 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 09:44:23,593 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 09:51:55,060 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 09:51:55,064 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 09:51:55,125 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 09:51:55,125 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 09:51:55,133 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 09:51:55,137 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 09:52:23,744 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 09:52:23,751 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 09:52:23,889 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 09:52:23,890 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 09:52:23,900 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 09:52:23,906 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 09:52:40,665 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 09:52:40,668 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 09:52:40,723 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 09:52:40,723 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 09:52:40,731 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 09:52:40,734 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 09:54:03,242 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 09:54:03,245 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 09:54:03,305 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 09:54:03,306 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 09:54:03,315 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 09:54:03,318 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 09:55:28,138 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 09:55:28,143 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 09:55:28,209 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 09:55:28,210 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 09:55:28,219 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 09:55:28,223 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:01:33,997 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:01:34,004 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:01:34,136 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:01:34,137 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:01:34,147 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:01:34,152 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:02:55,389 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:02:55,393 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:02:55,449 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:02:55,450 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:02:55,458 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:02:55,462 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:11:41,105 INFO c.s.a.c.PersonsController [http-nio-8080-exec-9] Search Person : Persons(id=2, firstName=Jacob, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6513, email=drk@email.com)
+2021-06-07 10:11:48,107 INFO c.s.a.c.PersonsController [http-nio-8080-exec-10] Search Person : Persons(id=4, firstName=Roger, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6512, email=jaboyd@email.com)
+2021-06-07 10:25:53,488 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:25:53,492 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:25:53,550 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:25:53,550 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:25:53,559 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:25:53,563 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:26:15,104 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] Search Person : Persons(id=4, firstName=Roger, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6512, email=jaboyd@email.com)
+2021-06-07 10:26:25,541 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] Search Person : Persons(id=5, firstName=Felicia, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6544, email=jaboyd@email.com)
+2021-06-07 10:28:07,190 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:28:07,194 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:28:07,251 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:28:07,252 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:28:07,261 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:28:07,265 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:34:56,248 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:34:56,253 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:34:56,320 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:34:56,321 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:34:56,332 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:34:56,336 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:35:00,370 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] Home
+2021-06-07 10:35:11,087 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] get All Person  
+2021-06-07 10:35:15,811 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3] Search Person : Persons(id=1, firstName=John, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6512, email=jaboyd@email.com)
+2021-06-07 10:35:29,670 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4] get All Person  
+2021-06-07 10:36:52,666 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:36:52,670 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:36:52,727 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:36:52,727 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:36:52,735 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:36:52,738 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:37:09,054 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] get All Person  
+2021-06-07 10:49:43,824 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:49:43,827 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:49:43,880 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:49:43,881 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:49:43,888 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:49:43,893 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:49:47,951 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] get All Person  
+2021-06-07 10:50:08,032 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:50:08,035 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:50:08,090 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:50:08,091 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:50:08,099 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:50:08,102 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:50:11,362 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] get All Person  
+2021-06-07 10:50:15,776 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] Search Person : Persons{id=1, lastName='Boyd', firstName='John', address='1509 Culver St', zip='97451', city='Culver', phone='841-874-6512', email='jaboyd@email.com}
+2021-06-07 10:51:57,796 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4] Home
+2021-06-07 10:52:04,018 INFO c.s.a.c.PersonsController [http-nio-8080-exec-6] get All Person  
+2021-06-07 10:55:06,494 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 10:55:06,498 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 10:55:06,553 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 10:55:06,554 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 10:55:06,563 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 10:55:06,566 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 10:55:10,861 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] get All Person  
+2021-06-07 10:55:16,497 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] Search Person : id= 2 lastName= Boyd firstName=Jacob'
+2021-06-07 11:12:18,917 INFO c.s.a.c.PersonsController [http-nio-8080-exec-5] get All Person  
+2021-06-07 11:17:42,167 INFO c.s.a.c.PersonsController [http-nio-8080-exec-10] get All Person  
+2021-06-07 11:22:39,569 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:22:39,573 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:22:39,635 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:22:39,635 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:22:39,647 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:22:39,651 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:23:28,993 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:23:28,997 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:23:29,051 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:23:29,052 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:23:29,060 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:23:29,064 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:23:50,597 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:23:50,603 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:23:50,747 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:23:50,748 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:23:50,757 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:23:50,763 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:24:43,322 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:24:43,328 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:24:43,446 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:24:43,446 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:24:43,456 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:24:43,462 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:25:57,721 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3] get All Person  
+2021-06-07 11:26:19,955 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:26:19,962 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:26:20,089 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:26:20,090 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:26:20,100 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:26:20,105 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:26:51,659 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:26:51,664 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:26:51,780 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:26:51,781 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:26:51,789 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:26:51,794 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:27:19,636 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:27:19,641 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:27:19,754 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:27:19,755 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:27:19,766 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:27:19,771 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:31:46,352 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4] get All Person  
+2021-06-07 11:31:46,353 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] get All Person  
+2021-06-07 11:31:46,353 INFO c.s.a.c.PersonsController [http-nio-8080-exec-6] get All Person  
+2021-06-07 11:31:50,562 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:31:50,565 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:31:50,624 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:31:50,624 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:31:50,632 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:31:50,636 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:31:50,636 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] get All Person  
+2021-06-07 11:36:07,535 INFO c.s.a.c.PersonsController [http-nio-8080-exec-8] Search Person : Persons(id=1, firstName=John, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6512, email=jaboyd@email.com)
+2021-06-07 11:36:13,815 INFO c.s.a.c.PersonsController [http-nio-8080-exec-9] Search Person : Persons(id=2, firstName=Jacob, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6513, email=drk@email.com)
+2021-06-07 11:37:46,016 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3] get All Person  
+2021-06-07 11:39:05,991 INFO c.s.a.c.PersonsController [http-nio-8080-exec-7] Search Person : Persons(id=60, firstName=Johnny, lastName=Boydddfdsfdsf, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6512, email=jaboyd@email.com)
+2021-06-07 11:39:26,636 INFO c.s.a.c.PersonsController [http-nio-8080-exec-9] get All Person  
+2021-06-07 11:43:05,493 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:43:05,497 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:43:05,566 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:43:05,566 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:43:05,575 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:43:05,578 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:44:07,192 INFO c.s.a.c.PersonsController [http-nio-8080-exec-8] get All Person  
+2021-06-07 11:44:43,557 INFO c.s.a.c.PersonsController [http-nio-8080-exec-10] get All Person  
+2021-06-07 11:45:01,610 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] get All Person  
+2021-06-07 11:45:15,601 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] get All Person  
+2021-06-07 11:45:42,872 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3] get All Person  
+2021-06-07 11:46:03,780 INFO c.s.a.c.PersonsController [http-nio-8080-exec-5] get All Person  
+2021-06-07 11:47:26,120 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:47:26,124 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:47:26,187 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:47:26,187 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:47:26,196 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:47:26,200 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:47:30,251 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] get All Person  
+2021-06-07 11:52:29,120 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:52:29,124 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:52:29,179 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:52:29,180 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:52:29,189 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:52:29,192 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:52:41,190 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4] get All Person  
+2021-06-07 11:53:36,592 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:53:36,596 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:53:36,653 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:53:36,653 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:53:36,662 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:53:36,666 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:55:31,913 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:55:31,918 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:55:31,978 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:55:31,978 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:55:31,987 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:55:31,990 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:57:43,333 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 11:57:43,338 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 11:57:43,393 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 11:57:43,394 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 11:57:43,402 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 11:57:43,405 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 11:58:02,248 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4] get All Person  
+2021-06-07 11:58:17,829 INFO c.s.a.c.PersonsController [http-nio-8080-exec-7] Home
+2021-06-07 15:14:36,189 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 15:14:36,193 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 15:14:36,250 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 15:14:36,250 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 15:14:36,258 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 15:14:36,262 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 15:18:10,137 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 15:18:10,141 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 15:18:10,197 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 15:18:10,198 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 15:18:10,205 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 15:18:10,208 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 16:00:57,250 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 16:00:57,254 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 16:00:57,309 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 16:00:57,309 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 16:00:57,318 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 16:00:57,322 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:10:46,340 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:10:46,344 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:10:46,398 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:10:46,399 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:10:46,407 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:10:46,411 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:13:55,147 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:13:55,151 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:13:55,208 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:13:55,209 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:13:55,217 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:13:55,220 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:17:22,342 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:17:22,345 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:17:22,401 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:17:22,402 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:17:22,409 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:17:22,418 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:18:05,242 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:18:05,246 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:18:05,302 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:18:05,302 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:18:05,310 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:18:05,314 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:23:36,606 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:23:36,610 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:23:36,664 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:23:36,665 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:23:36,674 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:23:36,678 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:25:05,408 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:25:05,412 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:25:05,469 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:25:05,470 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:25:05,478 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:25:05,482 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:28:19,647 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:28:19,651 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:28:19,712 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:28:19,713 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:28:19,721 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:28:19,725 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:34:26,033 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:34:26,037 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:34:26,090 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:34:26,091 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:34:26,099 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:34:26,102 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:36:41,586 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:36:41,590 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:36:41,654 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:36:41,655 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:36:41,664 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:36:41,667 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:51:02,002 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:51:02,006 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:51:02,062 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:51:02,063 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:51:02,070 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:51:02,074 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 17:57:31,822 INFO c.s.a.c.PersonsController [http-nio-8080-exec-5] get All Person  
+2021-06-07 17:57:40,931 INFO c.s.a.c.PersonsController [http-nio-8080-exec-7] get All Person  
+2021-06-07 17:59:32,505 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 17:59:32,508 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 17:59:32,564 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 17:59:32,564 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 17:59:32,573 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 17:59:32,576 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 18:47:45,912 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 18:47:45,915 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 18:47:45,973 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 18:47:45,974 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 18:47:45,981 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 18:47:45,985 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 18:50:13,072 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 18:50:13,076 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 18:50:13,132 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 18:50:13,133 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 18:50:13,141 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 18:50:13,145 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 18:51:43,528 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 18:51:43,531 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 18:51:43,588 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 18:51:43,589 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 18:51:43,598 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 18:51:43,602 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 18:53:45,318 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 18:53:45,321 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 18:53:45,379 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 18:53:45,379 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 18:53:45,387 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 18:53:45,391 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 18:57:14,762 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 18:57:14,765 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 18:57:14,821 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 18:57:14,821 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 18:57:14,830 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 18:57:14,833 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 18:59:05,981 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 18:59:05,985 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 18:59:06,041 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 18:59:06,041 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 18:59:06,050 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 18:59:06,054 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 19:05:14,716 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 19:05:14,719 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 19:05:14,774 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 19:05:14,775 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 19:05:14,784 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 19:05:14,787 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 19:07:11,163 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 19:07:11,167 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 19:07:11,223 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 19:07:11,224 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 19:07:11,233 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 19:07:11,237 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 19:11:24,416 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 19:11:24,420 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 19:11:24,480 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 19:11:24,481 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 19:11:24,498 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 19:11:24,502 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:18:30,678 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:18:30,682 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:18:30,739 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:18:30,739 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:18:30,751 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:18:30,755 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:19:06,625 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3] READ All Person  
+2021-06-07 20:19:13,625 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2]  READ /person > Persons(id=2, firstName=Jacob, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6513, email=drk@email.com)
+2021-06-07 20:19:43,056 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4] READ All Person  
+2021-06-07 20:25:00,957 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:25:00,961 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:25:01,021 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:25:01,022 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:25:01,034 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:25:01,038 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:25:59,484 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4] READ All Person  
+2021-06-07 20:26:47,707 INFO c.s.a.c.PersonsController [http-nio-8080-exec-7] READ All Person  
+2021-06-07 20:27:17,615 INFO c.s.a.c.PersonsController [http-nio-8080-exec-8] READ All Person  
+2021-06-07 20:27:24,509 INFO c.s.a.c.PersonsController [http-nio-8080-exec-9]  CREATE /person > Persons(id=0, firstName=null, lastName=null, address=null, zip=null, city=null, phone=null, email=null)
+2021-06-07 20:28:20,455 INFO c.s.a.c.PersonsController [http-nio-8080-exec-10]  CREATE /person > Persons(id=0, firstName=null, lastName=null, address=null, zip=null, city=null, phone=null, email=null)
+2021-06-07 20:29:14,761 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-1]  READ All /medicalRecord 
+2021-06-07 20:29:29,627 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-3]  READ All /medicalRecord 
+2021-06-07 20:32:40,866 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-2]  READ All /medicalRecord 
+2021-06-07 20:34:01,880 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-6]  READ All /medicalRecord 
+2021-06-07 20:34:08,878 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-7]  READ One /medicalRecord > Optional[MedicalRecords(id=38, firstName=Jacob, lastName=Boyd, birthdate=03/06/1989, medications=["pharmacol:5000mg","terazine:10mg","noznazol:250mg"], allergies=[])]
+2021-06-07 20:35:45,275 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:35:45,285 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:35:45,344 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:35:45,345 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:35:45,357 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:35:45,361 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:37:05,842 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:37:05,846 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:37:11,415 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:37:11,419 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:37:11,473 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:37:11,474 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:37:11,492 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:37:11,496 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:40:45,500 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:40:45,503 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:40:45,557 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:40:45,558 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:40:45,578 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:40:45,581 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:41:25,290 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:41:25,295 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:41:25,346 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:41:25,347 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:41:25,367 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:41:25,371 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:41:41,094 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] READ All Person  
+2021-06-07 20:43:12,655 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:43:12,659 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:43:12,714 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:43:12,714 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:43:12,730 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:43:12,733 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:43:32,020 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] READ All Person  
+2021-06-07 20:43:42,333 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3]  READ /person > Persons(id=2, firstName=Jacob, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6513, email=drk@email.com)
+2021-06-07 20:44:24,356 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:44:24,360 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:44:24,416 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:44:24,417 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:44:24,439 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:44:24,443 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:52:21,942 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:52:21,946 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:52:22,001 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:52:22,002 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:52:22,017 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:52:22,021 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:52:25,753 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1]  CREATE /person > Persons(id=122, firstName=Jacob, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6513, email=drk@email.com)
+2021-06-07 20:53:09,278 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] READ All Person  
+2021-06-07 20:53:41,819 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4]  READ /person > Persons(id=3, firstName=Tenley, lastName=Boyd, address=1509 Culver St, zip=97451, city=Culver, phone=841-874-6512, email=tenz@email.com)
+2021-06-07 20:54:20,753 INFO c.s.a.c.PersonsController [http-nio-8080-exec-5]  UPDATE /person > Persons(id=3, firstName=Tenley, lastName=Boyd, address=1509 Culver St, zip=97401, city=Culvera, phone=841-874-6513, email=drk@email.com)
+2021-06-07 20:54:52,345 INFO c.s.a.c.PersonsController [http-nio-8080-exec-6]  DELETE /person with lastName: Boyd and firstName: Tenley
+2021-06-07 20:55:16,458 INFO c.s.a.c.PersonsController [http-nio-8080-exec-7] READ All Person  
+2021-06-07 20:55:48,952 INFO c.s.a.c.PersonsController [http-nio-8080-exec-8]  DELETE /person with lastName: Boyd and firstName: John
+2021-06-07 20:55:56,278 INFO c.s.a.c.PersonsController [http-nio-8080-exec-9] READ All Person  
+2021-06-07 20:57:15,484 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 20:57:15,488 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 20:57:15,542 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 20:57:15,543 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 20:57:15,558 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 20:57:15,561 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 20:57:29,173 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-2]  READ All /medicalRecord 
+2021-06-07 20:57:42,104 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-3]  READ One /medicalRecord > Optional[MedicalRecords(id=2, firstName=Jacob, lastName=Boyd, birthdate=03/06/1989, medications=["pharmacol:5000mg","terazine:10mg","noznazol:250mg"], allergies=[])]
+2021-06-07 20:58:09,432 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-4]  CREATE /medicalRecord > MedicalRecords(id=2, firstName=Jacob, lastName=Boyd, birthdate=03/06/1989, medications=["pharmacol:5000mg","terazine:10mg","noznazol:250mg"], allergies=[])
+2021-06-07 20:58:23,736 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-5]  READ All /medicalRecord 
+2021-06-07 20:58:50,709 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-6]  READ All /medicalRecord 
+2021-06-07 20:58:57,155 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-7]  CREATE /medicalRecord > MedicalRecords(id=0, firstName=Jacob, lastName=Boyd, birthdate=03/06/1979, medications=["pharmacol:5000mg","terazine:10mg","noznazol:250mg"], allergies=[])
+2021-06-07 21:00:02,185 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-10]  READ All /medicalRecord 
+2021-06-07 21:00:26,576 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-1]  UPDATE /medicalRecord > MedicalRecords(id=1, firstName=John, lastName=Boyd, birthdate=03/06/1980, medications=["pharmacol:5000mg","terazine:10mg","noznazol:250mg"], allergies=[])
+2021-06-07 21:00:57,621 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-2]  DELETE /medicalRecord with lastName: Boyd and firstName: John
+2021-06-07 21:01:09,908 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-4]  READ All /medicalRecord 
+2021-06-07 21:05:15,362 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-7]  CREATE /medicalRecord > MedicalRecords(id=0, firstName=Jacob, lastName=Boyd, birthdate=03/06/1980, medications=["pharmacol:5000mg","terazine:10mg","noznazol:250mg"], allergies=[])
+2021-06-07 21:05:27,536 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-8]  READ All /medicalRecord 
+2021-06-07 21:05:36,660 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-9]  CREATE /medicalRecord > MedicalRecords(id=0, firstName=Jacob, lastName=Boyd, birthdate=03/06/1980, medications=["pharmacol:5000mg","terazine:10mg","noznazol:250mg"], allergies=[])
+2021-06-07 21:07:01,377 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 21:07:01,381 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 21:07:01,436 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 21:07:01,437 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 21:07:01,453 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 21:07:01,457 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 21:07:04,524 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-2]  CREATE /medicalRecord > JacobBoyd03/06/1980
+2021-06-07 21:07:40,161 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 21:07:40,166 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 21:07:40,219 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 21:07:40,220 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 21:07:40,235 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 21:07:40,238 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 21:07:50,699 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-1]  CREATE /medicalRecord > Jacob,Boyd,03/06/1980
+2021-06-07 21:09:13,868 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 21:09:13,872 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 21:09:13,927 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 21:09:13,928 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 21:09:13,942 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 21:09:13,946 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 21:09:16,993 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-2]  CREATE /medicalRecord > FirstName: Jacob LastName: Boyd BirthDate: 03/06/1980
+2021-06-07 21:11:05,771 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 21:11:05,774 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 21:11:05,828 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 21:11:05,829 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 21:11:05,851 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 21:11:05,855 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 21:11:09,211 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-1]  CREATE /medicalRecord > FirstName: Jacob LastName: Boyd BirthDate: 03/06/1980 Medications: ["pharmacol:5000mg","terazine:10mg","noznazol:250mg"] Allergies: []
+2021-06-07 21:11:38,410 INFO c.s.a.c.MedicalsRecordsController [http-nio-8080-exec-3]  UPDATE /medicalRecord > MedicalRecords(id=24, firstName=Jacob, lastName=Boyd, birthdate=03/06/1980, medications=["pharmacolique:5000mg","terazine:10mg","noznazol:250mg"], allergies=[])
+2021-06-07 21:29:41,296 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 21:29:41,301 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 21:29:41,358 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 21:29:41,359 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 21:29:41,374 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 21:29:41,378 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-07 22:11:27,190 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-07 22:11:27,193 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-07 22:11:27,250 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-07 22:11:27,251 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-07 22:11:27,266 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-07 22:11:27,270 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2

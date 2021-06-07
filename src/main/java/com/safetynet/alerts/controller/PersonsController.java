@@ -7,6 +7,7 @@ import com.safetynet.alerts.utils.ReaderJsonPerson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -36,17 +37,30 @@ public class PersonsController {
     public String home() {
         logger.info("Home");
         return "home";
-    }
+    } //ok
 
+    //Endpoint
     /**
      * Create - Add a new person
      *
      * @param persons An object persons
      * @return The person object saved
-     */
-    @PostMapping("/createperson") //Todo a finir
+     */ //TODO KO
+    @PostMapping("/person")
     public Persons createPerson(@RequestBody Persons persons) {
+        logger.info(" CREATE /person > "+persons);
         return personsService.createPerson(persons);
+    }
+
+    /**
+     * Read - Get all persons
+     *
+     * @return - An Iterable object of Person full filled
+     */
+    @GetMapping("/person")
+    public Iterable<Persons> getPersonAll() {
+        logger.info("READ All Person  ");
+        return personsService.getPersonAll();
     }
 
     /**
@@ -59,23 +73,11 @@ public class PersonsController {
     public Persons getPersonById(@PathVariable("id") final int id) {
         Optional<Persons> persons = personsService.getPersonsById(id);
         if (persons.isPresent()) {
-            logger.info("Search Person : " + persons.get());
+            logger.info(" READ /person > " + persons.get());
             return persons.get();
         } else {
-            logger.info("Person Unknow : " + persons.get());
             return null;
         }
-    }
-
-    /**
-     * Read - Get all persons
-     *
-     * @return - An Iterable object of Person full filled
-     */
-    @GetMapping("/person")
-    public Iterable<Persons> getPersonAll() {
-        logger.info("get All Person  ");
-        return personsService.getPersonAll();
     }
 
     /**
@@ -86,27 +88,34 @@ public class PersonsController {
      * @return
      */
     @PutMapping("/person/{id}")
-    public Persons updateEmployee(@PathVariable("id") final int id, @RequestBody Persons persons) {
+    public Persons updatePerson(@PathVariable("id") final int id, @RequestBody Persons persons) {
         Optional<Persons> p = personsService.getPersonsById(id);
-        if (p.isPresent()) {
-            Persons currentPerson = p.get();
 
-            String firstName = persons.getFirstName();
-
-            if (firstName != null) {
-                currentPerson.setFirstName(firstName);
-            }
-            String lastName = persons.getLastName();
-            if (lastName != null) {
-                currentPerson.setLastName(lastName);
-
-            }
-            String mail = persons.getEmail();
-            if (mail != null) {
-                currentPerson.setEmail(mail);
-            }
-            personsService.savePerson(currentPerson);
-            return currentPerson;
+            if (p.isPresent()) {
+                Persons currentPerson = p.get();
+                String address = persons.getAddress();
+                if (address != null) {
+                    currentPerson.setAddress(address);
+                }
+                String zip = persons.getZip();
+                if (zip != null) {
+                    currentPerson.setZip(zip);
+                }
+                String city = persons.getCity();
+                if (city != null) {
+                    currentPerson.setCity(city);
+                }
+                String phone = persons.getPhone();
+                if (phone != null) {
+                    currentPerson.setPhone(phone);
+                }
+                String mail = persons.getEmail();
+                if (mail != null) {
+                    currentPerson.setEmail(mail);
+                }
+                logger.info(" UPDATE /person > "+currentPerson);
+                personsService.savePerson(currentPerson);
+                return currentPerson;
         } else {
             return null;
         }
@@ -115,24 +124,20 @@ public class PersonsController {
     /**
      * Delete - Delete an person
      *
-     * @param id - The id of the person to delete
+     * @param firstName lastName the person to delete
      */
-    @GetMapping("/person/delete/{id}")
-    public ModelAndView deleteEmployee(@PathVariable("id") final int id) {
-        Optional<Persons> p = personsService.getPersonsById(id);
-        if (p.isPresent()) {
-            personsService.deletePerson(id);
-            return new ModelAndView("redirect:/person");
-        } else {
-            return new ModelAndView("redirect:/");
-        }
-
-        //TODO écrire le log
+    @Transactional
+    @DeleteMapping("/person/{firstName}/{lastName}")
+    public void deletePersonByFirstNameAndLastName(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
+        logger.info(" DELETE /person with lastName: " + lastName + " and firstName: " + firstName);
+        personsService.deletePersonByFirstNameAndLastName(firstName, lastName);
     }
+
 
     @GetMapping(value = "/childAlert")
     public List<String> childAlert(@PathParam("address") String address) throws ParseException {
         return personsService.getChildAlert(address);
+
     }
 
     @GetMapping(value = "/fire")

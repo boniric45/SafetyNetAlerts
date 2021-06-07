@@ -1,21 +1,21 @@
 package com.safetynet.alerts.controller;
 
 import com.safetynet.alerts.model.MedicalRecords;
-import com.safetynet.alerts.model.Persons;
 import com.safetynet.alerts.service.MedicalsRecordsService;
-import com.safetynet.alerts.utils.CalculateAgeUtil;
 import com.safetynet.alerts.utils.ReadJsonMedicalRecord;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
 public class MedicalsRecordsController {
 
+    Logger logger = LogManager.getLogger(MedicalsRecordsController.class);
     @Autowired
     private MedicalsRecordsService medicalsRecordsService;
 
@@ -25,16 +25,27 @@ public class MedicalsRecordsController {
         medicalsRecordsService.listSaveMedicalrecords(list);
     }
 
-
     /**
      * Create - Add a new MedicalRecord
      *
      * @param medicalRecords An object persons
      * @return The medicalRecord object saved
      */
-    @PostMapping("/medicalRecord")
+    @PostMapping("/medicalRecord")//ok
     public MedicalRecords createMedicalRecord(@RequestBody MedicalRecords medicalRecords) {
+        logger.info(" CREATE /medicalRecord > FirstName: " + medicalRecords.getFirstName() + " LastName: " + medicalRecords.getLastName() + " BirthDate: " + medicalRecords.getBirthdate() + " Medications: " + medicalRecords.getMedications() + " Allergies: " + medicalRecords.getAllergies());
         return medicalsRecordsService.createMedicalRecord(medicalRecords);
+    }
+
+    /**
+     * Read - Get all medicalRecord
+     *
+     * @return An MedicalRecord object full filled
+     */
+    @GetMapping("/medicalRecord")//ok
+    public Iterable<MedicalRecords> getMedicalRecordsAll() {
+        logger.info(" READ All /medicalRecord ");
+        return medicalsRecordsService.getMedicalRecordsAll();
     }
 
     /**
@@ -43,28 +54,44 @@ public class MedicalsRecordsController {
      * @param id The id of the medicalRecord
      * @return An MedicalRecord object full filled
      */
-    @GetMapping("/medicalRecord/{id}")
+    @GetMapping("/medicalRecord/{id}")//ok
     public MedicalRecords getMedicalRecordsById(@PathVariable("id") final int id) {
         Optional<MedicalRecords> medicalRecords = medicalsRecordsService.getMedicalRecordsById(id);
-        if (medicalRecords.isPresent()) {
-            return medicalRecords.get();
-        } else {
-            return null;
-        }
+        logger.info(" READ One /medicalRecord > " + medicalRecords);
+        return medicalRecords.orElse(null);
     }
 
     /**
      * Update - Update an existing medicalRecord
      *
-     * @param id      - The id of the medicalRecord to update
+     * @param id             - The id of the medicalRecord to update
      * @param medicalRecords - The medicalRecord object updated
      * @return
      */
-    @PutMapping("/medicalRecord/{id}")
-    public MedicalRecords updateMedicalRecords(@PathVariable("id") final int id, @RequestBody MedicalRecords medicalRecords) {
+    @PutMapping("/medicalRecord/{id}") //ok
+    public MedicalRecords updateMedicalRecord(@PathVariable("id") final int id, @RequestBody MedicalRecords medicalRecords) {
         Optional<MedicalRecords> mr = medicalsRecordsService.getMedicalRecordsById(id);
         if (mr.isPresent()) {
-            return mr.get();
+            MedicalRecords currentMedical = mr.get();
+
+            String birthdate = medicalRecords.getBirthdate();
+            if (birthdate != null) {
+                currentMedical.setBirthdate(birthdate);
+            }
+
+            String medications = medicalRecords.getMedications();
+            if (medications != null) {
+                currentMedical.setMedications(medications);
+            }
+
+            String allergies = medicalRecords.getAllergies();
+            if (allergies != null) {
+                currentMedical.setAllergies(allergies);
+            }
+            medicalsRecordsService.saveMedicalRecord(currentMedical);
+            logger.info(" UPDATE /medicalRecord > " + currentMedical);
+            return currentMedical;
+
         } else {
             return null;
         }
@@ -73,28 +100,17 @@ public class MedicalsRecordsController {
     /**
      * Delete - Delete an medicalRecord
      *
-     * @param id - The id of the medicalRecord to delete
+     * @param - The FirstName and LastName of the medicalRecord to delete
      */
-    @GetMapping("/medicalRecord/delete/{id}") // ok
-    public ModelAndView deleteMedicalRecord(@PathVariable("id") final int id) {
-        Optional<MedicalRecords> mr = medicalsRecordsService.getMedicalRecordsById(id);
-        if (mr.isPresent()) {
-            medicalsRecordsService.deleteMedicalRecord(id);
-            return new ModelAndView("redirect:/medicalRecord");
-        } else {
-            return null;
-        }
-
-        //TODO écrire le log
+    @Transactional
+    @DeleteMapping("/medicalRecord/{firstName}/{lastName}")
+    public void deleteMedicalRecordByFirstNameAndLastName(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
+        logger.info(" DELETE /medicalRecord with lastName: " + lastName + " and firstName: " + firstName);
+        medicalsRecordsService.deleteMedicalRecordByFirstNameAndLastName(firstName, lastName);
     }
 
-
-//    http://localhost:8080/medicalRecord
-//    Cet endpoint permettra d’effectuer les actions suivantes via Post/Put/Delete HTTP :
-//            ● ajouter un dossier médical ;
-//● mettre à jour un dossier médical existant (comme évoqué précédemment, supposer que le
-//            prénom et le nom de famille ne changent pas) ;
-//● supprimer un dossier médical (utilisez une combinaison de prénom et de nom comme
-//            identificateur unique).
-
 }
+
+
+
+

@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.websocket.server.PathParam;
 import java.text.ParseException;
@@ -40,9 +39,9 @@ public class FireStationsController {
      */
     @PostMapping("/firestation")
     public FireStations createFirestation(@RequestBody FireStations fireStations) {
+        logger.info(" CREATE /firestation > " + fireStations);
         return fireStationsService.createFirestation(fireStations);
     }
-
 
     /**
      * Read - Get one firestation
@@ -53,6 +52,7 @@ public class FireStationsController {
     @GetMapping("/firestation/{id}")
     public FireStations getFirestationById(@PathVariable("id") final int id) {
         Optional<FireStations> fireStations = fireStationsService.getFirestationsById(id);
+        logger.info(" READ /firestation > " + fireStations.get());
         return fireStations.orElse(null);
     }
 
@@ -61,56 +61,65 @@ public class FireStationsController {
      *
      * @param id           - The id of the firestation to update
      * @param fireStations - The firestation object updated
-     * @return
+     * @return fs
      */
     @PutMapping("/firestation/{id}")
     public FireStations updateFirestations(@PathVariable("id") final int id, @RequestBody FireStations fireStations) {
         Optional<FireStations> firestation = fireStationsService.getFirestationsById(id);
-        return firestation.orElse(null);
-    }
 
-    /**
-     * Delete - Delete an firestation
-     *
-     * @param id - The id of the firestation to delete
-     */
-    @GetMapping("/firestation/delete/{id}") // ok
-    public ModelAndView deleteFirestations(@PathVariable("id") final int id) {
-        Optional<FireStations> fireStations = fireStationsService.getFirestationsById(id);
-        if (fireStations.isPresent()) {
-            fireStationsService.deleteFirestation(id);
+        if (firestation.isPresent()) {
+            FireStations fs = firestation.get();
+
+            String station = fs.getStation();
+            if (station != null) {
+                fs.setStation(station);
+            }
+
+            String address = fs.getAddress();
+            if (address != null) {
+                fs.setAddress(address);
+            }
+            logger.info(" UPDATE /firestation > " + fs);
+            fireStationsService.saveFirestation(fs);
+            return fs;
         } else {
             return null;
         }
-        return new ModelAndView("redirect:/firestation");
-        //TODO écrire le log
     }
+
+//    /**
+//     * Delete - Delete an firestation
+//     *
+//     * @param stationNumber - The station of the firestation to delete
+//     */
+//    @DeleteMapping("/firestation/{station}")
+//    public void deleteFirestations(@PathVariable("station") String stationNumber) {
+//        logger.info(" DELETE /firestation > " + stationNumber);
+//        fireStationsService.deleteFireStationByStationNumber(stationNumber);
+//    }
+
+
+
 
     //URL
     @GetMapping(value = "/firestation")
     public List<String> getFirestationsFromStation(@PathParam("stationNumber") String stationNumber) throws ParseException {
-        logger.info("requête GET sur le endpoint /firestation avec le paramètre station: " + stationNumber);
+        logger.info("Query GET Endpoint /firestation with param station: " + stationNumber);
         fireStationsService.getFireStationsList().clear();
         return fireStationsService.getFirestationsFromStationNumber(stationNumber);
     }
 
     @GetMapping(value = "/phoneAlert")
     public List<String> getPhoneAlert(@PathParam("firestation") String firestation) throws ParseException {
-        logger.info("requête GET sur le endpoint /phoneAlert avec le paramètre firestation: " + firestation);
+        logger.info("Query GET Endpoint /phoneAlert with param firestation: " + firestation);
         return fireStationsService.getPhoneAlert(firestation);
     }
 
     @GetMapping(value = "/flood/stations")
     public List<String> getFloodStations(@PathParam("stations") String stations) throws ParseException {
-        logger.info("requête GET sur le endpoint /flood/stations avec le paramètre stations: " + stations);
+        logger.info("Query GET Endpoint /flood/stations with param stations: " + stations);
         return fireStationsService.getFloodStations(stations);
     }
-
-//    http://localhost:8080/firestation
-//    Cet endpoint permettra d’effectuer les actions suivantes via Post/Put/Delete avec HTTP :
-//            ● ajout d'un mapping caserne/adresse ;
-//            ● mettre à jour le numéro de la caserne de pompiers d'une adresse ;
-//            ● supprimer le mapping d'une caserne ou d'une adresse.
 
 
 }

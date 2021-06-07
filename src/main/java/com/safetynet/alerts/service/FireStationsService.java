@@ -55,7 +55,7 @@ public class FireStationsService {
     }
 
     /**
-     * Update - Update an existing firestation
+     * Read  an existing firestation
      *
      * @param id - The id of the firestation to update
      * @return
@@ -64,14 +64,16 @@ public class FireStationsService {
         return fireStationsRepository.findById(id);
     }
 
-    /**
-     * Delete - Delete an firestation
-     *
-     * @param id - The id of the firestation to delete
-     */
-    public void deleteFirestation(final int id) {
-        fireStationsRepository.deleteById(id);
-    }
+
+//    /**
+//     * Delete - Delete an firestation
+//     *
+//     * @param stationNumber - The station number of the firestation to delete
+//     */
+//    public void deleteFireStationByStationNumber(String stationNumber) {
+//        fireStationsRepository.deleteByStationNumber(stationNumber);
+//    }
+
 
 
     //URL
@@ -179,4 +181,10 @@ public class FireStationsService {
         }
         return fireStationsList;
     }
+
+    public void saveFirestation(FireStations fs) {
+        fireStationsRepository.save(fs);
+    }
+
+
 }

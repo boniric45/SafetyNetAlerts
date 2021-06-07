@@ -40,7 +40,6 @@ public class PersonsService {
     private MedicalRecords medicalRecords;
 
 
-
     /**
      * Create - Add a new person
      *
@@ -73,10 +72,10 @@ public class PersonsService {
     /**
      * Delete - Delete an person
      *
-     * @param id - The id of the person to delete
+     * @param firstName lastName of the person to delete
      */
-    public void deletePerson(final int id) {
-        personsRepository.deleteById(id);
+    public void deletePersonByFirstNameAndLastName(String firstName, String lastName) {
+        personsRepository.deletePersonByFirstNameAndLastName(firstName,lastName);
     }
 
     public Persons savePerson(Persons persons) {
@@ -202,4 +201,5 @@ public class PersonsService {
         return personsList;
     }
 
-  }
+
+}

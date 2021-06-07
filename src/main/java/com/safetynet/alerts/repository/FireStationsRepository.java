@@ -11,6 +11,6 @@ public interface FireStationsRepository extends CrudRepository<FireStations, Str
 
     Optional<FireStations> findById(int id);
 
-    void deleteById(int id);
+//    void deleteByStationNumber(String stationNumber);
 
 }
