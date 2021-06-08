@@ -9,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.websocket.server.PathParam;
 import java.text.ParseException;
@@ -40,6 +39,7 @@ public class PersonsController {
     } //ok
 
     //Endpoint
+
     /**
      * Create - Add a new person
      *
@@ -48,7 +48,11 @@ public class PersonsController {
      */ //TODO KO
     @PostMapping("/person")
     public Persons createPerson(@RequestBody Persons persons) {
-        logger.info(" CREATE /person > "+persons);
+
+        if (persons == null) {
+            logger.error(" CREATE /person > Error ");
+        }
+        logger.info(" CREATE /person > " + persons);
         return personsService.createPerson(persons);
     }
 
@@ -76,6 +80,7 @@ public class PersonsController {
             logger.info(" READ /person > " + persons.get());
             return persons.get();
         } else {
+            logger.error(" READ one person /person > Error ");
             return null;
         }
     }
@@ -85,38 +90,39 @@ public class PersonsController {
      *
      * @param id      - The id of the person to update
      * @param persons - The person object updated
-     * @return
+     * @return currentPerson
      */
     @PutMapping("/person/{id}")
     public Persons updatePerson(@PathVariable("id") final int id, @RequestBody Persons persons) {
         Optional<Persons> p = personsService.getPersonsById(id);
 
-            if (p.isPresent()) {
-                Persons currentPerson = p.get();
-                String address = persons.getAddress();
-                if (address != null) {
-                    currentPerson.setAddress(address);
-                }
-                String zip = persons.getZip();
-                if (zip != null) {
-                    currentPerson.setZip(zip);
-                }
-                String city = persons.getCity();
-                if (city != null) {
-                    currentPerson.setCity(city);
-                }
-                String phone = persons.getPhone();
-                if (phone != null) {
-                    currentPerson.setPhone(phone);
-                }
-                String mail = persons.getEmail();
-                if (mail != null) {
-                    currentPerson.setEmail(mail);
-                }
-                logger.info(" UPDATE /person > "+currentPerson);
-                personsService.savePerson(currentPerson);
-                return currentPerson;
+        if (p.isPresent()) {
+            Persons currentPerson = p.get();
+            String address = persons.getAddress();
+            if (address != null) {
+                currentPerson.setAddress(address);
+            }
+            String zip = persons.getZip();
+            if (zip != null) {
+                currentPerson.setZip(zip);
+            }
+            String city = persons.getCity();
+            if (city != null) {
+                currentPerson.setCity(city);
+            }
+            String phone = persons.getPhone();
+            if (phone != null) {
+                currentPerson.setPhone(phone);
+            }
+            String mail = persons.getEmail();
+            if (mail != null) {
+                currentPerson.setEmail(mail);
+            }
+            logger.info(" UPDATE /person > " + currentPerson);
+            personsService.savePerson(currentPerson);
+            return currentPerson;
         } else {
+            logger.error(" UPDATE /person > Error ");
             return null;
         }
     }
@@ -129,6 +135,10 @@ public class PersonsController {
     @Transactional
     @DeleteMapping("/person/{firstName}/{lastName}")
     public void deletePersonByFirstNameAndLastName(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
+        if (firstName.equals(null)||lastName.equals(null))
+        {
+            logger.error("DELETE /person > Error");
+        }
         logger.info(" DELETE /person with lastName: " + lastName + " and firstName: " + firstName);
         personsService.deletePersonByFirstNameAndLastName(firstName, lastName);
     }
@@ -136,6 +146,11 @@ public class PersonsController {
 
     @GetMapping(value = "/childAlert")
     public List<String> childAlert(@PathParam("address") String address) throws ParseException {
+
+        if (address == null){
+            logger.error(" Error /childAlert > "+address);
+        }
+        logger.info(" Success /childAlert");
         return personsService.getChildAlert(address);
 
     }

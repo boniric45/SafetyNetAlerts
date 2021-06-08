@@ -31,7 +31,7 @@ public class MedicalsRecordsController {
      * @param medicalRecords An object persons
      * @return The medicalRecord object saved
      */
-    @PostMapping("/medicalRecord")//ok
+    @PostMapping("/medicalRecord")
     public MedicalRecords createMedicalRecord(@RequestBody MedicalRecords medicalRecords) {
         logger.info(" CREATE /medicalRecord > FirstName: " + medicalRecords.getFirstName() + " LastName: " + medicalRecords.getLastName() + " BirthDate: " + medicalRecords.getBirthdate() + " Medications: " + medicalRecords.getMedications() + " Allergies: " + medicalRecords.getAllergies());
         return medicalsRecordsService.createMedicalRecord(medicalRecords);
@@ -42,7 +42,7 @@ public class MedicalsRecordsController {
      *
      * @return An MedicalRecord object full filled
      */
-    @GetMapping("/medicalRecord")//ok
+    @GetMapping("/medicalRecord")
     public Iterable<MedicalRecords> getMedicalRecordsAll() {
         logger.info(" READ All /medicalRecord ");
         return medicalsRecordsService.getMedicalRecordsAll();
@@ -54,7 +54,7 @@ public class MedicalsRecordsController {
      * @param id The id of the medicalRecord
      * @return An MedicalRecord object full filled
      */
-    @GetMapping("/medicalRecord/{id}")//ok
+    @GetMapping("/medicalRecord/{id}")
     public MedicalRecords getMedicalRecordsById(@PathVariable("id") final int id) {
         Optional<MedicalRecords> medicalRecords = medicalsRecordsService.getMedicalRecordsById(id);
         logger.info(" READ One /medicalRecord > " + medicalRecords);
@@ -68,7 +68,7 @@ public class MedicalsRecordsController {
      * @param medicalRecords - The medicalRecord object updated
      * @return
      */
-    @PutMapping("/medicalRecord/{id}") //ok
+    @PutMapping("/medicalRecord/{id}")
     public MedicalRecords updateMedicalRecord(@PathVariable("id") final int id, @RequestBody MedicalRecords medicalRecords) {
         Optional<MedicalRecords> mr = medicalsRecordsService.getMedicalRecordsById(id);
         if (mr.isPresent()) {

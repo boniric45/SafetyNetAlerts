@@ -1,4 +1,4 @@
-package com.safetynet.alerts;
+package com.safetynet.alerts.testUnitaire;
 
 import com.safetynet.alerts.service.PersonsService;
 import org.junit.jupiter.api.Disabled;
@@ -17,13 +17,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class EndpointTest {
-
-    @Autowired
-    private MockMvc mockMvc;
+public class UrlTest {
 
     @MockBean
     PersonsService personsService;
+    @Autowired
+    private MockMvc mockMvc;
+
+
 
     @Test
     public void testEndpointFirestationStationNumber() throws Exception {
@@ -60,24 +61,6 @@ public class EndpointTest {
     public void testEndpointCommunityEmail() throws Exception {
         when(personsService.communityEmail(anyString())).thenReturn(anyList());
         mockMvc.perform(get("/communityEmail?city=Culver"))
-                .andExpect(status().isOk());
-    }
-
-    @Test
-    public void testEndpointGetPersons() throws Exception {
-        mockMvc.perform(get("/person"))
-                .andExpect(status().isOk());
-    }
-
-    @Test
-    public void testEndpointGetFirestation() throws Exception {
-        mockMvc.perform(get("/firestation"))
-                .andExpect(status().isOk());
-    }
-    @Disabled
-    @Test
-    public void testEndpointGetMedicalRecords() throws Exception {
-        mockMvc.perform(get("/medicalRecord"))
                 .andExpect(status().isOk());
     }
 

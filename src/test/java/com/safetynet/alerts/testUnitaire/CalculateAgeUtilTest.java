@@ -1,4 +1,4 @@
-package com.safetynet.alerts;
+package com.safetynet.alerts.testUnitaire;
 
 import com.safetynet.alerts.utils.CalculateAgeUtil;
 import org.junit.jupiter.api.Assertions;

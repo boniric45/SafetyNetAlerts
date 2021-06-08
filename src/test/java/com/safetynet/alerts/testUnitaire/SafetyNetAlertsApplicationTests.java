@@ -1,4 +1,4 @@
-package com.safetynet.alerts;
+package com.safetynet.alerts.testUnitaire;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
