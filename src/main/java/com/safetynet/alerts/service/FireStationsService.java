@@ -65,14 +65,14 @@ public class FireStationsService {
     }
 
 
-//    /**
-//     * Delete - Delete an firestation
-//     *
-//     * @param stationNumber - The station number of the firestation to delete
-//     */
-//    public void deleteFireStationByStationNumber(String stationNumber) {
-//        fireStationsRepository.deleteByStationNumber(stationNumber);
-//    }
+    /**
+     * Delete - Delete an firestation
+     *
+     * @param address - The station address of the firestation to delete
+     */
+    public void deleteFireStationStationByAddress(String station , String address) {
+        fireStationsRepository.deleteFirestationByStationAndAddress(station,address);
+    }
 
 
 

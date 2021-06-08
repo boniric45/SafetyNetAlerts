@@ -541,3 +541,166 @@
 2021-06-07 22:11:27,251 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
 2021-06-07 22:11:27,266 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
 2021-06-07 22:11:27,270 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 08:28:43,698 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:28:43,703 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:28:43,758 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:28:43,758 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:28:43,773 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 08:28:43,776 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 08:49:26,450 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:49:26,454 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:49:26,509 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:49:26,509 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:49:26,524 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 08:49:26,528 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 08:50:52,905 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:50:52,910 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:50:52,962 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:50:52,963 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:50:52,978 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 08:50:52,982 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 08:53:23,260 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:53:23,264 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:53:23,323 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:53:23,324 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:53:23,339 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 08:53:23,343 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 08:54:32,679 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:54:32,683 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:54:32,734 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:54:32,734 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:54:32,750 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 08:54:32,759 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 08:56:19,131 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:56:19,135 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:56:19,189 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:56:19,190 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:56:19,203 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 08:56:19,207 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 08:57:08,954 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:57:08,958 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:57:09,015 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:57:09,016 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:57:09,018 ERROR o.h.e.j.s.SqlExceptionHelper [main] Table "FIRESTATION" non trouvée
+Table "FIRESTATION" not found; SQL statement:
+select firestatio0_.id as id1_0_0_, firestatio0_.address as address2_0_0_, firestatio0_.station as station3_0_0_ from firestation firestatio0_ where firestatio0_.id=? [42102-200]
+2021-06-08 08:57:30,869 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:57:30,873 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:57:30,928 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:57:30,929 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:57:30,940 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 08:57:30,944 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 08:58:34,720 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 08:58:34,724 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 08:58:34,779 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 08:58:34,780 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 08:58:34,797 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 08:58:34,801 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:03:04,234 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:03:04,237 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:03:04,294 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:03:04,295 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:03:04,309 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:03:04,313 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:15:48,933 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:15:48,937 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:15:48,990 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:15:48,991 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:15:49,007 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:15:49,011 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:22:59,167 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:22:59,170 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:22:59,222 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:22:59,223 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:22:59,239 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:22:59,242 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:28:01,384 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:28:01,389 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:28:01,444 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:28:01,444 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:28:01,461 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:28:01,464 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:34:35,667 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:34:35,671 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:34:35,726 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:34:35,727 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:34:35,742 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:34:35,746 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:37:02,752 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:37:02,756 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:37:02,812 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:37:02,813 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:37:02,829 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:37:02,833 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:37:37,718 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:37:37,723 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:37:37,782 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:37:37,783 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:37:37,800 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:37:37,805 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:38:23,575 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:38:23,580 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:38:23,639 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:38:23,640 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:38:23,657 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:38:23,661 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:43:34,625 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:43:34,629 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:43:34,690 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:43:34,690 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:43:34,707 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:43:34,711 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:44:25,678 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:44:25,682 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:44:25,739 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:44:25,740 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:44:25,755 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:44:25,758 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:51:20,547 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:51:20,550 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:51:20,605 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:51:20,606 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:51:20,620 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:51:20,623 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:53:03,489 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:53:03,493 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:53:03,547 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:53:03,548 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:53:03,563 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:53:03,566 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:55:28,593 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:55:28,597 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:55:28,652 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:55:28,653 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:55:28,669 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:55:28,673 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:56:26,436 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:56:26,440 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:56:26,492 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:56:26,493 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:56:26,509 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:56:26,514 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 09:57:06,195 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 09:57:06,199 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 09:57:06,251 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 09:57:06,252 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 09:57:06,268 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 09:57:06,271 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 10:50:10,761 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 10:50:10,765 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 10:50:10,823 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 10:50:10,824 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 10:50:10,840 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 10:50:10,843 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 10:51:29,195 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 10:51:29,199 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 10:51:29,258 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 10:51:29,258 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 10:51:29,271 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 10:51:29,275 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-08 10:51:45,567 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-08 10:51:45,571 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-08 10:51:45,635 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-08 10:51:45,635 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-08 10:51:45,648 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-08 10:51:45,652 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2

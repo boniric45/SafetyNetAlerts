@@ -7,6 +7,7 @@ import com.safetynet.alerts.utils.ReadJsonFirestation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
@@ -14,7 +15,6 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 
 @RestController
 public class FireStationsController {
@@ -42,6 +42,17 @@ public class FireStationsController {
         logger.info(" CREATE /firestation > " + fireStations);
         return fireStationsService.createFirestation(fireStations);
     }
+
+    /**
+     * Read - Get all firestation
+     *
+     * @return An firestation object full filled
+     */
+    @GetMapping("/firestations")
+    public Iterable<FireStations> getAllFirestation(){
+        return fireStationsService.getFirestationAll();
+    }
+
 
     /**
      * Read - Get one firestation
@@ -87,16 +98,17 @@ public class FireStationsController {
         }
     }
 
-//    /**
-//     * Delete - Delete an firestation
-//     *
-//     * @param stationNumber - The station of the firestation to delete
-//     */
-//    @DeleteMapping("/firestation/{station}")
-//    public void deleteFirestations(@PathVariable("station") String stationNumber) {
-//        logger.info(" DELETE /firestation > " + stationNumber);
-//        fireStationsService.deleteFireStationByStationNumber(stationNumber);
-//    }
+    /**
+     * Delete - Delete an firestation
+     *
+     * @param address - The station of the firestation to delete
+     */
+    @Transactional
+    @DeleteMapping("/firestation/{station}/{address}")
+    public void deleteFirestations(@PathVariable("station") String station, @PathVariable("address") String address ) {
+    logger.info(" DELETE /firestation > Station: "+station+" Address: " + address);
+    fireStationsService.deleteFireStationStationByAddress(station,address);
+    }
 
 
 

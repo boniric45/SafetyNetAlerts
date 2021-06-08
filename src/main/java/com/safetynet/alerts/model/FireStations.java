@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class FireStations {
 
     @Id //autoincrement id key primary
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String station;
     private String address;
