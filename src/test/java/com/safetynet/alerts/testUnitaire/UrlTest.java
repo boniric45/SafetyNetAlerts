@@ -1,7 +1,6 @@
 package com.safetynet.alerts.testUnitaire;
 
 import com.safetynet.alerts.service.PersonsService;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -13,6 +12,7 @@ import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -25,14 +25,11 @@ public class UrlTest {
     @Autowired
     private MockMvc mockMvc;
 
-
-
     @Test
     public void testEndpointFirestationStationNumber() throws Exception {
         mockMvc.perform(get("/firestation?stationNumber=1"))
                 .andExpect(status().isOk());
     }
-
 
     @Test
     public void testEndpointChildAlert() throws Exception {

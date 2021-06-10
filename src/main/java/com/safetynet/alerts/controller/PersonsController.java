@@ -135,7 +135,7 @@ public class PersonsController {
     @Transactional
     @DeleteMapping("/person/{firstName}/{lastName}")
     public void deletePersonByFirstNameAndLastName(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
-        if (firstName.equals(null)||lastName.equals(null))
+        if (firstName == null || lastName == null)
         {
             logger.error("DELETE /person > Error");
         }
@@ -147,9 +147,6 @@ public class PersonsController {
     @GetMapping(value = "/childAlert")
     public List<String> childAlert(@PathParam("address") String address) throws ParseException {
 
-        if (address == null){
-            logger.error(" Error /childAlert > "+address);
-        }
         logger.info(" Success /childAlert");
         return personsService.getChildAlert(address);
 

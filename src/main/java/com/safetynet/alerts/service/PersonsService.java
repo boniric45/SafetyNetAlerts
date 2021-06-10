@@ -63,7 +63,7 @@ public class PersonsService {
      * Update - Update an existing person
      *
      * @param id - The id of the person to update
-     * @return
+     * @return Optional<Persons>
      */
     public Optional<Persons> getPersonsById(int id) {
         return personsRepository.findById(id);
@@ -78,13 +78,12 @@ public class PersonsService {
         personsRepository.deletePersonByFirstNameAndLastName(firstName,lastName);
     }
 
-    public Persons savePerson(Persons persons) {
-        return personsRepository.save(persons);
+    public void savePerson(Persons persons) {
+        personsRepository.save(persons);
     }
 
-    public Iterable<Persons> listSave(List<Persons> list) {
+    public void listSave(List<Persons> list) {
         personsRepository.saveAll(list);
-        return list;
     }
 
     public List<String> communityEmail(final String city) {
@@ -104,7 +103,7 @@ public class PersonsService {
         personListAdult.clear();
         personListChildren.clear();
         personsList.clear();
-        long age = 0;
+        long age;
 
         for (Persons ps : personsIterable) {
             String lastNamePs = ps.getLastName();
@@ -139,7 +138,7 @@ public class PersonsService {
         Iterable<Persons> personsIterable = personsRepository.findAllByAddress(address);
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsRepository.findAll();
         Iterable<FireStations> fireStationsIterable = fireStationsRepository.findAll();
-        long age = 0;
+        long age;
         for (Persons ps : personsIterable){
             String lastNamePs = ps.getLastName();
             String firstNamePs = ps.getFirstName();
@@ -171,13 +170,13 @@ public class PersonsService {
         personsList.clear();
         Iterable<Persons> personsIterable = personsRepository.findAll();
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsRepository.findAll();
-        String firstNamePs = null;
-        String lastNamePs = null;
-        String mailPs = null;
-        String addressPs = null;
+        String firstNamePs;
+        String lastNamePs;
+        String mailPs;
+        String addressPs;
         String medication = null;
         String allergies = null;
-        String birthDate = null;
+        String birthDate;
         long age = 0;
 
         for (Persons ps : personsIterable){
