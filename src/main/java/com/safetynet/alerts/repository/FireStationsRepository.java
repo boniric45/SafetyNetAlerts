@@ -10,5 +10,5 @@ public interface FireStationsRepository extends CrudRepository<FireStations, Str
     Iterable<FireStations> findAllByStation(String station);
     Optional<FireStations> findById(int id);
 
-    void deleteFirestationByStationAndAddress(String station, String address);
+    void deleteFirestationByStationAndAddress(final String station,final String address);
 }

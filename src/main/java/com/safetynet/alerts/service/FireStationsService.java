@@ -71,7 +71,9 @@ public class FireStationsService {
      * @param address - The station address of the firestation to delete
      */
     public void deleteFireStationStationByAddress(String station , String address) {
-        fireStationsRepository.deleteFirestationByStationAndAddress(station,address);
+
+            fireStationsRepository.deleteFirestationByStationAndAddress(station,address);
+
     }
 
 

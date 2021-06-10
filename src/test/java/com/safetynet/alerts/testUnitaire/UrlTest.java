@@ -21,6 +21,7 @@ public class UrlTest {
 
     @MockBean
     PersonsService personsService;
+
     @Autowired
     private MockMvc mockMvc;
 
@@ -32,25 +33,25 @@ public class UrlTest {
                 .andExpect(status().isOk());
     }
 
-    @Disabled
+
     @Test
     public void testEndpointChildAlert() throws Exception {
         mockMvc.perform(get("/childAlert?address="))
                 .andExpect(status().isOk());
     }
-    @Disabled
+
     @Test
     public void testEndpointPhoneAlert() throws Exception {
         mockMvc.perform(get("/phoneAlert?firestation="))
                 .andExpect(status().isOk());
     }
-    @Disabled
+
     @Test
     public void testEndpointFireAdress() throws Exception {
         mockMvc.perform(get("/fire?address="))
                 .andExpect(status().isOk());
     }
-    @Disabled
+
     @Test
     public void testEndpointFloodStations() throws Exception {
         mockMvc.perform(get("/flood/stations?stations= "))
