@@ -1,10 +1,13 @@
 package com.safetynet.alerts.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Data //ajout auto getter setter
+@Getter
+@Setter
 @Entity //Table bdd
 @Table(name = "persons") //Table associé
 public class Persons {

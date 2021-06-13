@@ -1,10 +1,12 @@
 package com.safetynet.alerts.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Data //charge getter & setter
+@Getter
+@Setter
 @Entity //data table
 @Table(name = "medicalrecords") //name table
 public class MedicalRecords {

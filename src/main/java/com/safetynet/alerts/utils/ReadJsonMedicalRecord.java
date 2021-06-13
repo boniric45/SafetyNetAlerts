@@ -41,7 +41,6 @@ public class ReadJsonMedicalRecord {
                 String allergies = (String) jo.get("allergies").toString();
                 String birthdate = (String) jo.get("birthdate");
 
-
                 if (DateChecker.isValid(birthdate)) {
                     medicalRecords.setBirthdate(birthdate);
                     medicalRecords.setId(id);
@@ -50,12 +49,7 @@ public class ReadJsonMedicalRecord {
                     medicalRecords.setMedications(medications);
                     medicalRecords.setAllergies(allergies);
                 } else {
-                    medicalRecords.setBirthdate(null);
-                    medicalRecords.setId(id);
-                    medicalRecords.setFirstName(firstName);
-                    medicalRecords.setLastName(lastName);
-                    medicalRecords.setMedications(medications);
-                    medicalRecords.setAllergies(allergies);
+                    return null;
                 }
 
                 medicalRecords = new MedicalRecords(id, firstName, lastName, birthdate, medications, allergies);

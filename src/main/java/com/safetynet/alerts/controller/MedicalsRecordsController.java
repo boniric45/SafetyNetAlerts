@@ -25,6 +25,7 @@ public class MedicalsRecordsController {
         medicalsRecordsService.listSaveMedicalrecords(list);
     }
 
+
     /**
      * Create - Add a new MedicalRecord
      *

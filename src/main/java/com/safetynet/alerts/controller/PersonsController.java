@@ -36,16 +36,15 @@ public class PersonsController {
     public String home() {
         logger.info("Home");
         return "home";
-    } //ok
+    }
 
     //Endpoint
-
     /**
      * Create - Add a new person
      *
      * @param persons An object persons
      * @return The person object saved
-     */ //TODO KO
+     */
     @PostMapping("/person")
     public Persons createPerson(@RequestBody Persons persons) {
 
@@ -143,7 +142,6 @@ public class PersonsController {
         personsService.deletePersonByFirstNameAndLastName(firstName, lastName);
     }
 
-
     @GetMapping(value = "/childAlert")
     public List<String> childAlert(@PathParam("address") String address) throws ParseException {
 
@@ -158,7 +156,7 @@ public class PersonsController {
     }
 
     @GetMapping(value = "/communityEmail")
-    public List communityEmail(@PathParam("city") String city) {
+    public List<String>  communityEmail(@PathParam("city") String city) {
         return personsService.communityEmail(city);
     }
 

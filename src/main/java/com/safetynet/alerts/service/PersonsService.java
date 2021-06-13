@@ -8,6 +8,8 @@ import com.safetynet.alerts.repository.MedicalsRecordsRepository;
 import com.safetynet.alerts.repository.PersonsRepository;
 import com.safetynet.alerts.utils.CalculateAgeUtil;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Data
+@Getter
+@Setter
 @Service
 public class PersonsService {
 
@@ -38,7 +41,6 @@ public class PersonsService {
 
     private Persons Persons;
     private MedicalRecords medicalRecords;
-
 
     /**
      * Create - Add a new person
@@ -87,9 +89,10 @@ public class PersonsService {
     }
 
     public List<String> communityEmail(final String city) {
-        Iterable<Persons> personsIterable = personsRepository.findAllByCity(city);
+        personsList.clear();
+        Iterable<Persons> personsIterable = personsRepository.findMailByCity(city);
+
         for (Persons persons : personsIterable) {
-            personsList.add(persons.getEmail());
             if (!personsList.contains(persons.getEmail())) {
                 personsList.add(persons.getEmail());
             }
@@ -199,6 +202,5 @@ public class PersonsService {
         }
         return personsList;
     }
-
 
 }

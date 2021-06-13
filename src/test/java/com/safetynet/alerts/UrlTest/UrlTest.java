@@ -1,4 +1,4 @@
-package com.safetynet.alerts.testUnitaire;
+package com.safetynet.alerts.UrlTest;
 
 import com.safetynet.alerts.service.PersonsService;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,6 @@ import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -26,41 +25,40 @@ public class UrlTest {
     private MockMvc mockMvc;
 
     @Test
-    public void testEndpointFirestationStationNumber() throws Exception {
+    public void testUrlFirestationStationNumber() throws Exception {
         mockMvc.perform(get("/firestation?stationNumber=1"))
                 .andExpect(status().isOk());
     }
 
     @Test
-    public void testEndpointChildAlert() throws Exception {
-        mockMvc.perform(get("/childAlert?address="))
+    public void testUrlChildAlert() throws Exception {
+        mockMvc.perform(get("/childAlert?address=834 Binoc Ave"))
                 .andExpect(status().isOk());
     }
 
     @Test
-    public void testEndpointPhoneAlert() throws Exception {
-        mockMvc.perform(get("/phoneAlert?firestation="))
+    public void testUrlPhoneAlert() throws Exception {
+        mockMvc.perform(get("/phoneAlert?firestation=1"))
                 .andExpect(status().isOk());
     }
 
     @Test
-    public void testEndpointFireAdress() throws Exception {
-        mockMvc.perform(get("/fire?address="))
+    public void testUrlFireAdress() throws Exception {
+        mockMvc.perform(get("/fire?address=834 Binoc Ave"))
                 .andExpect(status().isOk());
     }
 
     @Test
-    public void testEndpointFloodStations() throws Exception {
-        mockMvc.perform(get("/flood/stations?stations= "))
+    public void testUrlFloodStations() throws Exception {
+        mockMvc.perform(get("/flood/stations?stations=1"))
                 .andExpect(status().isOk());
     }
 
     @Test
-    public void testEndpointCommunityEmail() throws Exception {
+    public void testUrlCommunityEmail() throws Exception {
         when(personsService.communityEmail(anyString())).thenReturn(anyList());
         mockMvc.perform(get("/communityEmail?city=Culver"))
                 .andExpect(status().isOk());
     }
-
 
 }

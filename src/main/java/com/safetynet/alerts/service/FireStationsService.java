@@ -8,6 +8,8 @@ import com.safetynet.alerts.repository.MedicalsRecordsRepository;
 import com.safetynet.alerts.repository.PersonsRepository;
 import com.safetynet.alerts.utils.CalculateAgeUtil;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Data
+@Getter
+@Setter
 @Service
 public class FireStationsService {
 

@@ -117,20 +117,20 @@ public class FireStationsController {
     //URL
     @GetMapping(value = "/firestation")
     public List<String> getFirestationsFromStation(@PathParam("stationNumber") String stationNumber) throws ParseException {
-        logger.info("Query GET Endpoint /firestation with param station: " + stationNumber);
+        logger.info("Query GET URL /firestation with param station: " + stationNumber);
         fireStationsService.getFireStationsList().clear();
         return fireStationsService.getFirestationsFromStationNumber(stationNumber);
     }
 
     @GetMapping(value = "/phoneAlert")
     public List<String> getPhoneAlert(@PathParam("firestation") String firestation) throws ParseException {
-        logger.info("Query GET Endpoint /phoneAlert with param firestation: " + firestation);
+        logger.info("Query GET URL /phoneAlert with param firestation: " + firestation);
         return fireStationsService.getPhoneAlert(firestation);
     }
 
     @GetMapping(value = "/flood/stations")
     public List<String> getFloodStations(@PathParam("stations") String stations) throws ParseException {
-        logger.info("Query GET Endpoint /flood/stations with param stations: " + stations);
+        logger.info("Query GET URL /flood/stations with param stations: " + stations);
         return fireStationsService.getFloodStations(stations);
     }
 

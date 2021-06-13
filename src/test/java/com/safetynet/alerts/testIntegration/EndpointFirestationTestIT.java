@@ -21,6 +21,7 @@ public class EndpointFirestationTestIT {
 
     @Autowired
     FireStationsService fireStationsService;
+
     @Autowired
     private MockMvc mockMvc;
 
