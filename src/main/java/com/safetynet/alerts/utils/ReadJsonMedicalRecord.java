@@ -30,15 +30,15 @@ public class ReadJsonMedicalRecord {
             JSONObject jsonObject = (JSONObject) parser.parse(new InputStreamReader(new FileInputStream(dataFile), StandardCharsets.UTF_8));
             JSONArray jsonArray = (JSONArray) jsonObject.get("medicalrecords");
             int id = 1;
-            for (int i = 0; i < jsonArray.size(); i++) {
-                JSONObject jo = (JSONObject) jsonArray.get(i);
+            for (Object o : jsonArray) {
+                JSONObject jo = (JSONObject) o;
 
                 listMedicalRecords.add(medicalRecords);
 
                 String firstName = (String) jo.get("firstName");
                 String lastName = (String) jo.get("lastName");
-                String medications = (String) jo.get("medications").toString();
-                String allergies = (String) jo.get("allergies").toString();
+                String medications = jo.get("medications").toString();
+                String allergies = jo.get("allergies").toString();
                 String birthdate = (String) jo.get("birthdate");
 
                 if (DateChecker.isValid(birthdate)) {
@@ -48,8 +48,6 @@ public class ReadJsonMedicalRecord {
                     medicalRecords.setLastName(lastName);
                     medicalRecords.setMedications(medications);
                     medicalRecords.setAllergies(allergies);
-                } else {
-                    return null;
                 }
 
                 medicalRecords = new MedicalRecords(id, firstName, lastName, birthdate, medications, allergies);

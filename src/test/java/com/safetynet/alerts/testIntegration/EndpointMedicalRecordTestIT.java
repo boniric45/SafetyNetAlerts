@@ -28,15 +28,15 @@ public class EndpointMedicalRecordTestIT {
     // Create Medical Record Test
     @Test
     public void create_MedicalRecord_Test() throws Exception {
-        //GIVEN
+        // GIVEN
         String mrRaw = "{\"firstName\":\"John\",\"lastName\":\"Boyd\",\"birthdate\":\"03/06/1985\",\"medications\":\"[aznol:60mg]\",\"allergies\":\"[peanut]\"}";
 
-        //WHEN
+        // WHEN
         MockHttpServletRequestBuilder req = post("/medicalRecord")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(mrRaw);
 
-        //THEN
+        // THEN
         this.mockMvc.perform(req)
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("firstName", CoreMatchers.is("John")))
@@ -61,24 +61,22 @@ public class EndpointMedicalRecordTestIT {
     public void get_One_MedicalRecord_Test() throws Exception {
         this.mockMvc.perform(get("/medicalRecord/6"))
                 .andExpect(status().isOk());
-
-
     }
 
     // Update Medical Record Test
     @Test
     public void update_MedicalRecord_Test() throws Exception {
-        //GIVEN
+        // GIVEN
         String updateMedicalRecord = "{\"firstName\":\"Felicia\",\"lastName\":\"Boyd\",\"birthdate\":\"01/02/1906\",\"medications\":\"[tetracyclaz:650mg]\",\"allergies\":\"[xilliathal]\"}";
 
         this.mockMvc.perform(get("/medicalRecord/5")).andDo(print());
 
-        //WHEN
+        // WHEN
         MockHttpServletRequestBuilder req = put("/medicalRecord/5")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(updateMedicalRecord);
 
-        //THEN
+        // THEN
         this.mockMvc.perform(req)
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("firstName", CoreMatchers.is("Felicia")))
@@ -94,23 +92,20 @@ public class EndpointMedicalRecordTestIT {
     @Test
     public void delete_MedicalRecord_Test() throws Exception {
 
-        //GIVEN
+        // GIVEN
         String medRec = "{\"id\": 8,\"firstName\":\"Peter\",\"lastName\":\"Duncan\",\"birthdate\":\"03/06/1985\",\"medications\":\"[aznol:60mg]\",\"allergies\":\"[peanut]\"}";
 
-        //WHEN
-        // Create medicalRecord
-        this.mockMvc.perform(post("/medialRecord")
+        // WHEN
+        this.mockMvc.perform(post("/medialRecord") // Create medicalRecord
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(medRec));
 
         this.mockMvc.perform(get("/medicalRecord/8")) //Test Id 8
                 .andExpect(status().isOk());
 
-        //THEN
-        this.mockMvc.perform(delete("/medicalRecord/Peter/Duncan")); // Delete by Firstname and Lastname
-
-        this.mockMvc.perform(get("/medicalRecord/8")) //Test Id 8
-                .andExpect(status().isOk());
+        // THEN
+        this.mockMvc.perform(delete("/medicalRecord/Peter/Duncan"))
+                .andExpect(status().isOk()); // Delete by Firstname and Lastname
 
     }
 

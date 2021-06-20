@@ -20,20 +20,36 @@ public class PhoneAlertTest {
 
     @Autowired
     public MockMvc mockMvc;
+
     @Mock
     FireStationsService fireStationsService;
 
     @Test
     public void testPhoneAlertFirestation() throws Exception {
 
-        String numberFirestation = "1";
-        String contentList = "841-874-6512";
+        // GIVEN
+        String contentList = "841-874-9845";
+        String strFirestation = "4";
 
-        this.mockMvc.perform(get("/phoneAlert?firestation=" + numberFirestation))
+        // WHEN
+        this.mockMvc.perform(get("/phoneAlert?firestation=" + strFirestation))
                 .andDo(print())
+                // THEN
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString(contentList)));
     }
 
+    @Test
+    public void testPhoneAlertFirestationIsNull() throws Exception {
 
+        // GIVEN
+        String strFirestation = "";
+
+        // WHEN
+        this.mockMvc.perform(get("/phoneAlert?firestation=" + strFirestation))
+                .andDo(print())
+                // THEN
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("")));
+    }
 }

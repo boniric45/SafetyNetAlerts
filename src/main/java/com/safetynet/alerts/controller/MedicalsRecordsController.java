@@ -25,7 +25,6 @@ public class MedicalsRecordsController {
         medicalsRecordsService.listSaveMedicalrecords(list);
     }
 
-
     /**
      * Create - Add a new MedicalRecord
      *
@@ -34,7 +33,12 @@ public class MedicalsRecordsController {
      */
     @PostMapping("/medicalRecord")
     public MedicalRecords createMedicalRecord(@RequestBody MedicalRecords medicalRecords) {
-        logger.info(" CREATE /medicalRecord > FirstName: " + medicalRecords.getFirstName() + " LastName: " + medicalRecords.getLastName() + " BirthDate: " + medicalRecords.getBirthdate() + " Medications: " + medicalRecords.getMedications() + " Allergies: " + medicalRecords.getAllergies());
+        if (medicalRecords == null) {
+            logger.error(" ERROR CREATE /medicalRecord ");
+            return null;
+        } else {
+            logger.info("SUCCESS CREATE /medicalRecord ");
+        }
         return medicalsRecordsService.createMedicalRecord(medicalRecords);
     }
 
@@ -45,7 +49,7 @@ public class MedicalsRecordsController {
      */
     @GetMapping("/medicalRecord")
     public Iterable<MedicalRecords> getMedicalRecordsAll() {
-        logger.info(" READ All /medicalRecord ");
+        logger.info(" SUCCESS READ All /medicalRecord ");
         return medicalsRecordsService.getMedicalRecordsAll();
     }
 
@@ -58,7 +62,13 @@ public class MedicalsRecordsController {
     @GetMapping("/medicalRecord/{id}")
     public MedicalRecords getMedicalRecordsById(@PathVariable("id") final int id) {
         Optional<MedicalRecords> medicalRecords = medicalsRecordsService.getMedicalRecordsById(id);
-        logger.info(" READ One /medicalRecord > " + medicalRecords);
+
+        if (!medicalRecords.isPresent()) {
+            logger.error(" ERROR READ /medicalRecord ");
+            return null;
+        } else {
+            logger.info(" SUCCESS READ /medicalRecord");
+        }
         return medicalRecords.orElse(null);
     }
 
@@ -90,10 +100,11 @@ public class MedicalsRecordsController {
                 currentMedical.setAllergies(allergies);
             }
             medicalsRecordsService.saveMedicalRecord(currentMedical);
-            logger.info(" UPDATE /medicalRecord > " + currentMedical);
+            logger.info(" SUCCESS UPDATE /medicalRecord ");
             return currentMedical;
 
         } else {
+            logger.error(" ERROR UPDATE /medicalRecord ");
             return null;
         }
     }
@@ -106,7 +117,14 @@ public class MedicalsRecordsController {
     @Transactional
     @DeleteMapping("/medicalRecord/{firstName}/{lastName}")
     public void deleteMedicalRecordByFirstNameAndLastName(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
-        logger.info(" DELETE /medicalRecord with lastName: " + lastName + " and firstName: " + firstName);
+
+        if (firstName == null || lastName == null) {
+            logger.error("ERROR DELETE /medicalRecord ");
+
+        } else {
+            logger.info("SUCCESS DELETE /medicalRecord ");
+        }
+
         medicalsRecordsService.deleteMedicalRecordByFirstNameAndLastName(firstName, lastName);
     }
 

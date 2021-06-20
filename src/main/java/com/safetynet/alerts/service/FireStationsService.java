@@ -7,13 +7,11 @@ import com.safetynet.alerts.repository.FireStationsRepository;
 import com.safetynet.alerts.repository.MedicalsRecordsRepository;
 import com.safetynet.alerts.repository.PersonsRepository;
 import com.safetynet.alerts.utils.CalculateAgeUtil;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -38,6 +36,7 @@ public class FireStationsService {
     private MedicalsRecordsRepository medicalsRecordsRepository;
 
     //Endpoints
+
     /**
      * Create - Add a new firestation
      *
@@ -73,20 +72,18 @@ public class FireStationsService {
      *
      * @param address - The station address of the firestation to delete
      */
-    public void deleteFireStationStationByAddress(String station , String address) {
+    public void deleteFireStationStationByAddress(String station, String address) {
 
-            fireStationsRepository.deleteFirestationByStationAndAddress(station,address);
+        fireStationsRepository.deleteFirestationByStationAndAddress(station, address);
 
     }
-
-
 
     //URL
     public void listSaveFirestation(List<FireStations> list) {
         fireStationsRepository.saveAll(list);
     }
 
-    public List<String> getFirestationsFromStationNumber(String station) throws ParseException {
+    public List<String> getFirestationsFromStationNumber(String station) {
         fireStationsList.clear();
         Iterable<FireStations> fireStations = fireStationsRepository.findAllByStation(station);
         Iterable<Persons> personsIterable = personsRepository.findAll();
@@ -134,6 +131,7 @@ public class FireStationsService {
     public List<String> getPhoneAlert(String firestation) {
         Iterable<FireStations> fireStations = fireStationsRepository.findAllByStation(firestation);
         Iterable<Persons> personsIterable = personsRepository.findAll();
+        fireStationsList.clear();
 
         for (FireStations fs : fireStations) {
             String addressFirestation = fs.getAddress();
@@ -149,7 +147,7 @@ public class FireStationsService {
         return fireStationsList;
     }
 
-    public List<String> getFloodStations(String stations) throws ParseException {
+    public List<String> getFloodStations(String stations) {
 
         fireStationsList.clear();
 
@@ -178,7 +176,7 @@ public class FireStationsService {
                         if (firstNamePs.equals(firstNameMr) && lastNamePs.equals(lastNameMr)) {
                             String birthDate = mr.getBirthdate();
                             long age = CalculateAgeUtil.getAge(birthDate);
-                            fireStationsList.add("firestation: " + firestationNumber + " address: " + addressPerson +" firstname: "+firstNamePs+ " lastname: " + lastNamePs + " allergies: " + allergies + " medications: " + medications + " phone: " + phone + " age: " + age);
+                            fireStationsList.add("firestation: " + firestationNumber + " address: " + addressPerson + " firstname: " + firstNamePs + " lastname: " + lastNamePs + " allergies: " + allergies + " medications: " + medications + " phone: " + phone + " age: " + age);
                         }
                     }
                 }
@@ -190,6 +188,5 @@ public class FireStationsService {
     public void saveFirestation(FireStations fs) {
         fireStationsRepository.save(fs);
     }
-
 
 }

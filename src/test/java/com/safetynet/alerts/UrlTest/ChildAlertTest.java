@@ -20,17 +20,51 @@ public class ChildAlertTest {
 
     @Autowired
     public MockMvc mockMvc;
+
     @Mock
     PersonsService personsService;
 
+
     @Test
     public void testChildAlertWithAddress() throws Exception {
+
+        // GIVEN
         String address = "892 Downing Ct";
 
+        // WHEN
         mockMvc.perform(get("/childAlert?address=" + address))
                 .andDo(print())
                 .andExpect(status().isOk())
+                // THEN
                 .andExpect(content().string(containsString("03/06/1988")));
+    }
+
+    @Test
+    public void testChildAlertWithNoAddress() throws Exception {
+
+        // GIVEN
+        String address = "";
+
+        // WHEN
+        mockMvc.perform(get("/childAlert?address=" + address))
+                .andDo(print())
+                .andExpect(status().isOk())
+                // THEN
+                .andExpect(content().string(containsString("")));
+    }
+
+    @Test
+    public void testChildAlertWithAddressNull() throws Exception {
+
+        // GIVEN
+        String address = null;
+
+        // WHEN
+        mockMvc.perform(get("/childAlert?address=" + address))
+                .andDo(print())
+                .andExpect(status().isOk())
+                // THEN
+                .andExpect(content().string(containsString("")));
     }
 
 }

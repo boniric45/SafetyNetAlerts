@@ -1,23 +1,19 @@
 package com.safetynet.alerts.UrlTest;
 
-import com.safetynet.alerts.model.Persons;
-import com.safetynet.alerts.service.PersonsService;
-import org.hamcrest.CoreMatchers;
+import com.safetynet.alerts.controller.MedicalsRecordsController;
+import com.safetynet.alerts.model.MedicalRecords;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
 import static org.junit.matchers.JUnitMatchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.web.servlet.function.RequestPredicates.contentType;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -26,33 +22,32 @@ public class PersonInfoTest {
     @Autowired
     public MockMvc mockMvc;
 
-    @Mock
-    PersonsService personsService;
+    @Autowired
+    private MedicalsRecordsController medicalsRecordsController;
 
-//    @Test
-//    public void testReturnListPersonWithMedicalRecordAndAllergies() throws Exception {
-//
-//        //GIVEN
-//        String person = "{\"firstName\":\"Sylvanas\",\"lastName\":\"Coursevent\",\"address\":\"1509 Culver St\",\"zip\":\"97451\",\"city\":\"Culver\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
-//        //String result = "[\"firstName: Sylvanas lastName: Coursevent address: 1509 Culver St age: 75 mail: jaboyd@email.com allergies: [] medications: [\\\"tradoxidine:400mg\\\"]\"]";
-//String result ="[\"firstName: Sylvanas lastName: Coursevent address: 1509 Culver St age: 75 mail: jaboyd@email.com allergies: [] medications: [\\\"tradoxidine:400mg\\\"]\"]";
-//
-//        MockHttpServletRequestBuilder req = post("/person")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content(person);
-//
-//        this.mockMvc.perform(req)
-//                .andExpect(status().isOk())
-//                .andDo(print());
-//
-//        this.mockMvc.perform(get("/personInfo?firstName=Sylvanas&lastName=Coursevent" )
-//                .contentType(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk())
-//                .andDo(print())
-//                .andExpect(content().string(containsString(result)));
-//
-//        //TODO à revoir médication erroné
-//    }
+    @Test
+    public void testReturnListPersonWithMedicalRecordAndAllergies() throws Exception {
+
+        // GIVEN
+        String firstName = "Sylvanas";
+        String lastName = "Coursevent";
+        String bitrhdate = "10/10/1950";
+        String medications = "doliprane";
+        String allergies = "peanut";
+        MedicalRecords medicalRecordsCreate = new MedicalRecords(24, "Sylvanas", "Coursevent", "10/10/1950", "doliprane", "peanut");
+
+        // WHEN
+        medicalsRecordsController.createMedicalRecord(medicalRecordsCreate);
+        MedicalRecords medicalRecordResult = medicalsRecordsController.getMedicalRecordsById(24);
+
+        // THEN
+        Assertions.assertEquals(firstName, medicalRecordResult.getFirstName());
+        Assertions.assertEquals(lastName, medicalRecordResult.getLastName());
+        Assertions.assertEquals(bitrhdate, medicalRecordResult.getBirthdate());
+        Assertions.assertEquals(medications, medicalRecordResult.getMedications());
+        Assertions.assertEquals(allergies, medicalRecordResult.getAllergies());
+
+    }
 
     @Test
     public void testNoReturnListPersonWithMedicalRecordAndAllergiesWithoutfirstname() throws Exception {

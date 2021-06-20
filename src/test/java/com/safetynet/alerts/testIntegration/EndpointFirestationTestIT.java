@@ -28,15 +28,15 @@ public class EndpointFirestationTestIT {
     // Create Firestation Test
     @Test
     public void create_Firestation_Test() throws Exception {
-        //GIVEN
+        // GIVEN
         String fsRecord = "{\"station\":\"3\",\"address\":\"1509 Culver St\"}";
 
-        //WHEN
+        // WHEN
         MockHttpServletRequestBuilder req = post("/firestation")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(fsRecord);
 
-        //THEN
+        // THEN
         this.mockMvc.perform(req)
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("station", CoreMatchers.is("3")))
@@ -89,23 +89,22 @@ public class EndpointFirestationTestIT {
         this.mockMvc.perform(get("/firestation/1"));   // Read Firestation Id 1
     }
 
-    // Delete Medical Record Test
+    // Delete Firestation Test
     @Test
-    public void delete_MedicalRecord_Test() throws Exception {
+    public void delete_Firestation_Test() throws Exception {
 
         // GIVEN
         String createFirestation = "{\"id\": 14,\"station\":\"4\",\"address\":\"9 Newyork Street\"}";
 
-        //WHEN
-        // Create Firestation
-        this.mockMvc.perform(post("/firestation")
+        // WHEN
+        this.mockMvc.perform(post("/firestation") // Create Firestation
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(createFirestation));
 
         this.mockMvc.perform(get("/firestation/14")) // Read Firestation Id 14
                 .andExpect(status().isOk());
 
-        //THEN
+        // THEN
         this.mockMvc.perform(delete("/firestation/4/9 Newyork Street")); // Delete by Station and Address
 
         this.mockMvc.perform(get("/firestations")) // Read All Firestations
@@ -113,5 +112,4 @@ public class EndpointFirestationTestIT {
                 .andDo(print());
 
     }
-
 }

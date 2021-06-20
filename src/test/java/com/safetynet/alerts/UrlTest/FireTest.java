@@ -24,15 +24,37 @@ public class FireTest {
     @Mock
     PersonsService personsService;
 
+
     @Test
     public void testListPersonByAddress() throws Exception {
 
+        // GIVEN
         String address = "834 Binoc Ave";
         String result = "[\" Adress: 834 Binoc Ave Firestation: 3 lastName: Carman phone: 841-874-6512 age: 9 years allergies: [] medications: []\"]";
 
+        // WHEN
         this.mockMvc.perform(get("/fire?address=" + address))
+
+                // THEN
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString(result)));
     }
+
+    @Test
+    public void testListPersonByAddressIsNull() throws Exception {
+
+        // GIVEN
+        String address = "";
+
+        // WHEN
+        this.mockMvc.perform(get("/fire?address=" + address))
+
+                // THEN
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("")));
+    }
+
+
 }

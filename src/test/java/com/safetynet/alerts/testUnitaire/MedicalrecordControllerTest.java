@@ -3,14 +3,10 @@ package com.safetynet.alerts.testUnitaire;
 import com.safetynet.alerts.CustomProperties;
 import com.safetynet.alerts.controller.MedicalsRecordsController;
 import com.safetynet.alerts.model.MedicalRecords;
-import com.safetynet.alerts.model.Persons;
-import com.safetynet.alerts.service.MedicalsRecordsService;
 import com.safetynet.alerts.utils.ReadJsonMedicalRecord;
-import com.safetynet.alerts.utils.ReaderJsonPerson;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -34,14 +30,10 @@ public class MedicalrecordControllerTest {
     public MedicalsRecordsController medicalsRecordsController;
 
     @Autowired
-    public MedicalsRecordsService medicalsRecordsService;
-
-    @Autowired
     private MockMvc mockMvc;
 
     @Autowired
     private CustomProperties props;
-
 
     private String firstName;
     private String lastName;
@@ -64,15 +56,14 @@ public class MedicalrecordControllerTest {
     public void testNoChargedMedicalRecord() {
 
         // GIVEN
-
         ReadJsonMedicalRecord.readJsonFileMedicalRecord(props.getJsonDatafile());
         String fakedate = "fakedate";
 
         // WHEN
-        Boolean isvalid =  ReadJsonMedicalRecord.DateChecker.isValid(fakedate);
+        Boolean isvalid = ReadJsonMedicalRecord.DateChecker.isValid(fakedate);
 
         //THEN
-        Assertions.assertEquals(isvalid,false);
+        Assertions.assertEquals(isvalid, false);
     }
 
     @Test
@@ -86,7 +77,7 @@ public class MedicalrecordControllerTest {
         int result = medicalRecordsList.size();
 
         //THEN
-        Assertions.assertEquals(result,0);
+        Assertions.assertEquals(result, 0);
     }
 
 
@@ -110,7 +101,7 @@ public class MedicalrecordControllerTest {
     }
 
 
-    // Create MedicalRecord
+    // Create MedicalRecord Test
     @Test
     public void testCreateMedicalRecord() throws Exception {
 
@@ -137,17 +128,6 @@ public class MedicalrecordControllerTest {
                 .andExpect(jsonPath("allergies", CoreMatchers.is(allergies)));
     }
 
-    @Test
-    public void testMethodNotAllowedCreateMedicalRecord() throws Exception {
-
-        String medicalRecords = "{\"id\":24,\"firstName\":\"Sylvanas\",\"lastName\":\"Coursevent\",\"birthdate\":\"05/04/1950\",\"medications\":\"dodoxadin:30mg\",\"allergies\":\"peanut\"}";
-
-        mockMvc.perform(post("/medicalRecord/24")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(medicalRecords))
-                .andExpect(status().isMethodNotAllowed());
-    }
-
     // Read All MedicalRecord Test
     @Test
     public void testReadAllMedicalRecord() {
@@ -162,7 +142,7 @@ public class MedicalrecordControllerTest {
             result.add(resultMedicalRecord);
         }
 
-        //THEN
+        // THEN
         Assertions.assertEquals(element, result.size());
     }
 
@@ -186,7 +166,6 @@ public class MedicalrecordControllerTest {
         Assertions.assertEquals(birthdate, medicalRecords.getBirthdate());
         Assertions.assertEquals(medications, medicalRecords.getMedications());
         Assertions.assertEquals(allergies, medicalRecords.getAllergies());
-
     }
 
     // Update MedicalRecord Test
@@ -199,7 +178,6 @@ public class MedicalrecordControllerTest {
         // WHEN
         medicalsRecordsController.getMedicalRecordsById(1);
         medicalsRecordsController.updateMedicalRecord(1, updateMedicalRecords);
-
         MedicalRecords medicalRecordsAfterUpdate = medicalsRecordsController.getMedicalRecordsById(1);
 
         // THEN
@@ -217,43 +195,79 @@ public class MedicalrecordControllerTest {
         allergies = "[\"shellfish\"]";
         MedicalRecords createMedicalRecord = new MedicalRecords(24, firstName, lastName, birthdate, medications, allergies);
 
-        //WHEN
+        // WHEN
         medicalsRecordsController.createMedicalRecord(createMedicalRecord);
         medicalsRecordsController.deleteMedicalRecordByFirstNameAndLastName(firstName, lastName);
 
-        //THEN
+        // THEN
         mockMvc.perform(MockMvcRequestBuilders.get("/medicalRecord"))
                 .andExpect(jsonPath("id", "24").doesNotExist())
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    public void testMethodNotAllowedCreateMedicalRecord() throws Exception {
+
+        // GIVEN
+        String medicalRecords = "{\"id\":24,\"firstName\":\"Sylvanas\",\"lastName\":\"Coursevent\",\"birthdate\":\"05/04/1950\",\"medications\":\"dodoxadin:30mg\",\"allergies\":\"peanut\"}";
+
+        // WHEN
+        mockMvc.perform(post("/medicalRecord/24")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(medicalRecords))
+                // THEN
+                .andExpect(status().isMethodNotAllowed());
+    }
+
+    @Test
+    public void testCreateMedicalRecordIsNull() {
+
+        // WHEN
+        MedicalRecords medicalRecords = null;
+
+        // THEN
+        Assertions.assertNull(medicalsRecordsController.createMedicalRecord(medicalRecords));
 
     }
 
     @Test
-    public void testUpdateMedicalRecordValueNull() throws Exception {
-        //GIVEN
-        MedicalRecords medicalRecords = new MedicalRecords(1,null,null,null,null,null);
+    public void testReadMedicalRecordByIdIsNull() throws Exception {
 
-        //WHEN
-        medicalsRecordsController.updateMedicalRecord(1,medicalRecords);
+        // GIVEN
+        int id = 400;
 
-        //THEN
-        Assertions.assertNull(medicalRecords.getFirstName());
-        Assertions.assertNull(medicalRecords.getLastName());
-        Assertions.assertNull(medicalRecords.getBirthdate());
-        Assertions.assertNull(medicalRecords.getMedications());
-        Assertions.assertNull(medicalRecords.getAllergies());
+        // WHEN
+        MedicalRecords medicalRecords = medicalsRecordsController.getMedicalRecordsById(id);
+
+        // THEN
+        Assertions.assertNull(medicalRecords);
 
     }
 
     @Test
-    public void testDeleteMedicalRecordValueNull() throws Exception {
-        //GIVEN
-        MedicalRecords medicalRecords = new MedicalRecords(1,null,null,null,null,null);
+    public void testUpdateMedicalRecordValueNull() {
 
-        //WHEN
-        medicalsRecordsController.deleteMedicalRecordByFirstNameAndLastName(null,null);
+        // GIVEN
+        MedicalRecords medicalRecords = null;
 
-        //THEN
+        // WHEN
+        MedicalRecords result = medicalsRecordsController.updateMedicalRecord(1000, medicalRecords);
+
+        // THEN
+        Assertions.assertNull(result);
+
+    }
+
+    @Test
+    public void testDeleteMedicalRecordValueNull() {
+
+        // GIVEN
+        MedicalRecords medicalRecords = new MedicalRecords(1, null, null, null, null, null);
+
+        // WHEN
+        medicalsRecordsController.deleteMedicalRecordByFirstNameAndLastName(null, null);
+
+        // THEN
         Assertions.assertNull(medicalRecords.getFirstName());
         Assertions.assertNull(medicalRecords.getLastName());
         Assertions.assertNull(medicalRecords.getBirthdate());

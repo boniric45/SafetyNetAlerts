@@ -15,5 +15,4 @@ public interface FireStationsRepository extends CrudRepository<FireStations, Str
 
     void deleteFirestationByStationAndAddress(final String station, final String address);
 
-
 }

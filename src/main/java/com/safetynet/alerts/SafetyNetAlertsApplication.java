@@ -8,8 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import java.io.IOException;
-import org.apache.logging.log4j.*;
 @SpringBootApplication
 @EnableAutoConfiguration
 public class SafetyNetAlertsApplication implements CommandLineRunner {

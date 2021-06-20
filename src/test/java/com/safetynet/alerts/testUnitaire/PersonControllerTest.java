@@ -3,7 +3,6 @@ package com.safetynet.alerts.testUnitaire;
 import com.safetynet.alerts.CustomProperties;
 import com.safetynet.alerts.controller.PersonsController;
 import com.safetynet.alerts.model.Persons;
-import com.safetynet.alerts.service.PersonsService;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,8 +16,6 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -37,37 +34,36 @@ public class PersonControllerTest {
     @Autowired
     private PersonsController personsController;
 
-    @Autowired
-    private PersonsService personsService;
-
-    private String firstName;
-    private String lastName;
-    private List<String> result;
+    private int count;
+    private Iterable<Persons> resultIterable;
 
     @BeforeEach
     private void setUpPerTest() {
-        firstName = null;
-        lastName = null;
-        result = new ArrayList<>();
+        count = 0;
+        resultIterable = null;
     }
 
     @Test
     public void testChargedPerson() throws ParseException {
+
         // GIVEN
-        firstName = "Eric";
-        lastName = "Cadigan";
+        personsController.chargedPerson(props.getJsonDatafile());
 
         // WHEN
-        personsController.chargedPerson(props.getJsonDatafile());
-        result = personsController.getPersonInfo(firstName, lastName);
+        resultIterable = personsController.getPersonAll();
+        for (Persons persons : resultIterable) {
+            count++;
+        }
+
 
         // THEN
-        Assertions.assertEquals(1, result.size());
+        Assertions.assertEquals(24, count);
 
     }
 
     @Test
     public void testMethodisUnsupportedMediaTypeCreatePerson() throws Exception {
+
         // GIVEN
         String personRecord = "{\"id\":8,\"firstName\":\"Peter\",\"lastName\":\"Duncan\",\"address\":\"644 Gershwin Cir\",\"zip\":\"97451\",\"city\":\"Culver\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
@@ -84,15 +80,16 @@ public class PersonControllerTest {
     // Create Person
     @Test
     public void testCreatePerson() throws Exception {
-        //GIVEN
+
+        // GIVEN
         String person = "{\"firstName\":\"John\",\"lastName\":\"Boyd\",\"address\":\"1509 Culver St\",\"zip\":\"97451\",\"city\":\"Culver\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
-        //WHEN
+        // WHEN
         MockHttpServletRequestBuilder req = post("/person")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(person);
 
-        //THEN
+        // THEN
         this.mockMvc.perform(req)
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("firstName", CoreMatchers.is("John")))
@@ -101,6 +98,7 @@ public class PersonControllerTest {
 
     @Test
     public void testMethodNotAllowedCreatePerson() throws Exception {
+
         // GIVEN
         String personRecord = "{\"id\":8,\"firstName\":\"Peter\",\"lastName\":\"Duncan\",\"address\":\"644 Gershwin Cir\",\"zip\":\"97451\",\"city\":\"Culver\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
@@ -134,16 +132,15 @@ public class PersonControllerTest {
     @Test
     public void testUpdatePerson() throws Exception {
 
-        //GIVEN
+        // GIVEN
         String updatePerson = "{\"firstName\":\"John\",\"lastName\":\"Boyd\",\"address\":\"1509 Culver St\",\"zip\":\"98000\",\"city\":\"Paris\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
-        // Read Person Id 2
-        mockMvc.perform(get("/person/1"))
+
+        mockMvc.perform(get("/person/1")) // Read Person Id 1
                 .andExpect(status().isOk());
 
-        //WHEN
-        //Update Person with updatePerson
-        MockHttpServletRequestBuilder req = put("/person/1")
+        // WHEN
+        MockHttpServletRequestBuilder req = put("/person/1") // Update Person with updatePerson
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(updatePerson);
 
@@ -152,9 +149,8 @@ public class PersonControllerTest {
                 .andExpect(jsonPath("zip", CoreMatchers.is("98000")))
                 .andExpect(jsonPath("city", CoreMatchers.is("Paris")));
 
-        //THEN
-        // Read Person Id 2
-        mockMvc.perform(get("/person/2"))
+        // THEN
+        mockMvc.perform(get("/person/1")) // Read Person Id 1
                 .andExpect(status().isOk());
     }
 
@@ -162,78 +158,86 @@ public class PersonControllerTest {
     @Test
     public void testDeletePerson() throws Exception {
 
-        //WHEN
+        // GIVEN
         String personRecord = "{\"id\":8,\"firstName\":\"Peter\",\"lastName\":\"Duncan\",\"address\":\"644 Gershwin Cir\",\"zip\":\"97451\",\"city\":\"Culver\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
-        // Create Person
-        this.mockMvc.perform(post("/person")
+        this.mockMvc.perform(post("/person")  // Create Person
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(personRecord));
-        // Read id 8 Person
-        this.mockMvc.perform(get("/person/8"))
+
+        this.mockMvc.perform(get("/person/8")) // Read id 8 Person
                 .andExpect(status().isOk());
 
-        //GIVEN
-        // Delete Person by Firstname and Lastname
-        this.mockMvc.perform(delete("/person/Peter/Duncan")); // Delete by Firstname and Lastname
+        // WHEN
+        this.mockMvc.perform(delete("/person/Peter/Duncan")); // Delete Person by Firstname and Lastname
 
-        //THEN
+        // THEN
         mockMvc.perform(MockMvcRequestBuilders.get("/person"))
                 .andExpect(jsonPath("id", "8").doesNotExist())
                 .andExpect(status().isOk());
-
-    }
-
-    @Test
-    public void testCommunityEmail() {
-        // GIVEN
-        String city = "Narbonne";
-
-        // WHEN
-        result = personsService.communityEmail(city);
-
-        // THEN
-        Assertions.assertEquals(0, result.size());
     }
 
     @Test
     public void testCreatePersonRequestBodyIsNull() throws Exception {
 
-        //GIVEN
+        // GIVEN
         String person = "";
 
-        //WHEN
+        // WHEN
         MockHttpServletRequestBuilder req = post("/person")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(person);
 
-        //THEN
+        // THEN
         this.mockMvc.perform(req)
                 .andExpect(status().isBadRequest());
     }
 
     @Test
-    public void testUpdatePersonDoesNotExist() throws Exception {
-        //GIVEN
-        Persons person = new Persons(120,"Jean","Jean","Street Flower","45661","Manathan","456-469-753","jjean@email.com");
+    public void testErrorCreatePerson() throws Exception {
 
-        personsController.updatePerson(120,person);
-
-        //THEN
-        mockMvc.perform(put("/person/120"))
-                .andExpect(jsonPath("id", "120").doesNotExist());
+        Persons persons = null;
+        Assertions.assertNull(personsController.createPerson(persons));
 
     }
 
     @Test
-    public void testCreatePersonValueNull() {
-        //GIVEN
-        Persons person = new Persons(0,null,null,null,null,null,null,null);
+    public void testErrorReadPersonById() {
 
-        //WHEN
+        // GIVEN
+        int id = 400;
+
+        // WHEN
+        Persons persons = personsController.getPersonById(id);
+
+        // GIVEN
+        Assertions.assertNull(persons);
+    }
+
+    @Test
+    public void testUpdatePersonDoesNotExist() throws Exception {
+
+        // GIVEN
+        Persons person = new Persons(120, "Jean", "Jean", "Street Flower", "45661", "Manathan", "456-469-753", "jjean@email.com");
+
+        // WHEN
+        personsController.updatePerson(120, person);
+
+        // THEN
+        mockMvc.perform(put("/person/120"))
+                .andExpect(jsonPath("id", "120").doesNotExist());
+    }
+
+    @Test
+    public void testCreatePersonValueNull() {
+
+        // GIVEN
+        Persons person = new Persons(0, null, null, null, null, null, null, null);
+
+        // WHEN
         personsController.createPerson(person);
 
-        //THEN
+        // THEN
         Assertions.assertNull(person.getAddress());
         Assertions.assertNull(person.getLastName());
         Assertions.assertNull(person.getFirstName());
@@ -241,18 +245,18 @@ public class PersonControllerTest {
         Assertions.assertNull(person.getCity());
         Assertions.assertNull(person.getPhone());
         Assertions.assertNull(person.getEmail());
-
     }
 
     @Test
     public void testUpdatePersonValueNull() {
-        //GIVEN
-        Persons person = new Persons(1,null,null,null,null,null,null,null);
 
-        //WHEN
-        personsController.updatePerson(1,person);
+        // GIVEN
+        Persons person = new Persons(1, null, null, null, null, null, null, null);
 
-        //THEN
+        // WHEN
+        personsController.updatePerson(1, person);
+
+        // THEN
         Assertions.assertNull(person.getLastName());
         Assertions.assertNull(person.getFirstName());
         Assertions.assertNull(person.getAddress());
@@ -264,13 +268,14 @@ public class PersonControllerTest {
 
     @Test
     public void testDeletePersonValueNull() {
-        //GIVEN
-        Persons person = new Persons(1,null,null,null,null,null,null,null);
 
-        //WHEN
-        personsController.deletePersonByFirstNameAndLastName(null,null);
+        // GIVEN
+        Persons person = new Persons(1, null, null, null, null, null, null, null);
 
-        //THEN
+        // WHEN
+        personsController.deletePersonByFirstNameAndLastName(null, null);
+
+        // THEN
         Assertions.assertNull(person.getLastName());
         Assertions.assertNull(person.getFirstName());
         Assertions.assertNull(person.getAddress());
@@ -279,7 +284,4 @@ public class PersonControllerTest {
         Assertions.assertNull(person.getPhone());
         Assertions.assertNull(person.getEmail());
     }
-
-
-
 }

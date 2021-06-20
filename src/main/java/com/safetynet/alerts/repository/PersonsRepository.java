@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface PersonsRepository extends CrudRepository<Persons, Integer> {
+
     List<Persons> findMailByCity(String city);
 
     List<Persons> findAllByAddress(String address);

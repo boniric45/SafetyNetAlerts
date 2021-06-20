@@ -10,10 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
-import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -29,8 +26,6 @@ public class FireStationsController {
         fireStationsService.listSaveFirestation(list);
     }
 
-    //EndPoint
-
     /**
      * Create - Add a new firestation
      *
@@ -39,7 +34,13 @@ public class FireStationsController {
      */
     @PostMapping("/firestation")
     public FireStations createFirestation(@RequestBody FireStations fireStations) {
-        logger.info(" CREATE /firestation > " + fireStations);
+        if (fireStations == null) {
+            logger.error(" ERROR CREATE /firestation ");
+            return null;
+        } else {
+            logger.info(" SUCCESS CREATE /firestation ");
+        }
+
         return fireStationsService.createFirestation(fireStations);
     }
 
@@ -49,10 +50,10 @@ public class FireStationsController {
      * @return An firestation object full filled
      */
     @GetMapping("/firestations")
-    public Iterable<FireStations> getAllFirestation(){
+    public Iterable<FireStations> getAllFirestation() {
+        logger.info(" SUCCESS READ All /firestations ");
         return fireStationsService.getFirestationAll();
     }
-
 
     /**
      * Read - Get one firestation
@@ -63,7 +64,11 @@ public class FireStationsController {
     @GetMapping("/firestation/{id}")
     public FireStations getFirestationById(@PathVariable("id") final int id) {
         Optional<FireStations> fireStations = fireStationsService.getFirestationsById(id);
-        logger.info(" READ /firestation > " + fireStations.get());
+        if (!fireStations.isPresent()) {
+            logger.error(" ERROR READ /firestation");
+        } else {
+            logger.info(" SUCCESS READ /firestation");
+        }
         return fireStations.orElse(null);
     }
 
@@ -76,25 +81,25 @@ public class FireStationsController {
      */
     @PutMapping("/firestation/{id}")
     public FireStations updateFirestations(@PathVariable("id") final int id, @RequestBody FireStations fireStations) {
-        Optional<FireStations> f = fireStationsService.getFirestationsById(id);
+        Optional<FireStations> firestations = fireStationsService.getFirestationsById(id);
 
-        if (f.isPresent()) {
-            FireStations currentFirestation = f.get();
+        if (firestations.isPresent()) {
+            FireStations currentFirestation = firestations.get();
 
             String station = fireStations.getStation();
             if (station != null) {
                 currentFirestation.setStation(station);
-               }
+            }
 
             String address = fireStations.getAddress();
             if (address != null) {
                 currentFirestation.setAddress(address);
             }
-
-            logger.info(" UPDATE /firestation > " + currentFirestation);
+            logger.info(" SUCCESS UPDATE /firestation/ ");
             fireStationsService.saveFirestation(currentFirestation);
             return currentFirestation;
         } else {
+            logger.error(" ERROR UPDATE /firestation/  ");
             return null;
         }
     }
@@ -106,33 +111,14 @@ public class FireStationsController {
      */
     @Transactional
     @DeleteMapping("/firestation/{station}/{address}")
-    public void deleteFirestations(@PathVariable("station") String station, @PathVariable("address") String address ) {
-    logger.info(" DELETE /firestation > Station: "+station+" Address: " + address);
-    fireStationsService.deleteFireStationStationByAddress(station,address);
+    public void deleteFirestations(@PathVariable("station") String station, @PathVariable("address") String address) {
+
+        if (station == null || address == null) {
+            logger.error(" ERROR DELETE /firestation");
+        } else {
+            logger.info(" SUCCESS DELETE /firestation");
+        }
+        fireStationsService.deleteFireStationStationByAddress(station, address);
     }
-
-
-
-
-    //URL
-    @GetMapping(value = "/firestation")
-    public List<String> getFirestationsFromStation(@PathParam("stationNumber") String stationNumber) throws ParseException {
-        logger.info("Query GET URL /firestation with param station: " + stationNumber);
-        fireStationsService.getFireStationsList().clear();
-        return fireStationsService.getFirestationsFromStationNumber(stationNumber);
-    }
-
-    @GetMapping(value = "/phoneAlert")
-    public List<String> getPhoneAlert(@PathParam("firestation") String firestation) throws ParseException {
-        logger.info("Query GET URL /phoneAlert with param firestation: " + firestation);
-        return fireStationsService.getPhoneAlert(firestation);
-    }
-
-    @GetMapping(value = "/flood/stations")
-    public List<String> getFloodStations(@PathParam("stations") String stations) throws ParseException {
-        logger.info("Query GET URL /flood/stations with param stations: " + stations);
-        return fireStationsService.getFloodStations(stations);
-    }
-
 
 }

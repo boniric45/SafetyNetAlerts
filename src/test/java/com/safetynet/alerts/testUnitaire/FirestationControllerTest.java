@@ -3,10 +3,6 @@ package com.safetynet.alerts.testUnitaire;
 import com.safetynet.alerts.CustomProperties;
 import com.safetynet.alerts.controller.FireStationsController;
 import com.safetynet.alerts.model.FireStations;
-import com.safetynet.alerts.model.MedicalRecords;
-import com.safetynet.alerts.model.Persons;
-import com.safetynet.alerts.repository.FireStationsRepository;
-import com.safetynet.alerts.service.FireStationsService;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +12,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -38,12 +33,6 @@ public class FirestationControllerTest {
     @Autowired
     private FireStationsController fireStationsController;
 
-    @Autowired
-    private FireStationsService fireStationsService;
-
-    @Autowired
-    private FireStationsRepository fireStationsRepository;
-
     private String station;
     private String address;
     private String firestation;
@@ -56,7 +45,6 @@ public class FirestationControllerTest {
         address = null;
         firestation = null;
         result = "";
-//        listresult.clear();
     }
 
     @Test
@@ -85,11 +73,12 @@ public class FirestationControllerTest {
     // Create Firestation
     @Test
     public void testCreateFirestation() {
-        //GIVEN
+
+        // GIVEN
         FireStations fireStations = new FireStations(0, "20", "15 Street Medecis");
         address = "15 Street Medecis";
 
-        //WHEN
+        // WHEN
         fireStationsController.createFirestation(fireStations);
         Iterable<FireStations> fireStationsIterable = fireStationsController.getAllFirestation();
 
@@ -101,7 +90,7 @@ public class FirestationControllerTest {
             }
         }
 
-        //THEN
+        // THEN
         Assertions.assertEquals(address, result);
     }
 
@@ -119,7 +108,7 @@ public class FirestationControllerTest {
             listresult.add(resultStation);
         }
 
-        //THEN
+        // THEN
         Assertions.assertEquals(element, listresult.size());
     }
 
@@ -151,9 +140,9 @@ public class FirestationControllerTest {
 
     // Delete Firestation By Firstname And Lastname Test
     @Test
-    public void testDeleteFirestation() throws Exception {
+    public void testDeleteFirestationByFirstnameAndLastname() throws Exception {
 
-        //WHEN
+        // WHEN
         String firestationRecord = "{\"station\":\"30\",\"address\":\"4 Binocle Ave\"}";
 
         // Create Person
@@ -165,28 +154,50 @@ public class FirestationControllerTest {
         this.mockMvc.perform(get("/firestation/14"))
                 .andExpect(status().isOk());
 
-        //GIVEN
-        // Delete Firestation by Station and Address
-        this.mockMvc.perform(delete("/firestation/30/4 Binocle Ave")); // Delete by Station and Address
-
-
-        //THEN
-        mockMvc.perform(MockMvcRequestBuilders.get("/firestation"))
-                .andExpect(jsonPath("id", "14").doesNotExist())
+        // GIVEN
+        this.mockMvc.perform(delete("/firestation/30/4 Binocle Ave")) // Delete Firestation by Station and Address
+                //THEN
                 .andExpect(status().isOk());
-
 
     }
 
     @Test
+    public void testErrorCreateFirestation() throws Exception {
+
+        // GIVEN
+        FireStations fireStations = null;
+
+        // WHEN
+        FireStations result = fireStationsController.createFirestation(fireStations);
+
+        // THEN
+        Assertions.assertNull(result);
+
+    }
+
+    @Test
+    public void testErrorReadFirestationById() {
+
+        // GIVEN
+        int id = 400;
+
+        // WHEN
+        FireStations fireStations = fireStationsController.getFirestationById(id);
+
+        // THEN
+        Assertions.assertNull(fireStations);
+    }
+
+    @Test
     public void testUpdateFirestationValueNull() {
-        //GIVEN
-        FireStations fireStations = new FireStations(1,null,null);
 
-        //WHEN
-        fireStationsController.updateFirestations(1,fireStations);
+        // GIVEN
+        FireStations fireStations = new FireStations(1, null, null);
 
-        //THEN
+        // WHEN
+        fireStationsController.updateFirestations(1, fireStations);
+
+        // THEN
         Assertions.assertNull(fireStations.getStation());
         Assertions.assertNull(fireStations.getAddress());
     }
@@ -194,28 +205,27 @@ public class FirestationControllerTest {
     @Test
     public void testUpdateFirestationDoesNotExist() {
 
+        // GIVEN
+        FireStations fireStations = new FireStations(100, null, null);
 
-        //GIVEN
-        FireStations fireStations = new FireStations(100,null,null);
+        // WHEN
+        fireStationsController.updateFirestations(100, fireStations);
 
-        //WHEN
-        fireStationsController.updateFirestations(100,fireStations);
-
-        //THEN
+        // THEN
         Assertions.assertNull(fireStations.getStation());
         Assertions.assertNull(fireStations.getAddress());
     }
 
     @Test
-    public void testDeleteFirestationValueNull(){
+    public void testDeleteFirestationValueNull() {
 
-        //GIVEN
-        FireStations fireStations = new FireStations(1,null,null);
+        // GIVEN
+        FireStations fireStations = new FireStations(1, null, null);
 
-        //WHEN
-        fireStationsController.deleteFirestations(null,null);
+        // WHEN
+        fireStationsController.deleteFirestations(null, null);
 
-        //THEN
+        // THEN
         Assertions.assertNull(fireStations.getStation());
         Assertions.assertNull(fireStations.getAddress());
     }

@@ -10,10 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
-import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -39,6 +36,7 @@ public class PersonsController {
     }
 
     //Endpoint
+
     /**
      * Create - Add a new person
      *
@@ -49,9 +47,12 @@ public class PersonsController {
     public Persons createPerson(@RequestBody Persons persons) {
 
         if (persons == null) {
-            logger.error(" CREATE /person > Error ");
+            logger.error(" ERROR CREATE /person ");
+            return null;
+        } else {
+            logger.info(" SUCCESS CREATE /person ");
         }
-        logger.info(" CREATE /person > " + persons);
+
         return personsService.createPerson(persons);
     }
 
@@ -62,7 +63,7 @@ public class PersonsController {
      */
     @GetMapping("/person")
     public Iterable<Persons> getPersonAll() {
-        logger.info("READ All Person  ");
+        logger.info(" SUCCESS READ All /person ");
         return personsService.getPersonAll();
     }
 
@@ -76,10 +77,10 @@ public class PersonsController {
     public Persons getPersonById(@PathVariable("id") final int id) {
         Optional<Persons> persons = personsService.getPersonsById(id);
         if (persons.isPresent()) {
-            logger.info(" READ /person > " + persons.get());
+            logger.info(" SUCCESS READ ONE /person  ");
             return persons.get();
         } else {
-            logger.error(" READ one person /person > Error ");
+            logger.error(" ERROR READ ONE /person ");
             return null;
         }
     }
@@ -117,11 +118,11 @@ public class PersonsController {
             if (mail != null) {
                 currentPerson.setEmail(mail);
             }
-            logger.info(" UPDATE /person > " + currentPerson);
+            logger.info(" SUCCESS UPDATE /person ");
             personsService.savePerson(currentPerson);
             return currentPerson;
         } else {
-            logger.error(" UPDATE /person > Error ");
+            logger.error(" ERROR UPDATE /person ");
             return null;
         }
     }
@@ -134,37 +135,12 @@ public class PersonsController {
     @Transactional
     @DeleteMapping("/person/{firstName}/{lastName}")
     public void deletePersonByFirstNameAndLastName(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
-        if (firstName == null || lastName == null)
-        {
-            logger.error("DELETE /person > Error");
+        if (firstName == null || lastName == null) {
+            logger.error("ERROR DELETE /person");
         }
-        logger.info(" DELETE /person with lastName: " + lastName + " and firstName: " + firstName);
+        logger.info(" SUCCESS DELETE /person ");
         personsService.deletePersonByFirstNameAndLastName(firstName, lastName);
     }
-
-    @GetMapping(value = "/childAlert")
-    public List<String> childAlert(@PathParam("address") String address) throws ParseException {
-
-        logger.info(" Success /childAlert");
-        return personsService.getChildAlert(address);
-
-    }
-
-    @GetMapping(value = "/fire")
-    public List<String> fire(@PathParam("address") String address) throws ParseException {
-        return personsService.getFire(address);
-    }
-
-    @GetMapping(value = "/communityEmail")
-    public List<String>  communityEmail(@PathParam("city") String city) {
-        return personsService.communityEmail(city);
-    }
-
-    @GetMapping(value = "/personInfo")
-    public List<String> getPersonInfo(@PathParam("firstName") String firstName, @PathParam("lastName") String lastName) throws ParseException {
-        return personsService.getPersonInfo(firstName, lastName);
-    }
-
 }
 
 

@@ -7,13 +7,11 @@ import com.safetynet.alerts.repository.FireStationsRepository;
 import com.safetynet.alerts.repository.MedicalsRecordsRepository;
 import com.safetynet.alerts.repository.PersonsRepository;
 import com.safetynet.alerts.utils.CalculateAgeUtil;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -28,19 +26,13 @@ public class PersonsService {
     private final List<String> personListChildren = new ArrayList<>();
 
     @Autowired
+    MedicalsRecordsService medicalsRecordsService;
+    @Autowired
     private PersonsRepository personsRepository;
-
     @Autowired
     private MedicalsRecordsRepository medicalsRecordsRepository;
-
     @Autowired
     private FireStationsRepository fireStationsRepository;
-
-    @Autowired
-    MedicalsRecordsService medicalsRecordsService;
-
-    private Persons Persons;
-    private MedicalRecords medicalRecords;
 
     /**
      * Create - Add a new person
@@ -77,8 +69,9 @@ public class PersonsService {
      * @param firstName lastName of the person to delete
      */
     public void deletePersonByFirstNameAndLastName(String firstName, String lastName) {
-        personsRepository.deletePersonByFirstNameAndLastName(firstName,lastName);
+        personsRepository.deletePersonByFirstNameAndLastName(firstName, lastName);
     }
+
 
     public void savePerson(Persons persons) {
         personsRepository.save(persons);
@@ -91,16 +84,13 @@ public class PersonsService {
     public List<String> communityEmail(final String city) {
         personsList.clear();
         Iterable<Persons> personsIterable = personsRepository.findMailByCity(city);
-
         for (Persons persons : personsIterable) {
-            if (!personsList.contains(persons.getEmail())) {
-                personsList.add(persons.getEmail());
-            }
+            personsList.add(persons.getEmail());
         }
         return personsList;
     }
 
-    public List<String> getChildAlert(String address) throws ParseException {
+    public List<String> getChildAlert(String address) {
         Iterable<Persons> personsIterable = personsRepository.findAllByAddress(address);
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsRepository.findAll();
         personListAdult.clear();
@@ -128,21 +118,21 @@ public class PersonsService {
             }
         }
         if (personListChildren.size() == 0) {
-              personsList.clear();
-         } else {
-        personsList.add("Children List" + personListChildren);
-        personsList.add("Adult List" + personListAdult);
+            personsList.clear();
+        } else {
+            personsList.add("Children List" + personListChildren);
+            personsList.add("Adult List" + personListAdult);
         }
         return personsList;
     }
 
-    public List<String> getFire(String address) throws ParseException {
+    public List<String> getFire(String address) {
         personsList.clear();
         Iterable<Persons> personsIterable = personsRepository.findAllByAddress(address);
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsRepository.findAll();
         Iterable<FireStations> fireStationsIterable = fireStationsRepository.findAll();
         long age;
-        for (Persons ps : personsIterable){
+        for (Persons ps : personsIterable) {
             String lastNamePs = ps.getLastName();
             String firstNamePs = ps.getFirstName();
             String addressPs = ps.getAddress();
@@ -155,7 +145,7 @@ public class PersonsService {
                 String medications = mr.getMedications();
                 if (firstNameMr.equals(firstNamePs) && lastNameMr.equals(lastNamePs) && addressPs.equals(address)) {
                     age = CalculateAgeUtil.getAge(birthDate);
-                    for (FireStations fs : fireStationsIterable){
+                    for (FireStations fs : fireStationsIterable) {
                         String stationNumber = fs.getStation();
                         String stationAddress = fs.getAddress();
                         if (addressPs.equals(stationAddress)) {
@@ -169,7 +159,7 @@ public class PersonsService {
         return personsList;
     }
 
-    public List<String> getPersonInfo(String firstName, String lastName) throws ParseException {
+    public List<String> getPersonInfo(String firstName, String lastName) {
         personsList.clear();
         Iterable<Persons> personsIterable = personsRepository.findAll();
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsRepository.findAll();
@@ -182,22 +172,22 @@ public class PersonsService {
         String birthDate;
         long age = 0;
 
-        for (Persons ps : personsIterable){
+        for (Persons ps : personsIterable) {
             firstNamePs = ps.getFirstName();
             lastNamePs = ps.getLastName();
             mailPs = ps.getEmail();
             addressPs = ps.getAddress();
 
-            if (firstName.equals(firstNamePs) && lastName.equals(lastNamePs)){
+            if (firstName.equals(firstNamePs) && lastName.equals(lastNamePs)) {
 
-                for (MedicalRecords mr : medicalRecordsIterable){
-                medication = mr.getMedications();
-                allergies = mr.getAllergies();
-                birthDate = mr.getBirthdate();
-                age = CalculateAgeUtil.getAge(birthDate);
+                for (MedicalRecords mr : medicalRecordsIterable) {
+                    medication = mr.getMedications();
+                    allergies = mr.getAllergies();
+                    birthDate = mr.getBirthdate();
+                    age = CalculateAgeUtil.getAge(birthDate);
                 }
-                personsList.add("firstName: "+firstNamePs+" lastName: "+lastNamePs+" address: "+addressPs+" age: "+age+" mail: "+mailPs+" allergies: "+allergies+" medications: "+medication);
-          //TODO en attente de Mandfred
+                personsList.add("firstName: " + firstNamePs + " lastName: " + lastNamePs + " address: " + addressPs + " age: " + age + " mail: " + mailPs + " allergies: " + allergies + " medications: " + medication);
+                //TODO en attente de Mandfred
             }
         }
         return personsList;

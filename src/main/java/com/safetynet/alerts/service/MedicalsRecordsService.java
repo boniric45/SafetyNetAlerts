@@ -2,7 +2,6 @@ package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.MedicalRecords;
 import com.safetynet.alerts.repository.MedicalsRecordsRepository;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +19,6 @@ public class MedicalsRecordsService {
     private final List<MedicalRecords> medicalRecordsList = new ArrayList<>();
     @Autowired
     private MedicalsRecordsRepository medicalsRecordsRepository;
-
-    public Iterable<MedicalRecords> listSaveMedicalrecords(List<MedicalRecords> list) {
-        medicalsRecordsRepository.saveAll(list);
-        return list;
-    }
-
 
     //EndPoint
 
@@ -70,15 +63,21 @@ public class MedicalsRecordsService {
 
     /**
      * Delete - Delete an medicalRecord
-     *
+     * <p>
      * The FirstName and LastName of the medicalRecord to delete
      */
+    public void deleteMedicalRecordByFirstNameAndLastName(String firstName, String lastName) {
+        medicalsRecordsRepository.deleteMedicalRecordByFirstNameAndLastName(firstName, lastName);
+    }
+
+
+    public Iterable<MedicalRecords> listSaveMedicalrecords(List<MedicalRecords> list) {
+        medicalsRecordsRepository.saveAll(list);
+        return list;
+    }
 
     public void saveMedicalRecord(MedicalRecords currentMedical) {
         medicalsRecordsRepository.save(currentMedical);
     }
 
-    public void deleteMedicalRecordByFirstNameAndLastName(String firstName, String lastName) {
-        medicalsRecordsRepository.deleteMedicalRecordByFirstNameAndLastName(firstName,lastName);
-    }
 }

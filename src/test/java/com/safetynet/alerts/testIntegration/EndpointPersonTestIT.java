@@ -27,15 +27,16 @@ public class EndpointPersonTestIT {
     // Create Person Test
     @Test
     public void testCreatePerson() throws Exception {
-        //GIVEN
+
+        // GIVEN
         String person = "{\"firstName\":\"John\",\"lastName\":\"Boyd\",\"address\":\"1509 Culver St\",\"zip\":\"97451\",\"city\":\"Culver\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
-        //WHEN
+        // WHEN
         MockHttpServletRequestBuilder req = post("/person")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(person);
 
-        //THEN
+        // THEN
         this.mockMvc.perform(req)
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("firstName", CoreMatchers.is("John")))
@@ -45,7 +46,9 @@ public class EndpointPersonTestIT {
     // Read All Person Test
     @Test
     public void testReadAllPersons() throws Exception {
-        mockMvc.perform(get("/person")).andExpect(status().isOk());
+
+        mockMvc.perform(get("/person"))
+                .andExpect(status().isOk());
     }
 
     // Read Person By Id Test
@@ -61,16 +64,14 @@ public class EndpointPersonTestIT {
     @Test
     public void testUpdatePerson() throws Exception {
 
-        //GIVEN
+        // GIVEN
         String updatePerson = "{\"firstName\":\"John\",\"lastName\":\"Boyd\",\"address\":\"1509 Culver St\",\"zip\":\"98000\",\"city\":\"Paris\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
-        // Read Person Id 2
-       mockMvc.perform(get("/person/1"))
+        mockMvc.perform(get("/person/1")) // Read Person Id 2
                 .andExpect(status().isOk());
 
-        //WHEN
-        //Update Person with updatePerson
-        MockHttpServletRequestBuilder req = put("/person/1")
+        // WHEN
+        MockHttpServletRequestBuilder req = put("/person/1") // Update Person with updatePerson
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(updatePerson);
 
@@ -79,9 +80,8 @@ public class EndpointPersonTestIT {
                 .andExpect(jsonPath("zip", CoreMatchers.is("98000")))
                 .andExpect(jsonPath("city", CoreMatchers.is("Paris")));
 
-        //THEN
-        // Read Person Id 2
-        mockMvc.perform(get("/person/2"))
+        // THEN
+        mockMvc.perform(get("/person/2")) // Read Person Id 2
                 .andExpect(status().isOk());
     }
 
@@ -89,22 +89,20 @@ public class EndpointPersonTestIT {
     @Test
     public void testDeletePerson() throws Exception {
 
-        //WHEN
+        // WHEN
         String personRecord = "{\"id\":8,\"firstName\":\"Peter\",\"lastName\":\"Duncan\",\"address\":\"644 Gershwin Cir\",\"zip\":\"97451\",\"city\":\"Culver\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
-        // Create Person
-        this.mockMvc.perform(post("/person")
+        this.mockMvc.perform(post("/person") // Create Person
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(personRecord));
-        // Read id 8 Person
-        this.mockMvc.perform(get("/person/8"))
+
+        this.mockMvc.perform(get("/person/8"))  // Read id 8 Person
                 .andExpect(status().isOk());
 
-        //GIVEN
-        // Delete Person by Firstname and Lastname
-        this.mockMvc.perform(delete("/person/Peter/Duncan")); // Delete by Firstname and Lastname
+        // GIVEN
+        this.mockMvc.perform(delete("/person/Peter/Duncan")); // Delete Person by Firstname and Lastname
 
-        //THEN
+        // THEN
         this.mockMvc.perform(get("/person/8")) //Test Id 8
                 .andExpect(status().isOk());
 
@@ -113,23 +111,24 @@ public class EndpointPersonTestIT {
     // No Update Person by Firstname And Lastname Test
     @Test
     public void testNoUpdatePersonByFirstnameAndLastname() throws Exception {
-        //GIVEN
+        // GIVEN
         String updatePerson = "{\"firstName\":\"Julio\",\"lastName\":\"Becker\",\"address\":\"1509 Culver St\",\"zip\":\"99999\",\"city\":\"Culver\",\"phone\":\"841-874-6512\",\"email\":\"jaboyd@email.com\"}";
 
         this.mockMvc.perform(get("/person/1")) // Read Person Id 1 => Firstname: Tenley and Lastname: Boyd
                 .andExpect(status().isOk());
-        //WHEN
+        // WHEN
         this.mockMvc.perform(put("/person/1")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(updatePerson))
                 .andExpect(jsonPath("firstName", CoreMatchers.is("John")))
                 .andExpect(jsonPath("lastName", CoreMatchers.is("Boyd")))
-                .andExpect(jsonPath("zip",CoreMatchers.is("99999")));
+                .andExpect(jsonPath("zip", CoreMatchers.is("99999")));
 
-        //THEN
+        // THEN
         this.mockMvc.perform(get("/person/1"))
                 .andExpect(status().isOk());
 
     }
+
 
 }

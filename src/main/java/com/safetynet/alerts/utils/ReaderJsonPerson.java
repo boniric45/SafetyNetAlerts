@@ -1,19 +1,15 @@
 package com.safetynet.alerts.utils;
 
-import com.fasterxml.jackson.core.json.UTF8StreamJsonParser;
 import com.safetynet.alerts.model.Persons;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ContainerFactory;
 import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Component;
 
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
@@ -31,13 +27,13 @@ public class ReaderJsonPerson {
         try {
             logger.info("Read JSON Person to H2");
 
-            JSONObject jsonObject = (JSONObject) parser.parse(new InputStreamReader(new FileInputStream(dataFile),StandardCharsets.UTF_8));
+            JSONObject jsonObject = (JSONObject) parser.parse(new InputStreamReader(new FileInputStream(dataFile), StandardCharsets.UTF_8));
             JSONArray jsonArray = (JSONArray) jsonObject.get("persons");
 
             int id = 1;
 
-            for (int i = 0; i < jsonArray.size(); i++) {
-                JSONObject jo = (JSONObject) jsonArray.get(i);
+            for (Object o : jsonArray) {
+                JSONObject jo = (JSONObject) o;
                 listPerson.add(persons);
                 String lastName = (String) jo.get("lastName");
                 String firstName = (String) jo.get("firstName");
