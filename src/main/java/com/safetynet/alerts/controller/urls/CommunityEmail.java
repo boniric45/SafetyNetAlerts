@@ -1,4 +1,4 @@
-package com.safetynet.alerts.urls;
+package com.safetynet.alerts.controller.urls;
 
 import com.safetynet.alerts.controller.PersonsController;
 import com.safetynet.alerts.service.PersonsService;
@@ -12,22 +12,22 @@ import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
-public class PersonInfo {
+public class CommunityEmail {
 
     @Autowired
     PersonsService personsService;
 
     Logger logger = LogManager.getLogger(PersonsController.class);
 
-    @GetMapping(value = "/personInfo")
-    public List<String> getPersonInfo(@PathParam("firstName") String firstName, @PathParam("lastName") String lastName) {
-
-        if (firstName.isEmpty() || lastName.isEmpty()) {
-            logger.error("ERROR /personInfo");
+    @GetMapping(value = "/communityEmail")
+    public List<String> communityEmail(@PathParam("city") String city) {
+        if (city.isEmpty()) {
+            logger.error("ERROR /communityEmail");
         } else {
-            logger.info(" SUCCESS /personInfo");
+            logger.info(" SUCCESS /communityEmail");
         }
-
-        return personsService.getPersonInfo(firstName, lastName);
+        return personsService.communityEmail(city);
     }
+
+
 }

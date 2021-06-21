@@ -1,7 +1,7 @@
-package com.safetynet.alerts.urls;
+package com.safetynet.alerts.controller.urls;
 
 import com.safetynet.alerts.controller.PersonsController;
-import com.safetynet.alerts.service.PersonsService;
+import com.safetynet.alerts.service.FireStationsService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,20 +12,24 @@ import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
-public class Fire {
+public class PhoneAlert {
 
     @Autowired
-    PersonsService personsService;
+    FireStationsService fireStationsService;
+
     Logger logger = LogManager.getLogger(PersonsController.class);
 
-    @GetMapping(value = "/fire")
-    public List<String> fire(@PathParam("address") String address) {
+    @GetMapping(value = "/phoneAlert")
+    public List<String> getPhoneAlert(@PathParam("firestation") String firestation) {
 
-        if (address.isEmpty()) {
-            logger.error("ERROR /fire");
+        if (firestation.isEmpty()) {
+            logger.error("ERROR /phoneAlert");
         } else {
-            logger.info(" SUCCESS /fire");
+            logger.info("SUCCESS /phoneAlert");
         }
-        return personsService.getFire(address);
+
+        return fireStationsService.getPhoneAlert(firestation);
     }
+
+
 }

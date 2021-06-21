@@ -1,8 +1,25 @@
-2021-06-21 16:00:41,690 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
-2021-06-21 16:00:41,694 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
-2021-06-21 16:00:41,748 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
-2021-06-21 16:00:41,749 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
-2021-06-21 16:00:41,759 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
-2021-06-21 16:00:41,762 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
-2021-06-21 16:01:01,806 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1]  SUCCESS READ All /person 
-2021-06-21 16:01:08,167 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2]  SUCCESS READ ONE /person  
+2021-06-21 18:15:40,737 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-21 18:15:40,741 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-21 18:15:40,797 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-21 18:15:40,798 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-21 18:15:40,809 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-21 18:15:40,813 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-21 18:15:54,144 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1]  SUCCESS READ All /person 
+2021-06-21 18:16:01,327 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2]  SUCCESS READ ONE /person  
+2021-06-21 18:16:06,830 ERROR c.s.a.c.PersonsController [http-nio-8080-exec-3]  ERROR READ ONE /person 
+2021-06-21 18:17:33,787 INFO c.s.a.c.PersonsController [http-nio-8080-exec-8]  SUCCESS READ All /person 
+2021-06-21 18:17:53,904 INFO c.s.a.c.PersonsController [http-nio-8080-exec-6]  SUCCESS READ ONE /person  
+2021-06-21 18:33:43,746 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-21 18:33:43,750 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-21 18:33:43,811 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-21 18:33:43,811 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-21 18:33:43,828 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-21 18:33:43,832 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-21 18:33:46,944 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1]  SUCCESS READ All /person 
+2021-06-21 18:34:22,006 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2]  SUCCESS /childAlert
+2021-06-21 18:34:41,876 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3]  SUCCESS /communityEmail
+2021-06-21 18:35:04,982 INFO c.s.a.c.PersonsController [http-nio-8080-exec-5]  SUCCESS /fire
+2021-06-21 18:35:32,349 INFO c.s.a.c.PersonsController [http-nio-8080-exec-6] SUCCESS /firestation?station
+2021-06-21 18:35:56,369 INFO c.s.a.c.PersonsController [http-nio-8080-exec-8] SUCCESS /flood/stations
+2021-06-21 18:36:33,348 INFO c.s.a.c.PersonsController [http-nio-8080-exec-9]  SUCCESS /personInfo
+2021-06-21 18:36:48,787 INFO c.s.a.c.PersonsController [http-nio-8080-exec-10] SUCCESS /phoneAlert

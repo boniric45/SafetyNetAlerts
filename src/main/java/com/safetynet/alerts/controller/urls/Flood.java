@@ -1,4 +1,4 @@
-package com.safetynet.alerts.urls;
+package com.safetynet.alerts.controller.urls;
 
 import com.safetynet.alerts.controller.PersonsController;
 import com.safetynet.alerts.service.FireStationsService;
