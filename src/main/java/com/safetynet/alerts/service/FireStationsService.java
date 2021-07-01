@@ -19,6 +19,9 @@ import java.util.Optional;
 @Getter
 @Setter
 @Service
+/**
+ * Service Firestation
+ */
 public class FireStationsService {
 
     private final List<String> fireStationsList = new ArrayList<>();
@@ -35,22 +38,20 @@ public class FireStationsService {
     @Autowired
     private MedicalsRecordsRepository medicalsRecordsRepository;
 
-    //Endpoints
-
     /**
      * Create - Add a new firestation
      *
      * @param fireStations An object firestation
      * @return The firestation object saved
      */
-    public FireStations createFirestation(FireStations fireStations) {
+    public FireStations createNewFirestation(FireStations fireStations) {
         return fireStationsRepository.save(fireStations);
     }
 
     /**
      * Read - Get all firestation
      *
-     * @return - An Iterable object of Firestation full filled
+     * @return - An Iterable object of ListFirestationByStationNumber full filled
      */
     public Iterable<FireStations> getFirestationAll() {
         return fireStationsRepository.findAll();
@@ -66,7 +67,6 @@ public class FireStationsService {
         return fireStationsRepository.findById(id);
     }
 
-
     /**
      * Delete - Delete an firestation
      *
@@ -78,11 +78,12 @@ public class FireStationsService {
 
     }
 
-    //URL
-    public void listSaveFirestation(List<FireStations> list) {
+    // Save list all firestation
+    public void saveListAllFirestation(List<FireStations> list) {
         fireStationsRepository.saveAll(list);
     }
 
+    // return list firestation from station number
     public List<String> getFirestationsFromStationNumber(String station) {
         fireStationsList.clear();
         Iterable<FireStations> fireStations = fireStationsRepository.findAllByStation(station);
@@ -128,7 +129,8 @@ public class FireStationsService {
         return fireStationsList;
     }
 
-    public List<String> getPhoneAlert(String firestation) {
+    // return list phone number
+    public List<String> getListPhoneNumber(String firestation) {
         Iterable<FireStations> fireStations = fireStationsRepository.findAllByStation(firestation);
         Iterable<Persons> personsIterable = personsRepository.findAll();
         fireStationsList.clear();
@@ -147,7 +149,8 @@ public class FireStationsService {
         return fireStationsList;
     }
 
-    public List<String> getFloodStations(String stations) {
+    // return list all homes by the firestation
+    public List<String> getListAllHomesByTheFirestation(String stations) {
 
         fireStationsList.clear();
 

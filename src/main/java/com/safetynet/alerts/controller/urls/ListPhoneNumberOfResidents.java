@@ -9,26 +9,29 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.websocket.server.PathParam;
-import java.text.ParseException;
 import java.util.List;
 
+/**
+ * Return list of telephone numbers of residents served by the fire station
+ */
 @RestController
-public class Flood {
+public class ListPhoneNumberOfResidents {
 
     @Autowired
     FireStationsService fireStationsService;
-
     Logger logger = LogManager.getLogger(PersonsController.class);
 
-    @GetMapping(value = "/flood/stations")
-    public List<String> getFloodStations(@PathParam("stations") String stations) throws ParseException {
+    // URL http://localhost:8080/phoneAlert?firestation=
+    @GetMapping(value = "/phoneAlert")
+    public List<String> getListPhoneNumberOfResidents(@PathParam("firestation") String firestation) {
 
-        if (stations.isEmpty()) {
-            logger.error("ERROR /flood/stations");
+        if (firestation.isEmpty()) {
+            logger.error("ERROR /phoneAlert");
         } else {
-            logger.info("SUCCESS /flood/stations");
+            logger.info("SUCCESS /phoneAlert");
         }
 
-        return fireStationsService.getFloodStations(stations);
+        return fireStationsService.getListPhoneNumber(firestation);
     }
+
 }

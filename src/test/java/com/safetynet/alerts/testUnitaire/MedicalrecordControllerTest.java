@@ -1,8 +1,9 @@
 package com.safetynet.alerts.testUnitaire;
 
-import com.safetynet.alerts.CustomProperties;
+import com.safetynet.alerts.config.CustomProperties;
 import com.safetynet.alerts.controller.MedicalsRecordsController;
 import com.safetynet.alerts.model.MedicalRecords;
+import com.safetynet.alerts.utils.DateIsValid;
 import com.safetynet.alerts.utils.ReadJsonMedicalRecord;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Assertions;
@@ -60,7 +61,7 @@ public class MedicalrecordControllerTest {
         String fakedate = "fakedate";
 
         // WHEN
-        Boolean isvalid = ReadJsonMedicalRecord.DateChecker.isValid(fakedate);
+        Boolean isvalid = DateIsValid.DateChecker.isValid(fakedate);
 
         //THEN
         Assertions.assertEquals(isvalid, false);
@@ -86,7 +87,7 @@ public class MedicalrecordControllerTest {
 
         // GIVEN
         int element = 23;
-        medicalsRecordsController.chargedMedicalRecord(props.getJsonDatafile());
+        medicalsRecordsController.saveMedicalRecordToH2(props.getJsonDatafile());
 
         // WHEN
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsController.getMedicalRecordsAll();
@@ -177,7 +178,7 @@ public class MedicalrecordControllerTest {
 
         // WHEN
         medicalsRecordsController.getMedicalRecordsById(1);
-        medicalsRecordsController.updateMedicalRecord(1, updateMedicalRecords);
+        medicalsRecordsController.updateMedicalRecordById(1, updateMedicalRecords);
         MedicalRecords medicalRecordsAfterUpdate = medicalsRecordsController.getMedicalRecordsById(1);
 
         // THEN
@@ -196,7 +197,7 @@ public class MedicalrecordControllerTest {
         MedicalRecords createMedicalRecord = new MedicalRecords(24, firstName, lastName, birthdate, medications, allergies);
 
         // WHEN
-        medicalsRecordsController.createMedicalRecord(createMedicalRecord);
+        medicalsRecordsController.createNewMedicalRecord(createMedicalRecord);
         medicalsRecordsController.deleteMedicalRecordByFirstNameAndLastName(firstName, lastName);
 
         // THEN
@@ -226,7 +227,7 @@ public class MedicalrecordControllerTest {
         MedicalRecords medicalRecords = null;
 
         // THEN
-        Assertions.assertNull(medicalsRecordsController.createMedicalRecord(medicalRecords));
+        Assertions.assertNull(medicalsRecordsController.createNewMedicalRecord(medicalRecords));
 
     }
 
@@ -251,7 +252,7 @@ public class MedicalrecordControllerTest {
         MedicalRecords medicalRecords = null;
 
         // WHEN
-        MedicalRecords result = medicalsRecordsController.updateMedicalRecord(1000, medicalRecords);
+        MedicalRecords result = medicalsRecordsController.updateMedicalRecordById(1000, medicalRecords);
 
         // THEN
         Assertions.assertNull(result);

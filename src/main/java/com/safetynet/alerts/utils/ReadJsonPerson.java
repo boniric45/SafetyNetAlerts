@@ -6,17 +6,19 @@ import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.springframework.stereotype.Component;
 
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-@Component
-public class ReaderJsonPerson {
+/**
+ * read data.json and save person data into h2 bdd
+ */
 
-    private static final Logger logger = LogManager.getLogger(ReaderJsonPerson.class);
+public class ReadJsonPerson {
+
+    private static final Logger logger = LogManager.getLogger(ReadJsonPerson.class);
 
     public static ArrayList<Persons> readJsonFile(String dataFile) {
 

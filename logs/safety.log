@@ -23,3 +23,516 @@
 2021-06-21 18:35:56,369 INFO c.s.a.c.PersonsController [http-nio-8080-exec-8] SUCCESS /flood/stations
 2021-06-21 18:36:33,348 INFO c.s.a.c.PersonsController [http-nio-8080-exec-9]  SUCCESS /personInfo
 2021-06-21 18:36:48,787 INFO c.s.a.c.PersonsController [http-nio-8080-exec-10] SUCCESS /phoneAlert
+2021-06-29 12:52:39,483 INFO c.s.a.u.ReaderJsonPerson [main] Read JSON Person to H2
+2021-06-29 12:52:39,487 INFO c.s.a.u.ReaderJsonPerson [main] Person saved to H2
+2021-06-29 12:52:39,547 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 12:52:39,547 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 12:52:39,559 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 12:52:39,563 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 12:53:23,449 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1]  SUCCESS READ All /person 
+2021-06-29 12:54:37,896 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 12:54:37,899 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 12:54:37,958 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 12:54:37,958 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 12:54:37,970 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 12:54:37,973 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 12:54:41,899 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1]  SUCCESS READ All /person 
+2021-06-29 12:54:46,554 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2]  SUCCESS READ ONE /person  
+2021-06-29 12:56:30,794 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 12:56:30,798 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 12:56:30,854 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 12:56:30,860 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 12:56:30,872 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 12:56:30,876 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 12:56:57,963 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 12:56:57,964 ERROR c.s.a.u.ReadJsonPerson [main] Error Read JSON Person: java.lang.NullPointerException
+2021-06-29 12:56:57,964 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 12:56:57,977 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 12:56:57,977 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 13:13:44,441 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 13:13:44,441 ERROR c.s.a.u.ReadJsonPerson [main] Error Read JSON Person: java.lang.NullPointerException
+2021-06-29 13:13:44,441 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 13:13:44,454 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 13:13:44,454 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 13:14:01,128 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 13:14:01,132 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 13:14:01,188 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 13:14:01,188 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 13:14:01,207 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 13:14:01,210 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 13:14:16,071 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2] Home
+2021-06-29 13:25:01,962 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 13:25:01,966 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 13:25:02,032 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 13:25:02,033 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 13:25:02,047 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 13:25:02,050 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 13:26:25,209 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 13:26:25,212 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 13:26:25,273 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 13:26:25,274 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 13:26:25,286 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 13:26:25,289 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 13:26:46,923 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 13:26:46,928 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 13:26:46,987 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 13:26:46,988 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 13:26:47,002 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 13:26:47,005 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 14:59:51,187 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 14:59:51,188 ERROR c.s.a.u.ReadJsonPerson [main] Error Read JSON Person: java.lang.NullPointerException
+2021-06-29 14:59:51,188 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:00:16,819 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:00:16,819 ERROR c.s.a.u.ReadJsonPerson [main] Error Read JSON Person: java.lang.NullPointerException
+2021-06-29 15:00:16,819 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:01:59,590 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:01:59,594 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:02:20,682 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:02:20,686 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:04:10,990 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:04:10,994 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:04:38,959 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:04:38,963 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:05:11,471 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:05:11,475 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:05:49,943 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:05:49,948 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:06:12,334 INFO c.s.a.c.PersonsController [http-nio-8080-exec-3] Home
+2021-06-29 15:06:19,100 INFO c.s.a.c.PersonsController [http-nio-8080-exec-4]  SUCCESS READ All /person 
+2021-06-29 15:07:51,716 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:07:51,719 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:08:35,251 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 15:08:35,255 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 15:08:35,312 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 15:08:35,313 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 15:08:35,325 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 15:08:35,329 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 18:54:50,584 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 18:54:50,588 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 18:55:28,684 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 18:55:28,688 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 18:56:30,442 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 18:56:30,447 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 18:56:42,597 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1]  SUCCESS READ All /person 
+2021-06-29 18:56:48,648 INFO c.s.a.c.PersonsController [http-nio-8080-exec-2]  SUCCESS READ ONE /person  
+2021-06-29 18:58:25,845 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 18:58:25,849 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 18:58:25,905 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 18:58:25,906 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 18:58:25,924 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 18:58:25,927 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 18:59:05,502 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 18:59:05,505 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 18:59:05,562 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 18:59:05,563 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 18:59:05,576 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 18:59:05,579 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:01:00,475 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:01:00,483 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:01:00,586 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:01:00,587 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:01:00,618 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:01:00,623 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:01:00,811 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:01:00,811 ERROR c.s.a.u.ReadJsonFirestation [main] Error Read JSON FireStation: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:01:00,811 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:01:00,829 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:01:00,829 ERROR c.s.a.u.ReadJsonMedicalRecord [main] Error Read JSON MedicalRecord: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:01:00,830 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:01:00,840 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:01:00,840 ERROR c.s.a.u.ReadJsonPerson [main] Error Read JSON Person: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:01:00,841 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:01:02,005 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:01:02,007 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:01:02,033 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:01:02,034 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:01:02,047 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:01:02,051 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:01:02,114 INFO c.s.a.c.PersonsController [main] Home
+2021-06-29 19:01:02,480 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:01:02,481 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:01:02,556 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:01:02,564 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:01:02,578 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:01:02,578 ERROR c.s.a.u.ReadJsonMedicalRecord [main] Error Read JSON MedicalRecord: java.io.FileNotFoundException: datajson.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:01:02,578 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:01:02,583 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR UPDATE /medicalRecord 
+2021-06-29 19:01:02,587 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:01:02,590 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:01:02,590 ERROR c.s.a.u.ReadJsonMedicalRecord [main] com.safetynet.alerts.utils.ReadJsonMedicalRecord$DateChecker
+2021-06-29 19:01:02,594 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:01:02,597 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS DELETE /medicalRecord 
+2021-06-29 19:01:02,604 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:01:02,620 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:01:02,628 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:01:02,631 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS UPDATE /medicalRecord 
+2021-06-29 19:01:02,632 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:01:02,635 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR CREATE /medicalRecord 
+2021-06-29 19:01:02,638 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:01:02,640 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:01:02,649 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:01:02,656 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR READ /medicalRecord 
+2021-06-29 19:01:02,660 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:01:02,664 ERROR c.s.a.c.MedicalsRecordsController [main] ERROR DELETE /medicalRecord 
+2021-06-29 19:01:02,686 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:01:02,703 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:01:02,704 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:01:02,715 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:01:02,724 ERROR c.s.a.c.PersonsController [main] ERROR DELETE /person
+2021-06-29 19:01:02,724 INFO c.s.a.c.PersonsController [main]  SUCCESS DELETE /person 
+2021-06-29 19:01:02,731 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:01:02,741 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:01:02,745 INFO c.s.a.c.PersonsController [main]  SUCCESS UPDATE /person 
+2021-06-29 19:01:02,750 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:01:02,756 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:01:02,760 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:01:02,763 INFO c.s.a.c.PersonsController [main]  SUCCESS DELETE /person 
+2021-06-29 19:01:02,768 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:01:02,780 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:01:02,785 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:01:02,792 ERROR c.s.a.c.PersonsController [main]  ERROR READ ONE /person 
+2021-06-29 19:01:02,796 INFO c.s.a.c.PersonsController [main]  SUCCESS UPDATE /person 
+2021-06-29 19:01:02,800 ERROR c.s.a.c.PersonsController [main]  ERROR CREATE /person 
+2021-06-29 19:01:02,803 ERROR c.s.a.c.PersonsController [main]  ERROR UPDATE /person 
+2021-06-29 19:01:04,363 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:01:04,364 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:01:04,380 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:01:04,380 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:01:04,388 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:01:04,391 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:01:04,536 INFO c.s.a.c.PersonsController [http-nio-auto-1-exec-1] Home
+2021-06-29 19:01:04,751 INFO c.s.a.c.PersonsController [main]  SUCCESS /childAlert
+2021-06-29 19:01:04,770 INFO c.s.a.c.PersonsController [main]  SUCCESS /childAlert
+2021-06-29 19:01:04,779 ERROR c.s.a.c.PersonsController [main] ERROR /childAlert
+2021-06-29 19:01:04,794 INFO c.s.a.c.PersonsController [main]  SUCCESS /communityEmail
+2021-06-29 19:01:04,805 ERROR c.s.a.c.PersonsController [main] ERROR /communityEmail
+2021-06-29 19:01:04,817 INFO c.s.a.c.PersonsController [main] SUCCESS /firestation?station
+2021-06-29 19:01:04,830 ERROR c.s.a.c.PersonsController [main] ERROR /firestation?station
+2021-06-29 19:01:04,844 ERROR c.s.a.c.PersonsController [main] ERROR /fire
+2021-06-29 19:01:04,854 INFO c.s.a.c.PersonsController [main]  SUCCESS /fire
+2021-06-29 19:01:04,908 INFO c.s.a.c.PersonsController [main] SUCCESS /flood/stations
+2021-06-29 19:01:04,919 ERROR c.s.a.c.PersonsController [main] ERROR /flood/stations
+2021-06-29 19:01:04,934 INFO c.s.a.c.PersonsController [main]  SUCCESS /personInfo
+2021-06-29 19:01:04,941 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:01:04,944 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:01:04,948 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:01:04,956 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:01:04,963 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:01:04,975 INFO c.s.a.c.PersonsController [main] SUCCESS /phoneAlert
+2021-06-29 19:01:04,983 ERROR c.s.a.c.PersonsController [main] ERROR /phoneAlert
+2021-06-29 19:07:29,790 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:07:29,794 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:07:29,857 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:07:29,857 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:07:29,871 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:07:29,874 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:15:53,524 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:15:53,528 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:15:53,592 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:15:53,592 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:15:53,605 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:15:53,608 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:16:18,439 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:16:18,445 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:16:18,546 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:16:18,548 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:16:18,568 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:16:18,572 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:16:18,764 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:16:18,764 ERROR c.s.a.u.ReadJsonFirestation [main] Error Read JSON FireStation: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:16:18,764 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:16:18,790 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:16:18,790 ERROR c.s.a.u.ReadJsonMedicalRecord [main] Error Read JSON MedicalRecord: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:16:18,791 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:16:18,801 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:16:18,802 ERROR c.s.a.u.ReadJsonPerson [main] Error Read JSON Person: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:16:18,802 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:16:19,917 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:16:19,918 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:16:19,941 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:16:19,942 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:16:19,954 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:16:19,956 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:16:20,021 INFO c.s.a.c.PersonsController [main] Home
+2021-06-29 19:16:20,372 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:16:20,373 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:16:20,453 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:16:20,465 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:16:20,475 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:16:20,475 ERROR c.s.a.u.ReadJsonMedicalRecord [main] Error Read JSON MedicalRecord: java.io.FileNotFoundException: datajson.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:16:20,475 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:16:20,479 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR UPDATE /medicalRecord 
+2021-06-29 19:16:20,483 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:16:20,486 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:16:20,487 ERROR c.s.a.u.ReadJsonMedicalRecord [main] com.safetynet.alerts.utils.DateIsValid$DateChecker
+2021-06-29 19:16:20,491 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:16:20,494 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS DELETE /medicalRecord 
+2021-06-29 19:16:20,500 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:16:20,518 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:16:20,526 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:16:20,530 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS UPDATE /medicalRecord 
+2021-06-29 19:16:20,531 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:16:20,535 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR CREATE /medicalRecord 
+2021-06-29 19:16:20,538 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:16:20,541 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:16:20,553 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:16:20,560 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR READ /medicalRecord 
+2021-06-29 19:16:20,565 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:16:20,569 ERROR c.s.a.c.MedicalsRecordsController [main] ERROR DELETE /medicalRecord 
+2021-06-29 19:16:20,596 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:16:20,614 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:16:20,615 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:16:20,625 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:16:20,634 ERROR c.s.a.c.PersonsController [main] ERROR DELETE /person
+2021-06-29 19:16:20,634 INFO c.s.a.c.PersonsController [main]  SUCCESS DELETE /person 
+2021-06-29 19:16:20,642 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:16:20,653 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:16:20,657 INFO c.s.a.c.PersonsController [main]  SUCCESS UPDATE /person 
+2021-06-29 19:16:20,663 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:16:20,670 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:16:20,676 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:16:20,679 INFO c.s.a.c.PersonsController [main]  SUCCESS DELETE /person 
+2021-06-29 19:16:20,685 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:16:20,697 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:16:20,702 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:16:20,711 ERROR c.s.a.c.PersonsController [main]  ERROR READ ONE /person 
+2021-06-29 19:16:20,717 INFO c.s.a.c.PersonsController [main]  SUCCESS UPDATE /person 
+2021-06-29 19:16:20,722 ERROR c.s.a.c.PersonsController [main]  ERROR CREATE /person 
+2021-06-29 19:16:20,726 ERROR c.s.a.c.PersonsController [main]  ERROR UPDATE /person 
+2021-06-29 19:16:22,209 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:16:22,209 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:16:22,224 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:16:22,224 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:16:22,232 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:16:22,234 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:16:22,372 INFO c.s.a.c.PersonsController [http-nio-auto-1-exec-1] Home
+2021-06-29 19:16:22,585 INFO c.s.a.c.PersonsController [main]  SUCCESS /childAlert
+2021-06-29 19:16:22,602 INFO c.s.a.c.PersonsController [main]  SUCCESS /childAlert
+2021-06-29 19:16:22,612 ERROR c.s.a.c.PersonsController [main] ERROR /childAlert
+2021-06-29 19:16:22,628 INFO c.s.a.c.PersonsController [main]  SUCCESS /communityEmail
+2021-06-29 19:16:22,639 ERROR c.s.a.c.PersonsController [main] ERROR /communityEmail
+2021-06-29 19:16:22,651 INFO c.s.a.c.PersonsController [main] SUCCESS /firestation?station
+2021-06-29 19:16:22,667 ERROR c.s.a.c.PersonsController [main] ERROR /firestation?station
+2021-06-29 19:16:22,682 ERROR c.s.a.c.PersonsController [main] ERROR /fire
+2021-06-29 19:16:22,692 INFO c.s.a.c.PersonsController [main]  SUCCESS /fire
+2021-06-29 19:16:22,750 INFO c.s.a.c.PersonsController [main] SUCCESS /flood/stations
+2021-06-29 19:16:22,761 ERROR c.s.a.c.PersonsController [main] ERROR /flood/stations
+2021-06-29 19:16:22,777 INFO c.s.a.c.PersonsController [main]  SUCCESS /personInfo
+2021-06-29 19:16:22,785 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:16:22,788 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:16:22,791 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:16:22,798 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:16:22,804 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:16:22,817 INFO c.s.a.c.PersonsController [main] SUCCESS /phoneAlert
+2021-06-29 19:16:22,825 ERROR c.s.a.c.PersonsController [main] ERROR /phoneAlert
+2021-06-29 19:18:00,680 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:18:00,687 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:18:00,790 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:18:00,791 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:18:00,812 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:18:00,816 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:18:01,013 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:18:01,014 ERROR c.s.a.u.ReadJsonFirestation [main] Error Read JSON FireStation: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:18:01,014 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:18:01,031 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:18:01,031 ERROR c.s.a.u.ReadJsonMedicalRecord [main] Error Read JSON MedicalRecord: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:18:01,031 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:18:01,041 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:18:01,042 ERROR c.s.a.u.ReadJsonPerson [main] Error Read JSON Person: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:18:01,042 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:18:02,150 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:18:02,151 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:18:02,172 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:18:02,173 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:18:02,186 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:18:02,189 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:18:02,246 INFO c.s.a.c.PersonsController [main] Home
+2021-06-29 19:18:02,597 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:18:02,598 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:18:02,675 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:18:02,687 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:18:02,700 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:18:02,700 ERROR c.s.a.u.ReadJsonMedicalRecord [main] Error Read JSON MedicalRecord: java.io.FileNotFoundException: datajson.xml (Le fichier spécifié est introuvable)
+2021-06-29 19:18:02,700 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:18:02,704 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR UPDATE /medicalRecord 
+2021-06-29 19:18:02,708 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:18:02,711 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:18:02,712 ERROR c.s.a.u.ReadJsonMedicalRecord [main] com.safetynet.alerts.utils.DateIsValid$DateChecker
+2021-06-29 19:18:02,716 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:18:02,719 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS DELETE /medicalRecord 
+2021-06-29 19:18:02,726 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:18:02,742 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:18:02,750 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:18:02,752 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS UPDATE /medicalRecord 
+2021-06-29 19:18:02,754 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:18:02,757 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR CREATE /medicalRecord 
+2021-06-29 19:18:02,760 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:18:02,762 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:18:02,775 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-06-29 19:18:02,782 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR READ /medicalRecord 
+2021-06-29 19:18:02,786 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:18:02,789 ERROR c.s.a.c.MedicalsRecordsController [main] ERROR DELETE /medicalRecord 
+2021-06-29 19:18:02,811 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:18:02,829 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:18:02,829 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:18:02,840 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:18:02,850 ERROR c.s.a.c.PersonsController [main] ERROR DELETE /person
+2021-06-29 19:18:02,850 INFO c.s.a.c.PersonsController [main]  SUCCESS DELETE /person 
+2021-06-29 19:18:02,859 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:18:02,871 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:18:02,875 INFO c.s.a.c.PersonsController [main]  SUCCESS UPDATE /person 
+2021-06-29 19:18:02,881 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:18:02,885 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-06-29 19:18:02,889 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:18:02,892 INFO c.s.a.c.PersonsController [main]  SUCCESS DELETE /person 
+2021-06-29 19:18:02,897 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:18:02,910 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-06-29 19:18:02,915 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-06-29 19:18:02,922 ERROR c.s.a.c.PersonsController [main]  ERROR READ ONE /person 
+2021-06-29 19:18:02,926 INFO c.s.a.c.PersonsController [main]  SUCCESS UPDATE /person 
+2021-06-29 19:18:02,930 ERROR c.s.a.c.PersonsController [main]  ERROR CREATE /person 
+2021-06-29 19:18:02,933 ERROR c.s.a.c.PersonsController [main]  ERROR UPDATE /person 
+2021-06-29 19:18:04,424 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-06-29 19:18:04,425 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-06-29 19:18:04,440 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-06-29 19:18:04,441 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-06-29 19:18:04,451 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-06-29 19:18:04,453 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-06-29 19:18:04,593 INFO c.s.a.c.PersonsController [http-nio-auto-1-exec-1] Home
+2021-06-29 19:18:04,816 INFO c.s.a.c.PersonsController [main]  SUCCESS /childAlert
+2021-06-29 19:18:04,832 INFO c.s.a.c.PersonsController [main]  SUCCESS /childAlert
+2021-06-29 19:18:04,843 ERROR c.s.a.c.PersonsController [main] ERROR /childAlert
+2021-06-29 19:18:04,862 INFO c.s.a.c.PersonsController [main]  SUCCESS /communityEmail
+2021-06-29 19:18:04,872 ERROR c.s.a.c.PersonsController [main] ERROR /communityEmail
+2021-06-29 19:18:04,887 INFO c.s.a.c.PersonsController [main] SUCCESS /firestation?station
+2021-06-29 19:18:04,901 ERROR c.s.a.c.PersonsController [main] ERROR /firestation?station
+2021-06-29 19:18:04,917 ERROR c.s.a.c.PersonsController [main] ERROR /fire
+2021-06-29 19:18:04,927 INFO c.s.a.c.PersonsController [main]  SUCCESS /fire
+2021-06-29 19:18:04,986 INFO c.s.a.c.PersonsController [main] SUCCESS /flood/stations
+2021-06-29 19:18:04,997 ERROR c.s.a.c.PersonsController [main] ERROR /flood/stations
+2021-06-29 19:18:05,013 INFO c.s.a.c.PersonsController [main]  SUCCESS /personInfo
+2021-06-29 19:18:05,020 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-06-29 19:18:05,023 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-06-29 19:18:05,026 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:18:05,034 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:18:05,040 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-06-29 19:18:05,052 INFO c.s.a.c.PersonsController [main] SUCCESS /phoneAlert
+2021-06-29 19:18:05,060 ERROR c.s.a.c.PersonsController [main] ERROR /phoneAlert
+2021-07-01 10:28:38,980 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 10:28:38,990 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 10:28:39,050 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 10:28:39,050 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 10:28:39,062 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 10:28:39,066 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 11:12:09,393 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 11:12:09,397 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 11:12:09,455 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 11:12:09,456 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 11:12:09,470 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 11:12:09,474 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:35:44,912 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 21:35:44,917 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 21:35:44,975 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 21:35:44,975 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 21:35:44,989 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:35:44,992 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:36:03,308 INFO c.s.a.c.PersonsController [http-nio-8080-exec-1] Home
+2021-07-01 21:36:54,774 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 21:36:54,778 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 21:36:54,835 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 21:36:54,842 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 21:36:54,855 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:36:54,859 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:37:25,176 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 21:37:25,182 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 21:37:25,297 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 21:37:25,298 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 21:37:25,321 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:37:25,326 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:37:25,523 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 21:37:25,523 ERROR c.s.a.u.ReadJsonFirestation [main] Error Read JSON FireStation: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-07-01 21:37:25,524 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 21:37:25,544 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:37:25,544 ERROR c.s.a.u.ReadJsonMedicalRecord [main] Error Read JSON MedicalRecord: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-07-01 21:37:25,544 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:37:25,553 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 21:37:25,553 ERROR c.s.a.u.ReadJsonPerson [main] Error Read JSON Person: java.io.FileNotFoundException: datas.xml (Le fichier spécifié est introuvable)
+2021-07-01 21:37:25,554 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 21:37:26,680 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 21:37:26,681 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 21:37:26,704 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 21:37:26,705 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 21:37:26,717 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:37:26,720 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:37:26,778 INFO c.s.a.c.PersonsController [main] Home
+2021-07-01 21:37:27,164 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 21:37:27,165 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 21:37:27,237 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-07-01 21:37:27,248 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-07-01 21:37:27,260 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:37:27,260 ERROR c.s.a.u.ReadJsonMedicalRecord [main] Error Read JSON MedicalRecord: java.io.FileNotFoundException: datajson.xml (Le fichier spécifié est introuvable)
+2021-07-01 21:37:27,260 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:37:27,264 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR UPDATE /medicalRecord 
+2021-07-01 21:37:27,266 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:37:27,269 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:37:27,270 ERROR c.s.a.u.ReadJsonMedicalRecord [main] com.safetynet.alerts.utils.DateIsValid$DateChecker
+2021-07-01 21:37:27,273 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-07-01 21:37:27,275 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS DELETE /medicalRecord 
+2021-07-01 21:37:27,281 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-07-01 21:37:27,299 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-07-01 21:37:27,306 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-07-01 21:37:27,309 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS UPDATE /medicalRecord 
+2021-07-01 21:37:27,310 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-07-01 21:37:27,313 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR CREATE /medicalRecord 
+2021-07-01 21:37:27,316 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:37:27,318 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:37:27,328 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ All /medicalRecord 
+2021-07-01 21:37:27,335 ERROR c.s.a.c.MedicalsRecordsController [main]  ERROR READ /medicalRecord 
+2021-07-01 21:37:27,340 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-07-01 21:37:27,343 ERROR c.s.a.c.MedicalsRecordsController [main] ERROR DELETE /medicalRecord 
+2021-07-01 21:37:27,369 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-07-01 21:37:27,390 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 21:37:27,391 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 21:37:27,401 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-07-01 21:37:27,409 ERROR c.s.a.c.PersonsController [main] ERROR DELETE /person
+2021-07-01 21:37:27,410 INFO c.s.a.c.PersonsController [main]  SUCCESS DELETE /person 
+2021-07-01 21:37:27,417 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-07-01 21:37:27,429 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-07-01 21:37:27,432 INFO c.s.a.c.PersonsController [main]  SUCCESS UPDATE /person 
+2021-07-01 21:37:27,437 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-07-01 21:37:27,442 INFO c.s.a.c.PersonsController [main]  SUCCESS CREATE /person 
+2021-07-01 21:37:27,446 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-07-01 21:37:27,449 INFO c.s.a.c.PersonsController [main]  SUCCESS DELETE /person 
+2021-07-01 21:37:27,453 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-07-01 21:37:27,465 INFO c.s.a.c.PersonsController [main]  SUCCESS READ ONE /person  
+2021-07-01 21:37:27,469 INFO c.s.a.c.PersonsController [main]  SUCCESS READ All /person 
+2021-07-01 21:37:27,477 ERROR c.s.a.c.PersonsController [main]  ERROR READ ONE /person 
+2021-07-01 21:37:27,481 INFO c.s.a.c.PersonsController [main]  SUCCESS UPDATE /person 
+2021-07-01 21:37:27,485 ERROR c.s.a.c.PersonsController [main]  ERROR CREATE /person 
+2021-07-01 21:37:27,488 ERROR c.s.a.c.PersonsController [main]  ERROR UPDATE /person 
+2021-07-01 21:37:29,049 INFO c.s.a.u.ReadJsonPerson [main] Read JSON Person to H2
+2021-07-01 21:37:29,050 INFO c.s.a.u.ReadJsonPerson [main] Person saved to H2
+2021-07-01 21:37:29,065 INFO c.s.a.u.ReadJsonFirestation [main] Read JSON FireStation to H2
+2021-07-01 21:37:29,066 INFO c.s.a.u.ReadJsonFirestation [main] FireStation saved to H2
+2021-07-01 21:37:29,074 INFO c.s.a.u.ReadJsonMedicalRecord [main] Read JSON MedicalRecord to H2
+2021-07-01 21:37:29,076 INFO c.s.a.u.ReadJsonMedicalRecord [main] MedicalRecord saved to H2
+2021-07-01 21:37:29,228 INFO c.s.a.c.PersonsController [http-nio-auto-1-exec-1] Home
+2021-07-01 21:37:29,444 INFO c.s.a.c.PersonsController [main]  SUCCESS /childAlert
+2021-07-01 21:37:29,479 INFO c.s.a.c.PersonsController [main]  SUCCESS /childAlert
+2021-07-01 21:37:29,488 ERROR c.s.a.c.PersonsController [main] ERROR /childAlert
+2021-07-01 21:37:29,502 INFO c.s.a.c.PersonsController [main]  SUCCESS /communityEmail
+2021-07-01 21:37:29,512 ERROR c.s.a.c.PersonsController [main] ERROR /communityEmail
+2021-07-01 21:37:29,525 INFO c.s.a.c.PersonsController [main] SUCCESS /firestation?station
+2021-07-01 21:37:29,538 ERROR c.s.a.c.PersonsController [main] ERROR /firestation?station
+2021-07-01 21:37:29,597 INFO c.s.a.c.PersonsController [main] SUCCESS /flood/stations
+2021-07-01 21:37:29,607 ERROR c.s.a.c.PersonsController [main] ERROR /flood/stations
+2021-07-01 21:37:29,622 INFO c.s.a.c.PersonsController [main]  SUCCESS /personInfo
+2021-07-01 21:37:29,630 INFO c.s.a.c.MedicalsRecordsController [main] SUCCESS CREATE /medicalRecord 
+2021-07-01 21:37:29,633 INFO c.s.a.c.MedicalsRecordsController [main]  SUCCESS READ /medicalRecord
+2021-07-01 21:37:29,637 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-07-01 21:37:29,647 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-07-01 21:37:29,655 ERROR c.s.a.c.PersonsController [main] ERROR /personInfo
+2021-07-01 21:37:29,669 ERROR c.s.a.c.PersonsController [main] ERROR /fire
+2021-07-01 21:37:29,678 INFO c.s.a.c.PersonsController [main]  SUCCESS /fire
+2021-07-01 21:37:29,692 INFO c.s.a.c.PersonsController [main] SUCCESS /phoneAlert
+2021-07-01 21:37:29,699 ERROR c.s.a.c.PersonsController [main] ERROR /phoneAlert

@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PersonInfoTest {
+public class ListOfReisdentsWithFirstnameAndLastnameTest {
 
     @Autowired
     public MockMvc mockMvc;
@@ -37,7 +37,7 @@ public class PersonInfoTest {
         MedicalRecords medicalRecordsCreate = new MedicalRecords(24, "Sylvanas", "Coursevent", "10/10/1950", "doliprane", "peanut");
 
         // WHEN
-        medicalsRecordsController.createMedicalRecord(medicalRecordsCreate);
+        medicalsRecordsController.createNewMedicalRecord(medicalRecordsCreate);
         MedicalRecords medicalRecordResult = medicalsRecordsController.getMedicalRecordsById(24);
 
         // THEN

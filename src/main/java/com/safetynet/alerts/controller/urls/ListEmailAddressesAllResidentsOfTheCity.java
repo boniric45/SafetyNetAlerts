@@ -11,22 +11,27 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.websocket.server.PathParam;
 import java.util.List;
 
+/**
+ * This url must return the email addresses of all the inhabitants of the city.
+ *
+ */
 @RestController
-public class CommunityEmail {
+public class ListEmailAddressesAllResidentsOfTheCity {
 
     @Autowired
     PersonsService personsService;
 
     Logger logger = LogManager.getLogger(PersonsController.class);
 
+    // URL http://localhost:8080/communityEmail?city=City
     @GetMapping(value = "/communityEmail")
-    public List<String> communityEmail(@PathParam("city") String city) {
+    public List<String> getListEmailAddressesAllResidentsOfTheCity(@PathParam("city") String city) {
         if (city.isEmpty()) {
             logger.error("ERROR /communityEmail");
         } else {
             logger.info(" SUCCESS /communityEmail");
         }
-        return personsService.communityEmail(city);
+        return personsService.getListEmailAddressesAllResidentsOfTheCity(city);
     }
 
 

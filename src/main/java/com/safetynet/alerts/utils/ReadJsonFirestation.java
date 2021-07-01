@@ -14,6 +14,9 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+/**
+ * read data.json and save firestation data into h2 bdd
+ */
 public class ReadJsonFirestation {
 
     private static final Logger logger = LogManager.getLogger(ReadJsonFirestation.class);

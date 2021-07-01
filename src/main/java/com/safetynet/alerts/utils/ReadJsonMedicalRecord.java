@@ -16,6 +16,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * read data.json and save medical record data into h2 bdd
+ */
 public class ReadJsonMedicalRecord {
 
     private static final Logger logger = LogManager.getLogger(ReadJsonMedicalRecord.class);
@@ -41,7 +44,7 @@ public class ReadJsonMedicalRecord {
                 String allergies = jo.get("allergies").toString();
                 String birthdate = (String) jo.get("birthdate");
 
-                if (DateChecker.isValid(birthdate)) {
+                if (DateIsValid.DateChecker.isValid(birthdate)) {
                     medicalRecords.setBirthdate(birthdate);
                     medicalRecords.setId(id);
                     medicalRecords.setFirstName(firstName);
@@ -61,22 +64,22 @@ public class ReadJsonMedicalRecord {
         return listMedicalRecords;
     }
 
-    public static class DateChecker {
-        public static boolean isValid(String strdate) {
-            SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-
-            try {
-                Date date = df.parse(strdate);
-                if (date.getMonth() > 12) {
-                    logger.info(String.valueOf(date.getMonth()));
-                }
-                return true;
-            } catch (java.text.ParseException ex) {
-                logger.error(DateChecker.class.getName());
-                return false;
-            }
-        }
-    }
+//    public static class DateChecker {
+//        public static boolean isValid(String strdate) {
+//            SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+//
+//            try {
+//                Date date = df.parse(strdate);
+//                if (date.getMonth() > 12) {
+//                    logger.info(String.valueOf(date.getMonth()));
+//                }
+//                return true;
+//            } catch (java.text.ParseException ex) {
+//                logger.error(DateChecker.class.getName());
+//                return false;
+//            }
+//        }
+//    }
 
 }
 

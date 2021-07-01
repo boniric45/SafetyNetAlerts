@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Optional;
 
+/**
+ * Controller Firestation
+ */
 @RestController
 public class FireStationsController {
     private static final Logger logger = LoggerFactory.getLogger(PersonsService.class);
@@ -21,9 +24,9 @@ public class FireStationsController {
     private FireStationsService fireStationsService;
 
     //ReaderJsonFirestation and Save H2 Database
-    public void chargedFirestation(String jsonDatafile) {
+    public void saveFirestationToH2(String jsonDatafile) {
         ArrayList<FireStations> list = ReadJsonFirestation.readJsonFileFirestation(jsonDatafile);
-        fireStationsService.listSaveFirestation(list);
+        fireStationsService.saveListAllFirestation(list);
     }
 
     /**
@@ -33,7 +36,7 @@ public class FireStationsController {
      * @return The firestation object saved
      */
     @PostMapping("/firestation")
-    public FireStations createFirestation(@RequestBody FireStations fireStations) {
+    public FireStations createNewFirestation(@RequestBody FireStations fireStations) {
         if (fireStations == null) {
             logger.error(" ERROR CREATE /firestation ");
             return null;
@@ -41,7 +44,7 @@ public class FireStationsController {
             logger.info(" SUCCESS CREATE /firestation ");
         }
 
-        return fireStationsService.createFirestation(fireStations);
+        return fireStationsService.createNewFirestation(fireStations);
     }
 
     /**
@@ -80,7 +83,7 @@ public class FireStationsController {
      * @return fs
      */
     @PutMapping("/firestation/{id}")
-    public FireStations updateFirestations(@PathVariable("id") final int id, @RequestBody FireStations fireStations) {
+    public FireStations updateFirestationsById(@PathVariable("id") final int id, @RequestBody FireStations fireStations) {
         Optional<FireStations> firestations = fireStationsService.getFirestationsById(id);
 
         if (firestations.isPresent()) {
@@ -111,7 +114,7 @@ public class FireStationsController {
      */
     @Transactional
     @DeleteMapping("/firestation/{station}/{address}")
-    public void deleteFirestations(@PathVariable("station") String station, @PathVariable("address") String address) {
+    public void deleteFirestationsByStationAndAddress(@PathVariable("station") String station, @PathVariable("address") String address) {
 
         if (station == null || address == null) {
             logger.error(" ERROR DELETE /firestation");

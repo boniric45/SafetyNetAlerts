@@ -11,23 +11,26 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.websocket.server.PathParam;
 import java.util.List;
 
+/**
+ * Return list of residents living at the address
+ *
+ */
 @RestController
-public class ChildAlert {
+public class ListOfResidentLivingAtTheAddress {
 
-    Logger logger = LogManager.getLogger(PersonsController.class);
     @Autowired
-    private PersonsService personsService;
+    PersonsService personsService;
+    Logger logger = LogManager.getLogger(PersonsController.class);
 
-    @GetMapping(value = "/childAlert")
-    public List<String> childAlert(@PathParam("address") String address) {
+    // URL http://localhost:8080/fire?address=
+    @GetMapping(value = "/fire")
+    public List<String> getListOfResidentLivingAtTheAddress(@PathParam("address") String address) {
+
         if (address.isEmpty()) {
-            logger.error("ERROR /childAlert");
+            logger.error("ERROR /fire");
         } else {
-
-            logger.info(" SUCCESS /childAlert");
+            logger.info(" SUCCESS /fire");
         }
-        return personsService.getChildAlert(address);
+        return personsService.getListOfResidentLivingAtTheAddress(address);
     }
-
-
 }

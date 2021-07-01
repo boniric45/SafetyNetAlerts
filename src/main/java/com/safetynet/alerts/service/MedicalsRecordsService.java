@@ -14,13 +14,14 @@ import java.util.Optional;
 @Getter
 @Setter
 @Service
+/**
+ * Service MedicalRecord
+ */
 public class MedicalsRecordsService {
 
     private final List<MedicalRecords> medicalRecordsList = new ArrayList<>();
     @Autowired
     private MedicalsRecordsRepository medicalsRecordsRepository;
-
-    //EndPoint
 
     /**
      * Create - Add a new medicalRecord
@@ -70,12 +71,13 @@ public class MedicalsRecordsService {
         medicalsRecordsRepository.deleteMedicalRecordByFirstNameAndLastName(firstName, lastName);
     }
 
-
-    public Iterable<MedicalRecords> listSaveMedicalrecords(List<MedicalRecords> list) {
+    // Save list all medical record
+    public Iterable<MedicalRecords> saveListAllMedicalrecords(List<MedicalRecords> list) {
         medicalsRecordsRepository.saveAll(list);
         return list;
     }
 
+    // Save medical record
     public void saveMedicalRecord(MedicalRecords currentMedical) {
         medicalsRecordsRepository.save(currentMedical);
     }

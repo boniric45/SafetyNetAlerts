@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Repository Person
+ */
 @Repository
 public interface PersonsRepository extends CrudRepository<Persons, Integer> {
 

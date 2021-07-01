@@ -9,6 +9,10 @@ import javax.persistence.*;
 @Setter
 @Entity //Table bdd
 @Table(name = "persons") //Table associé
+
+/**
+ * Model person
+ */
 public class Persons {
 
     @Id
@@ -22,9 +26,11 @@ public class Persons {
     private String phone;
     private String email;
 
+    // Default Constructor
     public Persons() {
     }
 
+    // Constructor Person
     public Persons(int id, String firstName, String lastName, String address, String zip, String city, String phone, String email) {
         this.id = id;
         this.firstName = firstName;

@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class FloodStationsTest {
+public class ListPhoneNumberOfResidentsTest {
 
     @Autowired
     public MockMvc mockMvc;
@@ -25,35 +25,31 @@ public class FloodStationsTest {
     FireStationsService fireStationsService;
 
     @Test
-    public void testReturnListHomeByFirestation() throws Exception {
+    public void testPhoneAlertFirestation() throws Exception {
 
         // GIVEN
-        String numberStation = "4";
-        String result = "[\"firestation: 4 address: 489 Manchester St firstname: Lily lastname: Cooper allergies: [] medications: [] phone: 841-874-9845 age: 27\",\"firestation: 4 address: 112 Steppes Pl firstname: Tony lastname: Cooper allergies: [\\\"shellfish\\\"] medications: [\\\"hydrapermazol:300mg\\\",\\\"dodoxadin:30mg\\\"] phone: 841-874-6874 age: 27\",\"firestation: 4 address: 112 Steppes Pl firstname: Ron lastname: Peters allergies: [] medications: [] phone: 841-874-8888 age: 56\",\"firestation: 4 address: 112 Steppes Pl firstname: Allison lastname: Boyd allergies: [\\\"nillacilan\\\"] medications: [\\\"aznol:200mg\\\"] phone: 841-874-9888 age: 56\"]";
+        String contentList = "841-874-9845";
+        String strFirestation = "4";
 
         // WHEN
-        this.mockMvc.perform(get("/flood/stations?stations=" + numberStation))
-
-                // THEN
+        this.mockMvc.perform(get("/phoneAlert?firestation=" + strFirestation))
                 .andDo(print())
+                // THEN
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString(result)));
-
+                .andExpect(content().string(containsString(contentList)));
     }
 
     @Test
-    public void testReturnListHomeByFirestationIsNull() throws Exception {
+    public void testPhoneAlertFirestationIsNull() throws Exception {
 
         // GIVEN
-        String numberStation = "";
+        String strFirestation = "";
 
         // WHEN
-        this.mockMvc.perform(get("/flood/stations?stations=" + numberStation))
-
-                // THEN
+        this.mockMvc.perform(get("/phoneAlert?firestation=" + strFirestation))
                 .andDo(print())
+                // THEN
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("")));
-
     }
 }

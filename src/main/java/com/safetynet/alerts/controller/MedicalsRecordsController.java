@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Optional;
 
+/**
+ * Controller Medical Record
+ */
 @RestController
 public class MedicalsRecordsController {
 
@@ -20,9 +23,9 @@ public class MedicalsRecordsController {
     private MedicalsRecordsService medicalsRecordsService;
 
     //ReaderJsonMedicalRecord and Save H2 Database
-    public void chargedMedicalRecord(String jsonDatafile) {
+    public void saveMedicalRecordToH2(String jsonDatafile) {
         ArrayList<MedicalRecords> list = ReadJsonMedicalRecord.readJsonFileMedicalRecord(jsonDatafile);
-        medicalsRecordsService.listSaveMedicalrecords(list);
+        medicalsRecordsService.saveListAllMedicalrecords(list);
     }
 
     /**
@@ -32,7 +35,7 @@ public class MedicalsRecordsController {
      * @return The medicalRecord object saved
      */
     @PostMapping("/medicalRecord")
-    public MedicalRecords createMedicalRecord(@RequestBody MedicalRecords medicalRecords) {
+    public MedicalRecords createNewMedicalRecord(@RequestBody MedicalRecords medicalRecords) {
         if (medicalRecords == null) {
             logger.error(" ERROR CREATE /medicalRecord ");
             return null;
@@ -80,7 +83,7 @@ public class MedicalsRecordsController {
      * @return
      */
     @PutMapping("/medicalRecord/{id}")
-    public MedicalRecords updateMedicalRecord(@PathVariable("id") final int id, @RequestBody MedicalRecords medicalRecords) {
+    public MedicalRecords updateMedicalRecordById(@PathVariable("id") final int id, @RequestBody MedicalRecords medicalRecords) {
         Optional<MedicalRecords> mr = medicalsRecordsService.getMedicalRecordsById(id);
         if (mr.isPresent()) {
             MedicalRecords currentMedical = mr.get();

@@ -9,6 +9,10 @@ import javax.persistence.*;
 @Setter
 @Entity //data table
 @Table(name = "medicalrecords") //name table
+
+/**
+ * Model MedicalRecords
+ */
 public class MedicalRecords {
 
     @Id //autoincrement id key primary
@@ -20,9 +24,11 @@ public class MedicalRecords {
     private String medications;
     private String allergies;
 
+    // Default Constructor
     public MedicalRecords() {
     }
 
+    // Constructor MedicalRecords
     public MedicalRecords(int id, String firstName, String lastName, String birthdate, String medications, String allergies) {
         this.id = id;
         this.firstName = firstName;

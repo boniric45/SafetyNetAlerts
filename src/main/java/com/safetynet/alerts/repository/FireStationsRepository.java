@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+/**
+ * Repository Firestation
+ */
 @Repository
 public interface FireStationsRepository extends CrudRepository<FireStations, String> {
 

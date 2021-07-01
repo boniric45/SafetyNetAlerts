@@ -1,6 +1,6 @@
 package com.safetynet.alerts.testUnitaire;
 
-import com.safetynet.alerts.CustomProperties;
+import com.safetynet.alerts.config.CustomProperties;
 import com.safetynet.alerts.controller.PersonsController;
 import com.safetynet.alerts.model.Persons;
 import org.hamcrest.CoreMatchers;
@@ -47,7 +47,7 @@ public class PersonControllerTest {
     public void testChargedPerson() throws ParseException {
 
         // GIVEN
-        personsController.chargedPerson(props.getJsonDatafile());
+        personsController.savePersonToH2(props.getJsonDatafile());
 
         // WHEN
         resultIterable = personsController.getPersonAll();
@@ -197,7 +197,7 @@ public class PersonControllerTest {
     public void testErrorCreatePerson() throws Exception {
 
         Persons persons = null;
-        Assertions.assertNull(personsController.createPerson(persons));
+        Assertions.assertNull(personsController.createNewPerson(persons));
 
     }
 
@@ -221,7 +221,7 @@ public class PersonControllerTest {
         Persons person = new Persons(120, "Jean", "Jean", "Street Flower", "45661", "Manathan", "456-469-753", "jjean@email.com");
 
         // WHEN
-        personsController.updatePerson(120, person);
+        personsController.updatePersonById(120, person);
 
         // THEN
         mockMvc.perform(put("/person/120"))
@@ -235,7 +235,7 @@ public class PersonControllerTest {
         Persons person = new Persons(0, null, null, null, null, null, null, null);
 
         // WHEN
-        personsController.createPerson(person);
+        personsController.createNewPerson(person);
 
         // THEN
         Assertions.assertNull(person.getAddress());
@@ -254,7 +254,7 @@ public class PersonControllerTest {
         Persons person = new Persons(1, null, null, null, null, null, null, null);
 
         // WHEN
-        personsController.updatePerson(1, person);
+        personsController.updatePersonById(1, person);
 
         // THEN
         Assertions.assertNull(person.getLastName());

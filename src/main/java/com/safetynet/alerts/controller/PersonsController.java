@@ -1,9 +1,9 @@
 package com.safetynet.alerts.controller;
 
-import com.safetynet.alerts.CustomProperties;
+import com.safetynet.alerts.config.CustomProperties;
 import com.safetynet.alerts.model.Persons;
 import com.safetynet.alerts.service.PersonsService;
-import com.safetynet.alerts.utils.ReaderJsonPerson;
+import com.safetynet.alerts.utils.ReadJsonPerson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Optional;
 
+/**
+ * Controller Person
+ */
 @RestController
 public class PersonsController {
 
@@ -22,20 +25,20 @@ public class PersonsController {
     @Autowired
     private PersonsService personsService;
 
-    //ReaderJsonPerson and Save H2 Database
-    public void chargedPerson(String jsonDatafile) {
-        ArrayList<Persons> list = ReaderJsonPerson.readJsonFile(jsonDatafile);
-        personsService.listSave(list);
+    //ReadJsonPerson and Save H2 Database
+    public void savePersonToH2(String jsonDatafile) {
+        ArrayList<Persons> list = ReadJsonPerson.readJsonFile(jsonDatafile);
+        personsService.savePersonList(list);
     }
 
-    //Home
+    /**
+     * Home
+     */
     @GetMapping("/")
     public String home() {
         logger.info("Home");
         return "home";
     }
-
-    //Endpoint
 
     /**
      * Create - Add a new person
@@ -44,7 +47,7 @@ public class PersonsController {
      * @return The person object saved
      */
     @PostMapping("/person")
-    public Persons createPerson(@RequestBody Persons persons) {
+    public Persons createNewPerson(@RequestBody Persons persons) {
 
         if (persons == null) {
             logger.error(" ERROR CREATE /person ");
@@ -53,7 +56,7 @@ public class PersonsController {
             logger.info(" SUCCESS CREATE /person ");
         }
 
-        return personsService.createPerson(persons);
+        return personsService.createNewPerson(persons);
     }
 
     /**
@@ -93,7 +96,7 @@ public class PersonsController {
      * @return currentPerson
      */
     @PutMapping("/person/{id}")
-    public Persons updatePerson(@PathVariable("id") final int id, @RequestBody Persons persons) {
+    public Persons updatePersonById(@PathVariable("id") final int id, @RequestBody Persons persons) {
         Optional<Persons> p = personsService.getPersonsById(id);
 
         if (p.isPresent()) {

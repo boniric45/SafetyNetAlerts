@@ -19,6 +19,10 @@ import java.util.Optional;
 @Getter
 @Setter
 @Service
+
+/**
+ * Service MedicalRecord
+ */
 public class PersonsService {
 
     private final List<String> personsList = new ArrayList<>();
@@ -40,7 +44,7 @@ public class PersonsService {
      * @param persons An object persons
      * @return The person object saved
      */
-    public Persons createPerson(Persons persons) {
+    public Persons createNewPerson(Persons persons) {
         return personsRepository.save(persons);
     }
 
@@ -72,16 +76,18 @@ public class PersonsService {
         personsRepository.deletePersonByFirstNameAndLastName(firstName, lastName);
     }
 
-
+    // Save Person
     public void savePerson(Persons persons) {
         personsRepository.save(persons);
     }
 
-    public void listSave(List<Persons> list) {
+    // Save person list
+    public void savePersonList(List<Persons> list) {
         personsRepository.saveAll(list);
     }
 
-    public List<String> communityEmail(final String city) {
+    // This url must return the email addresses of all the inhabitants of the city.
+    public List<String> getListEmailAddressesAllResidentsOfTheCity(final String city) {
         personsList.clear();
         Iterable<Persons> personsIterable = personsRepository.findMailByCity(city);
         for (Persons persons : personsIterable) {
@@ -90,7 +96,8 @@ public class PersonsService {
         return personsList;
     }
 
-    public List<String> getChildAlert(String address) {
+    // Return List Child by address
+    public List<String> getListChildByAddress(String address) {
         Iterable<Persons> personsIterable = personsRepository.findAllByAddress(address);
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsRepository.findAll();
         personListAdult.clear();
@@ -126,7 +133,8 @@ public class PersonsService {
         return personsList;
     }
 
-    public List<String> getFire(String address) {
+    // Return list of residents living at the address
+    public List<String> getListOfResidentLivingAtTheAddress(String address) {
         personsList.clear();
         Iterable<Persons> personsIterable = personsRepository.findAllByAddress(address);
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsRepository.findAll();
@@ -149,7 +157,7 @@ public class PersonsService {
                         String stationNumber = fs.getStation();
                         String stationAddress = fs.getAddress();
                         if (addressPs.equals(stationAddress)) {
-                            personsList.add(" Adress: " + addressPs + " Firestation: " + stationNumber + " lastName: " + lastNamePs + " phone: " + phonePs + " age: " + age + " years" + " allergies: " + allergies + " medications: " + medications);
+                            personsList.add(" Adress: " + addressPs + " ListFirestationByStationNumber: " + stationNumber + " lastName: " + lastNamePs + " phone: " + phonePs + " age: " + age + " years" + " allergies: " + allergies + " medications: " + medications);
                         }
                     }
                 }
@@ -159,7 +167,8 @@ public class PersonsService {
         return personsList;
     }
 
-    public List<String> getPersonInfo(String firstName, String lastName) {
+    //  Return list of residents by firstname and lastname
+    public List<String> getListOfResidents(String firstName, String lastName) {
         personsList.clear();
         Iterable<Persons> personsIterable = personsRepository.findAll();
         Iterable<MedicalRecords> medicalRecordsIterable = medicalsRecordsRepository.findAll();

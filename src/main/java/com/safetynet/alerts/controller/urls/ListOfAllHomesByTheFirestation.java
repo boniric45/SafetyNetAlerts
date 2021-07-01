@@ -12,22 +12,28 @@ import javax.websocket.server.PathParam;
 import java.text.ParseException;
 import java.util.List;
 
+/**
+ * list of all homes served by the fire station.
+ *
+ */
 @RestController
-public class Firestation {
+public class ListOfAllHomesByTheFirestation {
 
     @Autowired
     FireStationsService fireStationsService;
+
     Logger logger = LogManager.getLogger(PersonsController.class);
 
-    @GetMapping(value = "/firestation")
-    public List<String> getFirestationsFromStation(@PathParam("stationNumber") String stationNumber) throws ParseException {
-        fireStationsService.getFireStationsList().clear();
+    // URL http://localhost:8080/flood/stations?stations=
+    @GetMapping(value = "/flood/stations")
+    public List<String> getListOfAllHomesByTheFirestation(@PathParam("stations") String stations) throws ParseException {
 
-        if (stationNumber.isEmpty()) {
-            logger.error("ERROR /firestation?station");
+        if (stations.isEmpty()) {
+            logger.error("ERROR /flood/stations");
         } else {
-            logger.info("SUCCESS /firestation?station");
+            logger.info("SUCCESS /flood/stations");
         }
-        return fireStationsService.getFirestationsFromStationNumber(stationNumber);
+
+        return fireStationsService.getListAllHomesByTheFirestation(stations);
     }
 }

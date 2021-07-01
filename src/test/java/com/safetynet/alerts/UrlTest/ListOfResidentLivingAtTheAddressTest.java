@@ -1,6 +1,6 @@
 package com.safetynet.alerts.UrlTest;
 
-import com.safetynet.alerts.service.FireStationsService;
+import com.safetynet.alerts.service.PersonsService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,40 +16,45 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PhoneAlertTest {
+public class ListOfResidentLivingAtTheAddressTest {
 
     @Autowired
     public MockMvc mockMvc;
 
     @Mock
-    FireStationsService fireStationsService;
+    PersonsService personsService;
+
 
     @Test
-    public void testPhoneAlertFirestation() throws Exception {
+    public void testListPersonByAddress() throws Exception {
 
         // GIVEN
-        String contentList = "841-874-9845";
-        String strFirestation = "4";
+        String address = "834 Binoc Ave";
+        String result = "[\" Adress: 834 Binoc Ave ListFirestationByStationNumber: 3 lastName: Carman phone: 841-874-6512 age: 9 years allergies: [] medications: []\"]";
 
         // WHEN
-        this.mockMvc.perform(get("/phoneAlert?firestation=" + strFirestation))
-                .andDo(print())
+        this.mockMvc.perform(get("/fire?address=" + address))
+
                 // THEN
+                .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString(contentList)));
+                .andExpect(content().string(containsString(result)));
     }
 
     @Test
-    public void testPhoneAlertFirestationIsNull() throws Exception {
+    public void testListPersonByAddressIsNull() throws Exception {
 
         // GIVEN
-        String strFirestation = "";
+        String address = "";
 
         // WHEN
-        this.mockMvc.perform(get("/phoneAlert?firestation=" + strFirestation))
-                .andDo(print())
+        this.mockMvc.perform(get("/fire?address=" + address))
+
                 // THEN
+                .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("")));
     }
+
+
 }

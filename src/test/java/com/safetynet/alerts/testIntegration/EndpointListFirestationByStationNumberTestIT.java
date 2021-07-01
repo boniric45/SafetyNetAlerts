@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class EndpointFirestationTestIT {
+public class EndpointListFirestationByStationNumberTestIT {
 
     @Autowired
     FireStationsService fireStationsService;
@@ -25,7 +25,7 @@ public class EndpointFirestationTestIT {
     @Autowired
     private MockMvc mockMvc;
 
-    // Create Firestation Test
+    // Create ListFirestationByStationNumber Test
     @Test
     public void create_Firestation_Test() throws Exception {
         // GIVEN
@@ -45,7 +45,7 @@ public class EndpointFirestationTestIT {
 
     }
 
-    // Read All Firestation Test
+    // Read All ListFirestationByStationNumber Test
     @Test
     public void testReadAllFirestation() throws Exception {
         this.mockMvc.perform(get("/firestations"))
@@ -53,7 +53,7 @@ public class EndpointFirestationTestIT {
                 .andDo(print());
     }
 
-    // Read One Firestation Test
+    // Read One ListFirestationByStationNumber Test
     @Test
     public void testReadOneFirestation() throws Exception {
 
@@ -64,7 +64,7 @@ public class EndpointFirestationTestIT {
                 .andExpect(status().isOk());
     }
 
-    // Update Firestation Test
+    // Update ListFirestationByStationNumber Test
     @Test
     public void testUpdateFirestation() throws Exception {
 
@@ -76,20 +76,20 @@ public class EndpointFirestationTestIT {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(updatefsRecord);
 
-        this.mockMvc.perform(get("/firestation/1")); // Read Firestation Id 1
+        this.mockMvc.perform(get("/firestation/1")); // Read ListFirestationByStationNumber Id 1
 
 
         // THEN
-        this.mockMvc.perform(req)   // Update Firestation
+        this.mockMvc.perform(req)   // Update ListFirestationByStationNumber
                 .andExpect(status().isOk())
                 .andDo(print())
                 .andExpect(jsonPath("station", CoreMatchers.is("4")))
                 .andExpect(jsonPath("address", CoreMatchers.is("9 Newyork Street")));
 
-        this.mockMvc.perform(get("/firestation/1"));   // Read Firestation Id 1
+        this.mockMvc.perform(get("/firestation/1"));   // Read ListFirestationByStationNumber Id 1
     }
 
-    // Delete Firestation Test
+    // Delete ListFirestationByStationNumber Test
     @Test
     public void delete_Firestation_Test() throws Exception {
 
@@ -97,11 +97,11 @@ public class EndpointFirestationTestIT {
         String createFirestation = "{\"id\": 14,\"station\":\"4\",\"address\":\"9 Newyork Street\"}";
 
         // WHEN
-        this.mockMvc.perform(post("/firestation") // Create Firestation
+        this.mockMvc.perform(post("/firestation") // Create ListFirestationByStationNumber
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(createFirestation));
 
-        this.mockMvc.perform(get("/firestation/14")) // Read Firestation Id 14
+        this.mockMvc.perform(get("/firestation/14")) // Read ListFirestationByStationNumber Id 14
                 .andExpect(status().isOk());
 
         // THEN

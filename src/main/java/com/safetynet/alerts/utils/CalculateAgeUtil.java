@@ -8,6 +8,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
 
+/**
+ * calculate the age according to the date of birth return long
+ */
 @Component
 public class CalculateAgeUtil {
     public static long getAge(String birthDate) {

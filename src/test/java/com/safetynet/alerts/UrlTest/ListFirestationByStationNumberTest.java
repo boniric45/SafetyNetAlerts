@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class FirestationTest {
+public class ListFirestationByStationNumberTest {
 
     @Autowired
     public MockMvc mockMvc;

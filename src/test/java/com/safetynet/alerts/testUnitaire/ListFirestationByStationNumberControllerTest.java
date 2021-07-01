@@ -1,6 +1,6 @@
 package com.safetynet.alerts.testUnitaire;
 
-import com.safetynet.alerts.CustomProperties;
+import com.safetynet.alerts.config.CustomProperties;
 import com.safetynet.alerts.controller.FireStationsController;
 import com.safetynet.alerts.model.FireStations;
 import org.hamcrest.CoreMatchers;
@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class FirestationControllerTest {
+public class ListFirestationByStationNumberControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -55,7 +55,7 @@ public class FirestationControllerTest {
         address = "1509 Culver St";
 
         // WHEN
-        fireStationsController.chargedFirestation(props.getJsonDatafile());
+        fireStationsController.saveFirestationToH2(props.getJsonDatafile());
         Iterable<FireStations> fireStationsIterable = fireStationsController.getAllFirestation();
 
         for (FireStations fireStations : fireStationsIterable) {
@@ -70,7 +70,7 @@ public class FirestationControllerTest {
 
     }
 
-    // Create Firestation
+    // Create ListFirestationByStationNumber
     @Test
     public void testCreateFirestation() {
 
@@ -79,7 +79,7 @@ public class FirestationControllerTest {
         address = "15 Street Medecis";
 
         // WHEN
-        fireStationsController.createFirestation(fireStations);
+        fireStationsController.createNewFirestation(fireStations);
         Iterable<FireStations> fireStationsIterable = fireStationsController.getAllFirestation();
 
         for (FireStations fs : fireStationsIterable) {
@@ -94,7 +94,7 @@ public class FirestationControllerTest {
         Assertions.assertEquals(address, result);
     }
 
-    // Read All Firestation Test
+    // Read All ListFirestationByStationNumber Test
     @Test
     public void testReadAllFirestation() {
 
@@ -112,7 +112,7 @@ public class FirestationControllerTest {
         Assertions.assertEquals(element, listresult.size());
     }
 
-    // Read Firestation By Id Test
+    // Read ListFirestationByStationNumber By Id Test
     @Test
     public void testReadFirestationById() throws Exception {
 
@@ -121,7 +121,7 @@ public class FirestationControllerTest {
                 .andExpect(jsonPath("station", CoreMatchers.is("3")));
     }
 
-    // Update Firestation Test
+    // Update ListFirestationByStationNumber Test
     @Test
     public void testUpdateFirestation() {
 
@@ -132,13 +132,13 @@ public class FirestationControllerTest {
 
         // WHEN
         fireStationsController.getFirestationById(1);
-        fireStationsController.updateFirestations(1, fireStations);
+        fireStationsController.updateFirestationsById(1, fireStations);
 
         // THEN
         Assertions.assertEquals(address, fireStationsController.getFirestationById(1).getAddress());
     }
 
-    // Delete Firestation By Firstname And Lastname Test
+    // Delete ListFirestationByStationNumber By Firstname And Lastname Test
     @Test
     public void testDeleteFirestationByFirstnameAndLastname() throws Exception {
 
@@ -150,12 +150,12 @@ public class FirestationControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(firestationRecord));
 
-        // Read id 14 Firestation
+        // Read id 14 ListFirestationByStationNumber
         this.mockMvc.perform(get("/firestation/14"))
                 .andExpect(status().isOk());
 
         // GIVEN
-        this.mockMvc.perform(delete("/firestation/30/4 Binocle Ave")) // Delete Firestation by Station and Address
+        this.mockMvc.perform(delete("/firestation/30/4 Binocle Ave")) // Delete ListFirestationByStationNumber by Station and Address
                 //THEN
                 .andExpect(status().isOk());
 
@@ -168,7 +168,7 @@ public class FirestationControllerTest {
         FireStations fireStations = null;
 
         // WHEN
-        FireStations result = fireStationsController.createFirestation(fireStations);
+        FireStations result = fireStationsController.createNewFirestation(fireStations);
 
         // THEN
         Assertions.assertNull(result);
@@ -195,7 +195,7 @@ public class FirestationControllerTest {
         FireStations fireStations = new FireStations(1, null, null);
 
         // WHEN
-        fireStationsController.updateFirestations(1, fireStations);
+        fireStationsController.updateFirestationsById(1, fireStations);
 
         // THEN
         Assertions.assertNull(fireStations.getStation());
@@ -209,7 +209,7 @@ public class FirestationControllerTest {
         FireStations fireStations = new FireStations(100, null, null);
 
         // WHEN
-        fireStationsController.updateFirestations(100, fireStations);
+        fireStationsController.updateFirestationsById(100, fireStations);
 
         // THEN
         Assertions.assertNull(fireStations.getStation());
@@ -223,7 +223,7 @@ public class FirestationControllerTest {
         FireStations fireStations = new FireStations(1, null, null);
 
         // WHEN
-        fireStationsController.deleteFirestations(null, null);
+        fireStationsController.deleteFirestationsByStationAndAddress(null, null);
 
         // THEN
         Assertions.assertNull(fireStations.getStation());
