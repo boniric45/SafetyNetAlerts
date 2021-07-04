@@ -24,7 +24,6 @@ public class ListChildAlertTest {
     @Mock
     PersonsService personsService;
 
-
     @Test
     public void testChildAlertWithAddress() throws Exception {
 
@@ -32,7 +31,7 @@ public class ListChildAlertTest {
         String address = "892 Downing Ct";
 
         // WHEN
-        mockMvc.perform(get("/childAlert?address=" + address))
+        this.mockMvc.perform(get("/childAlert?address=" + address))
                 .andDo(print())
                 .andExpect(status().isOk())
                 // THEN

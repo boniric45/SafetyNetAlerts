@@ -34,11 +34,11 @@ public class ListOfReisdentsWithFirstnameAndLastnameTest {
         String bitrhdate = "10/10/1950";
         String medications = "doliprane";
         String allergies = "peanut";
-        MedicalRecords medicalRecordsCreate = new MedicalRecords(24, "Sylvanas", "Coursevent", "10/10/1950", "doliprane", "peanut");
+        MedicalRecords medicalRecordsCreate = new MedicalRecords(23, "Sylvanas", "Coursevent", "10/10/1950", "doliprane", "peanut");
 
         // WHEN
         medicalsRecordsController.createNewMedicalRecord(medicalRecordsCreate);
-        MedicalRecords medicalRecordResult = medicalsRecordsController.getMedicalRecordsById(24);
+        MedicalRecords medicalRecordResult = medicalsRecordsController.getMedicalRecordsById(23);
 
         // THEN
         Assertions.assertEquals(firstName, medicalRecordResult.getFirstName());

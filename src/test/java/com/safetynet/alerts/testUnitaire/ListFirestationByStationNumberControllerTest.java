@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.text.ParseException;
@@ -22,6 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
+@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD) // reinit size testReadAllFirestation before each test
 public class ListFirestationByStationNumberControllerTest {
 
     @Autowired
@@ -37,7 +39,6 @@ public class ListFirestationByStationNumberControllerTest {
     private String address;
     private String firestation;
     private String result;
-    private ArrayList<String> listresult = new ArrayList<>();
 
     @BeforeEach
     private void setUpPerTest() {
@@ -94,23 +95,6 @@ public class ListFirestationByStationNumberControllerTest {
         Assertions.assertEquals(address, result);
     }
 
-    // Read All ListFirestationByStationNumber Test
-    @Test
-    public void testReadAllFirestation() {
-
-        // GIVEN
-        int element = 14;
-
-        // WHEN
-        Iterable<FireStations> fireStationsIterable = fireStationsController.getAllFirestation();
-        for (FireStations fs : fireStationsIterable) {
-            String resultStation = fs.getStation();
-            listresult.add(resultStation);
-        }
-
-        // THEN
-        Assertions.assertEquals(element, listresult.size());
-    }
 
     // Read ListFirestationByStationNumber By Id Test
     @Test
@@ -229,4 +213,21 @@ public class ListFirestationByStationNumberControllerTest {
         Assertions.assertNull(fireStations.getStation());
         Assertions.assertNull(fireStations.getAddress());
     }
+
+    // Read All ListFirestationByStationNumber Test
+    @Test
+    public void testReadAllFirestation() {
+
+        // GIVEN
+        int element = 13;
+
+        // WHEN
+        Iterable<FireStations> fireStationsIterable = fireStationsController.getAllFirestation();
+        long size = fireStationsIterable.spliterator().getExactSizeIfKnown();
+        System.out.println(size);
+
+        // THEN
+        Assertions.assertEquals(element, size);
+    }
+
 }
